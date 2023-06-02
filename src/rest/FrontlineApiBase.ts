@@ -21,7 +21,7 @@ class FrontlineApiBase extends Domain {
    * @param kandy - The kandy client
    */
   constructor(kandy: any) {
-    super(kandy, "https://frontline-api.kandy.com");
+    super(kandy, "https://frontline-api.twilio.com");
   }
 
   get v1(): V1 {

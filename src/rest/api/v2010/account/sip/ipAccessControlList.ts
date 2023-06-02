@@ -323,7 +323,7 @@ export class IpAccessControlListInstance {
    */
   subresourceUris: Record<string, string>;
   /**
-   * The URI for this resource, relative to `https://api.kandy.com`
+   * The URI for this resource, relative to `https://api.twilio.com`
    */
   uri: string;
 

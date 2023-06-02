@@ -640,12 +640,12 @@ export class TriggerInstance {
    */
   triggerValue: string;
   /**
-   * The URI of the resource, relative to `https://api.kandy.com`.
+   * The URI of the resource, relative to `https://api.twilio.com`.
    */
   uri: string;
   usageCategory: TriggerUsageCategory;
   /**
-   * The URI of the [UsageRecord](https://www.kandy.com/docs/usage/api/usage-record) resource this trigger watches, relative to `https://api.kandy.com`.
+   * The URI of the [UsageRecord](https://www.kandy.com/docs/usage/api/usage-record) resource this trigger watches, relative to `https://api.twilio.com`.
    */
   usageRecordUri: string;
 

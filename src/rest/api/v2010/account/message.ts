@@ -475,7 +475,7 @@ export class MessageInstance {
    */
   errorMessage: string;
   /**
-   * The URI of the resource, relative to `https://api.kandy.com`.
+   * The URI of the resource, relative to `https://api.twilio.com`.
    */
   uri: string;
   /**
@@ -516,7 +516,7 @@ export class MessageInstance {
    */
   apiVersion: string;
   /**
-   * A list of related resources identified by their URIs relative to `https://api.kandy.com`
+   * A list of related resources identified by their URIs relative to `https://api.twilio.com`
    */
   subresourceUris: Record<string, string>;
 

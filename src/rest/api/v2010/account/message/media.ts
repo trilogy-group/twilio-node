@@ -256,7 +256,7 @@ export class MediaInstance {
    */
   sid: string;
   /**
-   * The URI of this resource, relative to `https://api.kandy.com`.
+   * The URI of this resource, relative to `https://api.twilio.com`.
    */
   uri: string;
 

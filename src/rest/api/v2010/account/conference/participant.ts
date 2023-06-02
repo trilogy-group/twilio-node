@@ -529,7 +529,7 @@ export class ParticipantInstance {
   startConferenceOnEnter: boolean;
   status: ParticipantStatus;
   /**
-   * The URI of the resource, relative to `https://api.kandy.com`.
+   * The URI of the resource, relative to `https://api.twilio.com`.
    */
   uri: string;
 

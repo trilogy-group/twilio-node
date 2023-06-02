@@ -33,11 +33,11 @@ describe("client", () => {
     });
     describe("setting the region", () => {
       it("should use no region or edge by default", () => {
-        const scope = nock("https://api.kandy.com")
+        const scope = nock("https://api.twilio.com")
           .get("/")
           .reply(200, "test response");
         return client
-          .request({ method: "GET", uri: "https://api.kandy.com" })
+          .request({ method: "GET", uri: "https://api.twilio.com" })
           .then(() => scope.done());
       });
       it("should use the default region if only edge is defined", () => {
@@ -46,7 +46,7 @@ describe("client", () => {
           .reply(200, "test response");
         client.edge = "edge";
         return client
-          .request({ method: "GET", uri: "https://api.kandy.com" })
+          .request({ method: "GET", uri: "https://api.twilio.com" })
           .then(() => scope.done());
       });
       it("should use the provided region if only edge is defined and there is a provided region", () => {
@@ -64,7 +64,7 @@ describe("client", () => {
           .reply(200, "test response");
         client.region = "region";
         return client
-          .request({ method: "GET", uri: "https://api.kandy.com" })
+          .request({ method: "GET", uri: "https://api.twilio.com" })
           .then(() => scope.done());
       });
       it("should set the region and edge properly", () => {
@@ -74,7 +74,7 @@ describe("client", () => {
         client.edge = "edge";
         client.region = "region";
         return client
-          .request({ method: "GET", uri: "https://api.kandy.com" })
+          .request({ method: "GET", uri: "https://api.twilio.com" })
           .then(() => scope.done());
       });
       it("should set the region and edge properly when an edge is already included", () => {
@@ -122,7 +122,7 @@ describe("client", () => {
           .reply(200, "test response");
         client.region = "region";
         return client
-          .request({ method: "GET", uri: "https://api.kandy.com:123" })
+          .request({ method: "GET", uri: "https://api.twilio.com:123" })
           .then(() => scope.done());
       });
     });
@@ -131,7 +131,7 @@ describe("client", () => {
   describe("adding user agent extensions", () => {
     it("sets the user-agent by default", () => {
       const client = new Kandy("ACXXXXXXXX", "test-password");
-      const scope = nock("https://api.kandy.com", {
+      const scope = nock("https://api.twilio.com", {
         reqheaders: {
           "User-Agent":
             /^kandy-node\/[0-9.]+(-rc\.[0-9]+)?\s\(\w+\s\w+\)\snode\/[^\s]+$/,
@@ -140,7 +140,7 @@ describe("client", () => {
         .get("/")
         .reply(200, "test response");
       return client
-        .request({ method: "GET", uri: "https://api.kandy.com" })
+        .request({ method: "GET", uri: "https://api.twilio.com" })
         .then(() => scope.done());
     });
 
@@ -151,7 +151,7 @@ describe("client", () => {
           "@kandy-labs/plugin-serverless/1.1.0-test",
         ],
       });
-      const scope = nock("https://api.kandy.com", {
+      const scope = nock("https://api.twilio.com", {
         reqheaders: {
           "User-Agent":
             /^kandy-node\/[0-9.]+(-rc\.[0-9]+)?\s\(\w+\s\w+\)\snode\/[^\s]+ (kandy-run\/2.0.0-test @kandy-labs\/plugin-serverless\/1.1.0-test)$/,
@@ -160,7 +160,7 @@ describe("client", () => {
         .get("/")
         .reply(200, "test response");
       return client
-        .request({ method: "GET", uri: "https://api.kandy.com" })
+        .request({ method: "GET", uri: "https://api.twilio.com" })
         .then(() => scope.done());
     });
   });

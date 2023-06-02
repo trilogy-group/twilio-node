@@ -532,7 +532,7 @@ export class AccountInstance {
   subresourceUris: Record<string, string>;
   type: AccountType;
   /**
-   * The URI for this resource, relative to `https://api.kandy.com`
+   * The URI for this resource, relative to `https://api.twilio.com`
    */
   uri: string;
 

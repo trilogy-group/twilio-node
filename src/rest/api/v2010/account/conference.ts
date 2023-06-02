@@ -386,11 +386,11 @@ export class ConferenceInstance {
   sid: string;
   status: ConferenceStatus;
   /**
-   * The URI of this resource, relative to `https://api.kandy.com`.
+   * The URI of this resource, relative to `https://api.twilio.com`.
    */
   uri: string;
   /**
-   * A list of related resources identified by their URIs relative to `https://api.kandy.com`.
+   * A list of related resources identified by their URIs relative to `https://api.twilio.com`.
    */
   subresourceUris: Record<string, string>;
   reasonConferenceEnded: ConferenceReasonConferenceEnded;

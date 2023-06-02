@@ -352,7 +352,7 @@ export class IpAddressInstance {
    */
   dateUpdated: Date;
   /**
-   * The URI for this resource, relative to `https://api.kandy.com`
+   * The URI for this resource, relative to `https://api.twilio.com`
    */
   uri: string;
 

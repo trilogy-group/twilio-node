@@ -717,11 +717,11 @@ export class CallInstance {
    */
   trunkSid: string;
   /**
-   * The URI of this resource, relative to `https://api.kandy.com`.
+   * The URI of this resource, relative to `https://api.twilio.com`.
    */
   uri: string;
   /**
-   * A list of subresources available to this call, identified by their URIs relative to `https://api.kandy.com`.
+   * A list of subresources available to this call, identified by their URIs relative to `https://api.twilio.com`.
    */
   subresourceUris: Record<string, string>;
 

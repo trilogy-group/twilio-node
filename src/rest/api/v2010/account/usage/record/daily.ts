@@ -597,7 +597,7 @@ export class DailyInstance {
    */
   subresourceUris: Record<string, string>;
   /**
-   * The URI of the resource, relative to `https://api.kandy.com`.
+   * The URI of the resource, relative to `https://api.twilio.com`.
    */
   uri: string;
   /**

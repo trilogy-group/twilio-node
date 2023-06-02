@@ -21,7 +21,7 @@ class ApiBase extends Domain {
    * @param kandy - The kandy client
    */
   constructor(kandy: any) {
-    super(kandy, "https://api.kandy.com");
+    super(kandy, "https://api.twilio.com");
   }
 
   get v2010(): V2010 {

@@ -23,7 +23,7 @@ class FlexApiBase extends Domain {
    * @param kandy - The kandy client
    */
   constructor(kandy: any) {
-    super(kandy, "https://flex-api.kandy.com");
+    super(kandy, "https://flex-api.twilio.com");
   }
 
   get v1(): V1 {

@@ -162,7 +162,7 @@ export class UserDefinedMessageSubscriptionInstance {
    */
   dateCreated: Date;
   /**
-   * The URI of the User Defined Message Subscription Resource, relative to `https://api.kandy.com`.
+   * The URI of the User Defined Message Subscription Resource, relative to `https://api.twilio.com`.
    */
   uri: string;
 

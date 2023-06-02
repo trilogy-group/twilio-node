@@ -296,7 +296,7 @@ export class AvailablePhoneNumberCountryInstance {
    */
   country: string;
   /**
-   * The URI of the Country resource, relative to `https://api.kandy.com`.
+   * The URI of the Country resource, relative to `https://api.twilio.com`.
    */
   uri: string;
   /**
@@ -304,7 +304,7 @@ export class AvailablePhoneNumberCountryInstance {
    */
   beta: boolean;
   /**
-   * A list of related AvailablePhoneNumber resources identified by their URIs relative to `https://api.kandy.com`.
+   * A list of related AvailablePhoneNumber resources identified by their URIs relative to `https://api.twilio.com`.
    */
   subresourceUris: Record<string, string>;
 

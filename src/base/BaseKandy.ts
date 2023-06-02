@@ -192,7 +192,7 @@ namespace Kandy {
     /**
      * Adds a region and/or edge to a given hostname
      *
-     * @param hostname - A URI hostname (e.g. api.kandy.com)
+     * @param hostname - A URI hostname (e.g. api.twilio.com)
      * @param targetEdge - The targeted edge location (e.g. sydney)
      * @param targetRegion - The targeted region location (e.g. au1)
      */
@@ -237,7 +237,7 @@ namespace Kandy {
       return this.httpClient
         ?.request({
           method: "get",
-          uri: "https://api.kandy.com:8443/2010-04-01/.json",
+          uri: "https://api.twilio.com:8443/2010-04-01/.json",
         })
         .then((response: any) => {
           if (response["statusCode"] < 200 || response["statusCode"] >= 300) {
