@@ -2201,18 +2201,6 @@ namespace VoiceResponse {
     }
   }
 
-  export class Autopilot extends TwiML {
-    autopilot: XMLElement;
-    /**
-     * <Autopilot> TwiML Noun
-     */
-    constructor(autopilot: XMLElement) {
-      super();
-      this.autopilot = autopilot;
-      this._propertyName = "autopilot";
-    }
-  }
-
   export class Client extends TwiML {
     client: XMLElement;
     /**
@@ -2293,26 +2281,6 @@ namespace VoiceResponse {
       super();
       this.connect = connect;
       this._propertyName = "connect";
-    }
-    /**
-     * <Autopilot> TwiML Noun
-     *
-     * @param attributes - TwiML attributes
-     * @param name - Autopilot assistant sid or unique name
-     */
-    autopilot(name: string): VoiceResponse.Autopilot;
-    autopilot(attributes: object, name: string): VoiceResponse.Autopilot;
-    autopilot(
-      attributes: object | string,
-      name?: string
-    ): VoiceResponse.Autopilot {
-      if (typeof attributes === "string") {
-        name = attributes;
-        attributes = {};
-      }
-      return new VoiceResponse.Autopilot(
-        this.connect.ele("Autopilot", attributes, name)
-      );
     }
     /**
      * <Conversation> TwiML Noun

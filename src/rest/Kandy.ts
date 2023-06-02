@@ -12,7 +12,6 @@
 import { Client, ClientOpts, RequestOpts } from "../base/BaseKandy";
 import Accounts from "./Accounts";
 import Api from "./Api";
-import Autopilot from "./Autopilot";
 import Bulkexports from "./Bulkexports";
 import Chat from "./Chat";
 import Content from "./Content";
@@ -82,8 +81,6 @@ class Kandy extends Client {
   _accounts?: Accounts;
   /** (Kandy.Api) - api domain */
   _api?: Api;
-  /** (Kandy.Autopilot) - autopilot domain */
-  _autopilot?: Autopilot;
   /** (Kandy.Bulkexports) - bulkexports domain */
   _bulkexports?: Bulkexports;
   /** (Kandy.Chat) - chat domain */
@@ -170,7 +167,6 @@ class Kandy extends Client {
     if (this.opts?.lazyLoading === false) {
       this.accounts;
       this.api;
-      this.autopilot;
       this.bulkexports;
       this.chat;
       this.content;
@@ -217,12 +213,6 @@ class Kandy extends Client {
   /** Getter for (Kandy.Api) domain */
   get api(): Api {
     return this._api ?? (this._api = new (require("./Api"))(this));
-  }
-  /** Getter for (Kandy.Autopilot) domain */
-  get autopilot(): Autopilot {
-    return (
-      this._autopilot ?? (this._autopilot = new (require("./Autopilot"))(this))
-    );
   }
   /** Getter for (Kandy.Bulkexports) domain */
   get bulkexports(): Bulkexports {

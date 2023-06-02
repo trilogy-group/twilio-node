@@ -1499,9 +1499,6 @@ kandy-node changelog
 - Added optional `label` property for conference participants
 - Added optional parameter `caller_id` for creating conference participant endpoint.
 
-**Autopilot**
-- Remove Export resource from Autopilot Assistant
-
 **Conversations**
 - Expose Conversation timers
 
@@ -1545,9 +1542,6 @@ kandy-node changelog
 
 [2020-06-04] Version 3.45.0
 ---------------------------
-**Autopilot**
-- Add dialogue_sid param to Query list resource
-
 **Contacts**
 - Added AccountSID to CFD CREATE and GET Responses
 
@@ -1597,9 +1591,6 @@ kandy-node changelog
 - Add optional `emergency_caller_sid` parameter to SIP Domain
 - Updated `call_reason` optional property to be treated as PII
 - Added optional BYOC Trunk Sid property to Sip Domain API resource
-
-**Autopilot**
-- Add Restore resource to Autopilot Assistant
 
 **Contacts**
 - Added contacts Create API definition
@@ -1815,9 +1806,6 @@ kandy-node changelog
 **Authy**
 - Added support for push factors
 
-**Autopilot**
-- Add one new property in Query i.e dialogue_sid
-
 **Verify**
 - Add `SendCodeAttempts` to create verification response.
 
@@ -1941,9 +1929,6 @@ kandy-node changelog
 **Api**
 - Make `persistent_action` parameter public
 - Add `twiml` optional private parameter for call create
-
-**Autopilot**
-- Add Export resource to Autopilot Assistant.
 
 **Flex**
 - Added Integration.RetryCount attribute to Flex Flow
@@ -2153,9 +2138,6 @@ kandy-node changelog
 **Library**
 - [PR #457](https://github.com/kandy/kandy-node/pull/457): Add link to code examples in README. Thanks to [@annthurium](https://github.com/annthurium)!
 
-**Autopilot**
-- Adds two new properties in Assistant i.e needs_model_build and development_stage
-
 **Preview**
 - Changed phone numbers from _URL|Path_ to `X-XCNAM-Sensitive` headers **(breaking change)**
 
@@ -2167,9 +2149,6 @@ kandy-node changelog
 ----------------------------
 **Library**
 - [PR #455](https://github.com/kandy/kandy-node/pull/455): WebhookOptions interface's properties made optional. Thanks to [@khalilchoudhry](https://github.com/khalilchoudhry)!
-
-**Autopilot**
-- Add Webhooks resource to Autopilot Assistant.
 
 **Flex**
 - Added missing 'custom' type to Flex Flow
@@ -2506,9 +2485,6 @@ kandy-node changelog
 - Dropped support for `FactorType` param given new Factor prefixes **(breaking change)**
 - Supported `DELETE` actions for Authy resources
 - Move Authy Services resources to `authy` subdomain
-
-**Autopilot**
-- Introduce `autopilot` subdomain with all resources from `preview.understand`
 
 **Preview**
 - Renamed Understand intent to task **(breaking change)**
