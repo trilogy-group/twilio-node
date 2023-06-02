@@ -41,6 +41,7 @@ jobs:
           KANDY_API_SECRET: ${{ secrets.KANDY_CLUSTER_TEST_API_KEY_SECRET }}
           KANDY_FROM_NUMBER: ${{ secrets.KANDY_FROM_NUMBER }}
           KANDY_TO_NUMBER: ${{ secrets.KANDY_TO_NUMBER }}
+          KANDY_AUTH_TOKEN: ${{ secrets.KANDY_AUTH_TOKEN }}
         run: |
           npm pack
           tar -xzf kandy*.tgz
