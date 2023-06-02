@@ -934,8 +934,6 @@ namespace VoiceResponse {
     waitUrl?: string;
     /** waitUrlMethod - Wait URL method */
     waitUrlMethod?: string;
-    /** workflowSid - TaskRouter Workflow SID */
-    workflowSid?: string;
   }
 
   /**
@@ -1004,10 +1002,6 @@ namespace VoiceResponse {
   export interface QueueAttributes {
     /** method - Action URL method */
     method?: string;
-    /** postWorkActivitySid - TaskRouter Activity SID */
-    postWorkActivitySid?: string;
-    /** reservationSid - TaskRouter Reservation SID */
-    reservationSid?: string;
     /** url - Action URL */
     url?: string;
   }
@@ -1964,10 +1958,6 @@ namespace VoiceResponse {
   export interface QueueAttributes {
     /** method - Action URL method */
     method?: string;
-    /** postWorkActivitySid - TaskRouter Activity SID */
-    postWorkActivitySid?: string;
-    /** reservationSid - TaskRouter Reservation SID */
-    reservationSid?: string;
     /** url - Action URL */
     url?: string;
   }
@@ -2536,7 +2526,6 @@ namespace VoiceResponse {
      * <Task> TwiML Noun
      *
      * @param attributes - TwiML attributes
-     * @param body - TaskRouter task attributes
      */
     task(body: string): VoiceResponse.Task;
     task(
@@ -2551,7 +2540,7 @@ namespace VoiceResponse {
         body = attributes;
         attributes = {};
       }
-      return new VoiceResponse.Task(this.enqueue.ele("Task", attributes, body));
+      return new VoiceResponse.Task(this.enqueue.ele("Task", attributes));
     }
   }
 

@@ -5,8 +5,6 @@ import * as webhooks from "./webhooks/webhooks";
 import type { ClientOpts as IClientOpts } from "./base/BaseKandy";
 import IAccessToken from "./jwt/AccessToken";
 import IClientCapability from "./jwt/ClientCapability";
-import ITaskRouterCapability from "./jwt/taskrouter/TaskRouterCapability";
-import * as taskRouterUtil from "./jwt/taskrouter/util";
 import IVoiceResponse from "./twiml/VoiceResponse";
 import IMessagingResponse from "./twiml/MessagingResponse";
 import IFaxResponse from "./twiml/FaxResponse";
@@ -29,11 +27,6 @@ namespace KandySDK {
     export const AccessToken = IAccessToken;
     export type ClientCapability = IClientCapability;
     export const ClientCapability = IClientCapability;
-    export namespace taskrouter {
-      export type TaskRouterCapability = ITaskRouterCapability;
-      export const TaskRouterCapability = ITaskRouterCapability;
-      export const util = taskRouterUtil;
-    }
   }
   export namespace twiml {
     export type VoiceResponse = IVoiceResponse;

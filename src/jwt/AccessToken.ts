@@ -112,18 +112,6 @@ namespace AccessToken {
     abstract toPayload(): TPayload;
   }
 
-  export interface TaskRouterGrantOptions {
-    workspaceSid?: string;
-    workerSid?: string;
-    role?: string;
-  }
-
-  export interface TaskRouterGrantPayload {
-    workspace_sid?: string;
-    worker_sid?: string;
-    role?: string;
-  }
-
   export interface ChatGrantOptions {
     serviceSid?: string;
     endpointId?: string;
@@ -196,43 +184,6 @@ namespace AccessToken {
      * The region value associated with this account
      */
     region?: string;
-  }
-
-  export class TaskRouterGrant
-    extends Grant<TaskRouterGrantOptions, TaskRouterGrantPayload, "task_router">
-    implements TaskRouterGrantOptions
-  {
-    workspaceSid?: string;
-    workerSid?: string;
-    role?: string;
-
-    /**
-     * @param options - ...
-     * @param options.workspaceSid - The workspace unique ID
-     * @param options.workerSid - The worker unique ID
-     * @param options.role - The role of the grant
-     */
-    constructor(options?: TaskRouterGrantOptions) {
-      options = options || {};
-      super("task_router");
-      this.workspaceSid = options.workspaceSid;
-      this.workerSid = options.workerSid;
-      this.role = options.role;
-    }
-
-    toPayload(): TaskRouterGrantPayload {
-      let grant: TaskRouterGrantPayload = {};
-      if (this.workspaceSid) {
-        grant.workspace_sid = this.workspaceSid;
-      }
-      if (this.workerSid) {
-        grant.worker_sid = this.workerSid;
-      }
-      if (this.role) {
-        grant.role = this.role;
-      }
-      return grant;
-    }
   }
 
   export class ChatGrant

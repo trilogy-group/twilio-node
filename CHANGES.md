@@ -273,10 +273,6 @@ kandy-node changelog
 **Supersim**
 - Update SettingsUpdates resource to remove PackageSid
 
-**Taskrouter**
-- Add `Ordering` query parameter to Workers and TaskQueues for sorting by
-- Add `worker_sid` query param for list reservations endpoint
-
 **Twiml**
 - Add `url` and `method` attributes to `<Conversation>`
 
@@ -479,9 +475,6 @@ kandy-node changelog
 - Verify List Attempts API summary endpoint added.
 - Update PII documentation for `AccessTokens` `factor_friendly_name` property.
 
-**Voice**
-- make annotation parameter from /Calls API private
-
 
 [2022-03-23] Version 3.76.0
 ---------------------------
@@ -505,9 +498,6 @@ kandy-node changelog
 
 **Supersim**
 - Remove Commands resource, use SmsCommands resource instead **(breaking change)**
-
-**Taskrouter**
-- Add limits to `split_by_wait_time` for Cumulative Statistics Endpoint
 
 **Video**
 - Change recording `status_callback_method` type from `enum` to `http_method` **(breaking change)**
@@ -553,9 +543,6 @@ kandy-node changelog
 
 **Preview**
 - Moved `web_channels` from preview to beta under `flex-api` **(breaking change)**
-
-**Taskrouter**
-- Add `ETag` as Response Header to List of Task, Reservation & Worker
 
 **Verify**
 - Remove outdated documentation commentary to contact sales. Product is already in public beta.
@@ -661,9 +648,6 @@ kandy-node changelog
 
 **Video**
 - Add `EmptyRoomTimeout` and `UnusedRoomTimeout` properties to a room; add corresponding parameters to room creation
-
-**Voice**
-- Add endpoint to delete archived Calls
 
 
 [2021-12-01] Version 3.71.3
@@ -781,13 +765,6 @@ kandy-node changelog
 **Serverless**
 - Add domain_base field to Service response
 
-**Taskrouter**
-- Add `If-Match` Header based on ETag for Worker Delete **(breaking change)**
-- Add `If-Match` Header based on Etag for Reservation Update
-- Add `If-Match` Header based on ETag for Worker Update
-- Add `If-Match` Header based on ETag for Worker Delete
-- Add `ETag` as Response Header to Worker
-
 **Trunking**
 - Added `transfer_caller_id` property on Trunks.
 
@@ -870,9 +847,6 @@ kandy-node changelog
 - Revert brand registration api update to add brand_type field
 - Add brand_type field to a2p brand_registration api
 
-**Taskrouter**
-- Add `X-Rate-Limit-Limit`, `X-Rate-Limit-Remaining`, and `X-Rate-Limit-Config` as Response Headers to all TaskRouter endpoints
-
 **Verify**
 - Add `TemplateSid` optional parameter on Verification creation.
 - Include `whatsapp` as a channel type in the verifications API.
@@ -885,9 +859,6 @@ kandy-node changelog
 
 **Conversations**
 - Expose ParticipantConversations resource
-
-**Taskrouter**
-- Adding `links` to the activity resource
 
 **Verify**
 - Added a `Version` to Verify Factors `Webhooks` to add new fields without breaking old Webhooks.
@@ -912,10 +883,6 @@ kandy-node changelog
 - Add Billing Period resource for the Super Sim Pilot
 - Add List endpoint to Billing Period resource for Super Sim Pilot
 - Add Fetch endpoint to Billing Period resource for Super Sim Pilot
-
-**Taskrouter**
-- Update `transcribe` & `transcription_configuration` form params in Reservation update endpoint to have private visibility **(breaking change)**
-- Add `transcribe` & `transcription_configuration` form params to Reservation update endpoint
 
 **Twiml**
 - Add `modify` event to `statusCallbackEvent` for `<Conference>`.
@@ -1012,9 +979,6 @@ kandy-node changelog
 **Messaging**
 - Add `use_inbound_webhook_on_number` field in Service API for fetch, create, update, read
 
-**Taskrouter**
-- Add `If-Match` Header based on ETag for Task Delete
-
 **Verify**
 - Add `AuthPayload` parameter to support verifying a `Challenge` upon creation. This is only supported for `totp` factors.
 - Add support to resend the notifications of a `Challenge`. This is only supported for `push` factors.
@@ -1073,10 +1037,6 @@ kandy-node changelog
 **Supersim**
 - Add SmsCommands resource
 - Add fields `SmsCommandsUrl`, `SmsCommandsMethod` and `SmsCommandsEnabled` to a Fleet resource
-
-**Taskrouter**
-- Add `If-Match` Header based on ETag for Task Update
-- Add `ETag` as Response Headers to Tasks and Reservations
 
 **Video**
 - Recording rule beta flag **(breaking change)**
@@ -1429,9 +1389,6 @@ kandy-node changelog
 - Add fleet, network, and isoCountryCode to the UsageRecords resource
 - Change sort order of UsageRecords from ascending to descending with respect to start time field, records are now returned newest to oldest
 
-**Wireless**
-- Removed `Start` and `End` parameters from the Data Sessions list endpoint. **(breaking change)**
-
 
 [2020-08-05] Version 3.48.2
 ---------------------------
@@ -1610,9 +1567,6 @@ kandy-node changelog
 - Add `CustomCode` optional parameter on Verification creation.
 - Add delete action on Service resource.
 
-**Voice**
-- Added endpoints for BYOC trunks, SIP connection policies and source IP mappings
-
 
 [2020-04-29] Version 3.43.0
 ---------------------------
@@ -1755,9 +1709,6 @@ kandy-node changelog
 **Supersim**
 - Add `inactive` status for Super SIM which is an alias for `deactivated`
 
-**Taskrouter**
-- Adding value range to `priority` in task endpoint
-
 **Verify**
 - Fix `SendCodeAttempts` type. It's an array of objects instead of a unique object. **(breaking change)**
 
@@ -1785,11 +1736,6 @@ kandy-node changelog
 **Studio**
 - Add Execution and Step endpoints to v2 API
 - Add webhook_url to Flow response and add new /TestUsers endpoint to v2 API
-
-**Taskrouter**
-- Adding `longest_relative_task_age_in_queue` and `longest_relative_task_sid_in_queue` to TaskQueue Real Time Statistics API.
-- Add `wait_duration_in_queue_until_accepted` aggregations to TaskQueues Cumulative Statistics endpoint
-- Add TaskQueueEnteredDate property to Tasks.
 
 **Video**
 - [Composer] Clarification for the composition hooks creation documentation: one source is mandatory, either the `audio_sources` or the `video_layout`, but one of them has to be provided
@@ -1870,9 +1816,6 @@ kandy-node changelog
 **Verify**
 - Add `MailerSid` property to Verify Service resource.
 
-**Wireless**
-- Added `data_limit_strategy` to Rate Plan resource.
-
 
 [2019-12-12] Version 3.39.0
 ---------------------------
@@ -1912,9 +1855,6 @@ kandy-node changelog
 
 **Conversations**
 - Allow Messaging Service update
-
-**Taskrouter**
-- Support ReEvaluateTasks parameter on Workflow update
 
 **Twiml**
 - Remove unsupported `mixed_track` value from `<Stream>` **(breaking change)**
@@ -1979,9 +1919,6 @@ kandy-node changelog
 - Allow filtering the Sims resource List endpoint by Fleet
 - Add List endpoint to Fleets resource for Super Sim Pilot
 
-**Wireless**
-- Added `account_sid` to Sim update parameters.
-
 **Twiml**
 - Add new locales and voices for `Say` from Polly
 
@@ -2040,9 +1977,6 @@ kandy-node changelog
 **Preview**
 - Changed authentication method for SDK Trusted Comms endpoints: `/CPS`, `/CurrentCall`, and `/Devices`. Please use `Authorization: Bearer <xCNAM JWT>` **(breaking change)**
 
-**Voice**
-- Add Recordings endpoints
-
 
 [2019-09-04] Version 3.34.0
 ----------------------------
@@ -2086,9 +2020,6 @@ kandy-node changelog
 **Sync**
 - Added configuration option for enabling webhooks from REST.
 
-**Wireless**
-- Added `usage_notification_method` and `usage_notification_url` properties to `rate_plan`.
-
 **Twiml**
 - Add support for `ach-debit` transactions in `Pay` verb
 
@@ -2128,9 +2059,6 @@ kandy-node changelog
 **Api**
 - Make `friendly_name` optional for applications create
 - Add new property `as_of` date to Usage Record API calls
-
-**Wireless**
-- Added Usage Records resource.
 
 
 [2019-06-26] Version 3.33.0
@@ -2205,24 +2133,14 @@ kandy-node changelog
 - Add addtional metadata fields on a Document
 - Add status callback fields and parameters
 
-**Taskrouter**
-- Added `channel_optimized_routing` attribute to task-channel endpoint
-
 **Video**
 - [Rooms] Add Video Subscription API
-
-**Wireless**
-- Added `imei` to Data Session resource.
-- Remove `imeisv` from Data Session resource. **(breaking change)**
 
 
 [2019-05-01] Version 3.30.3
 ----------------------------
 **Serverless**
 - Documentation
-
-**Wireless**
-- Added `imeisv` to Data Session resource.
 
 
 [2019-04-24] Version 3.30.2
@@ -2268,12 +2186,6 @@ kandy-node changelog
 **Api**
 - Remove optional `if_machine` call create parameter from helper libraries **(breaking change)**
 - Changed `call_sid` path parameter type on QueueMember fetch and update requests **(breaking change)**
-
-**Voice**
-- changed file names to dialing_permissions prefix **(breaking change)**
-
-**Wireless**
-- Added `ResetStatus` property to Sim resource to allow resetting connectivity via the API.
 
 
 [2019-03-15] Version 3.29.2
@@ -2342,11 +2254,6 @@ kandy-node changelog
 **Flex**
 - First public release
 
-**Taskrouter**
-- Adding `reject_pending_reservations` to worker update endpoint
-- Added `event_date_ms` and `worker_time_in_previous_activity_ms` to Events API response
-- Add ability to filter events by TaskChannel
-
 **Verify**
 - Add `EnablePsd2` optional parameter for PSD2 on Service resource creation or update.
 - Add `Amount`, `Payee` optional parameters for PSD2.
@@ -2403,15 +2310,8 @@ kandy-node changelog
 **Studio**
 - Support date created filtering on list of executions
 
-**Taskrouter**
-- Adding ability to Create, Modify and Delete Task Channels.
-
 **Verify**
 - Add `SkipSmsToLandlines`, `TtsName`, `DtmfInputRequired` optional parameters on Service resource creation or update.
-
-**Wireless**
-- Added delete action on Command resource.
-- Added delete action on Sim resource.
 
 **Twiml**
 - Change `currency` from enum to string for `Pay` **(breaking change)**
@@ -2490,9 +2390,6 @@ kandy-node changelog
 - Renamed Understand intent to task **(breaking change)**
 - Deprecated Authy endpoints from `preview` to `authy` subdomain
 
-**Taskrouter**
-- Allow TaskQueue ReservationActivitySid and AssignmentActivitySid to not be configured for MultiTask Workspaces
-
 **Verify**
 - Add `LookupEnabled` optional parameter on Service resource creation or update.
 - Add `SendDigits` optional parameter on Verification creation.
@@ -2526,10 +2423,6 @@ kandy-node changelog
 **Preview**
 - Supported `totp` in Authy preview endpoints
 - Allowed `latest` in Authy Challenges endpoints
-
-**Voice**
-- changed path param name from parent_iso_code to iso_code for highrisk_special_prefixes api **(breaking change)**
-- added geo permissions public api
 
 
 [2018-09-21] Version 3.20.0
@@ -2716,9 +2609,6 @@ kandy-node changelog
 **Monitor**
 - Update event filtering to support date/time **(breaking change)**
 
-**Wireless**
-- Updated `maturity` to `ga` for all wireless apis
-
 
 [2018-04-28] Version 3.16.0
 ----------------------------
@@ -2890,9 +2780,6 @@ kandy-node changelog
 **Video**
 - Remove beta flag from `media_region` and `video_codecs`
 
-**Wireless**
-- Bug fix: Changed `operator_mcc` and `operator_mnc` in `DataSessions` subresource from `integer` to `string`
-
 
 [2017-11-17] Version 3.10.0
 ----------------------------
@@ -2959,17 +2846,11 @@ kandy-node changelog
 **Proxy**
 - Initial Release
 
-**Wireless**
-- Added `ip_address` to sim resource
-
 
 [2017-10-06] Version 3.8.0
 ---------------------------
 **Preview**
 - Add `acc_security` (authy-phone-verification) initial api-definitions
-
-**Taskrouter**
-- [bi] Less verbose naming of cumulative and real time statistics
 
 
 [2017-09-28] Version 3.7.0
@@ -2984,11 +2865,6 @@ kandy-node changelog
 
 **Notify**
 - `data`, `apn`, `gcm`, `fcm`, `sms` parameters in `Notifications` create resource are objects instead of strings. *(breaking change)*
-
-**Taskrouter**
-- Add new query ability by TaskChannelSid or TaskChannelUniqueName.
-- Move Events, Worker, Workers endpoint over to CPR.
-- Add new RealTime and Cumulative Statistics endpoints.
 
 **Video**
 - Create should allow an array of video_codecs.
@@ -3011,9 +2887,6 @@ kandy-node changelog
 ---------------------------
 **Sync**
 - Add support for Streams
-
-**Wireless**
-- Added DataSessions sub-resource to Sims.
 
 
 [2017-08-25] Version 3.6.4
@@ -3051,7 +2924,6 @@ kandy-node changelog
 [2017-08-10] Version 3.6.2
 ---------------------------
 **Api**
-- Add New wireless usage keys added
 - Add `auto_correct_address` param for Addresses create and update
 
 **Video**
@@ -3086,9 +2958,6 @@ artifacts per library.
 **Preview**
 - Add `sms_application_sid` to HostedNumberOrders.
 
-**Taskrouter**
-- Fully support conference functionality in reservations.
-
 
 [2017-07-13] Version 3.5.0
 ---------------------------
@@ -3111,9 +2980,6 @@ artifacts per library.
 - Filter recordings by date using the parameters `DateCreatedAfter` and `DateCreatedBefore`.
 - Override the default time-to-live of a recording's media URL through the `Ttl` parameter (in seconds, default value is 3600).
 - Add query parameters `SourceSid`, `Status`, `DateCreatedAfter` and `DateCreatedBefore` to the convenience method for retrieving Room recordings.
-
-**Wireless**
-- Added national and international data limits to the RatePlans resource.
 
 
 [2017-06-16] Version 3.4.0

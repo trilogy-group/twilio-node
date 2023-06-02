@@ -205,7 +205,7 @@ describe("create voice response TwiML", function () {
     );
 
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Enqueue method="POST"><Task priority="1" timeout="4">foo</Task></Enqueue></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Enqueue method="POST"><Task priority="1" timeout="4"/></Enqueue></Response>'
     );
   });
 

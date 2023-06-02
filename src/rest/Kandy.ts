@@ -13,38 +13,15 @@ import { Client, ClientOpts, RequestOpts } from "../base/BaseKandy";
 import Accounts from "./Accounts";
 import Api from "./Api";
 import Bulkexports from "./Bulkexports";
-import Chat from "./Chat";
 import Content from "./Content";
-import Conversations from "./Conversations";
-import Events from "./Events";
-import FlexApi from "./FlexApi";
-import FrontlineApi from "./FrontlineApi";
-import Insights from "./Insights";
-import Intelligence from "./Intelligence";
-import IpMessaging from "./IpMessaging";
 import Lookups from "./Lookups";
 import Media from "./Media";
 import Messaging from "./Messaging";
-import Microvisor from "./Microvisor";
 import Monitor from "./Monitor";
-import Notify from "./Notify";
-import Numbers from "./Numbers";
 import Oauth from "./Oauth";
 import Preview from "./Preview";
 import Pricing from "./Pricing";
-import Proxy from "./Proxy";
 import Routes from "./Routes";
-import Serverless from "./Serverless";
-import Studio from "./Studio";
-import Supersim from "./Supersim";
-import Sync from "./Sync";
-import Taskrouter from "./Taskrouter";
-import Trunking from "./Trunking";
-import Trusthub from "./Trusthub";
-import Verify from "./Verify";
-import Video from "./Video";
-import Voice from "./Voice";
-import Wireless from "./Wireless";
 import { AddressListInstance } from "./api/v2010/account/address";
 import { ApplicationListInstance } from "./api/v2010/account/application";
 import { AuthorizedConnectAppListInstance } from "./api/v2010/account/authorizedConnectApp";
@@ -83,70 +60,24 @@ class Kandy extends Client {
   _api?: Api;
   /** (Kandy.Bulkexports) - bulkexports domain */
   _bulkexports?: Bulkexports;
-  /** (Kandy.Chat) - chat domain */
-  _chat?: Chat;
   /** (Kandy.Content) - content domain */
   _content?: Content;
-  /** (Kandy.Conversations) - conversations domain */
-  _conversations?: Conversations;
-  /** (Kandy.Events) - events domain */
-  _events?: Events;
-  /** (Kandy.FlexApi) - flexApi domain */
-  _flexApi?: FlexApi;
-  /** (Kandy.FrontlineApi) - frontlineApi domain */
-  _frontlineApi?: FrontlineApi;
-  /** (Kandy.Insights) - insights domain */
-  _insights?: Insights;
-  /** (Kandy.Intelligence) - intelligence domain */
-  _intelligence?: Intelligence;
-  /** (Kandy.IpMessaging) - ipMessaging domain */
-  _ipMessaging?: IpMessaging;
   /** (Kandy.Lookups) - lookups domain */
   _lookups?: Lookups;
   /** (Kandy.Media) - media domain */
   _media?: Media;
   /** (Kandy.Messaging) - messaging domain */
   _messaging?: Messaging;
-  /** (Kandy.Microvisor) - microvisor domain */
-  _microvisor?: Microvisor;
   /** (Kandy.Monitor) - monitor domain */
   _monitor?: Monitor;
-  /** (Kandy.Notify) - notify domain */
-  _notify?: Notify;
-  /** (Kandy.Numbers) - numbers domain */
-  _numbers?: Numbers;
   /** (Kandy.Oauth) - oauth domain */
   _oauth?: Oauth;
   /** (Kandy.Preview) - preview domain */
   _preview?: Preview;
   /** (Kandy.Pricing) - pricing domain */
   _pricing?: Pricing;
-  /** (Kandy.Proxy) - proxy domain */
-  _proxy?: Proxy;
   /** (Kandy.Routes) - routes domain */
   _routes?: Routes;
-  /** (Kandy.Serverless) - serverless domain */
-  _serverless?: Serverless;
-  /** (Kandy.Studio) - studio domain */
-  _studio?: Studio;
-  /** (Kandy.Supersim) - supersim domain */
-  _supersim?: Supersim;
-  /** (Kandy.Sync) - sync domain */
-  _sync?: Sync;
-  /** (Kandy.Taskrouter) - taskrouter domain */
-  _taskrouter?: Taskrouter;
-  /** (Kandy.Trunking) - trunking domain */
-  _trunking?: Trunking;
-  /** (Kandy.Trusthub) - trusthub domain */
-  _trusthub?: Trusthub;
-  /** (Kandy.Verify) - verify domain */
-  _verify?: Verify;
-  /** (Kandy.Video) - video domain */
-  _video?: Video;
-  /** (Kandy.Voice) - voice domain */
-  _voice?: Voice;
-  /** (Kandy.Wireless) - wireless domain */
-  _wireless?: Wireless;
 
   /* jshint ignore:start */
   /**
@@ -168,38 +99,15 @@ class Kandy extends Client {
       this.accounts;
       this.api;
       this.bulkexports;
-      this.chat;
       this.content;
-      this.conversations;
-      this.events;
-      this.flexApi;
-      this.frontlineApi;
-      this.insights;
-      this.intelligence;
-      this.ipMessaging;
       this.lookups;
       this.media;
       this.messaging;
-      this.microvisor;
       this.monitor;
-      this.notify;
-      this.numbers;
       this.oauth;
       this.preview;
       this.pricing;
-      this.proxy;
       this.routes;
-      this.serverless;
-      this.studio;
-      this.supersim;
-      this.sync;
-      this.taskrouter;
-      this.trunking;
-      this.trusthub;
-      this.verify;
-      this.video;
-      this.voice;
-      this.wireless;
     }
   }
 
@@ -221,55 +129,9 @@ class Kandy extends Client {
       (this._bulkexports = new (require("./Bulkexports"))(this))
     );
   }
-  /** Getter for (Kandy.Chat) domain */
-  get chat(): Chat {
-    return this._chat ?? (this._chat = new (require("./Chat"))(this));
-  }
   /** Getter for (Kandy.Content) domain */
   get content(): Content {
     return this._content ?? (this._content = new (require("./Content"))(this));
-  }
-  /** Getter for (Kandy.Conversations) domain */
-  get conversations(): Conversations {
-    return (
-      this._conversations ??
-      (this._conversations = new (require("./Conversations"))(this))
-    );
-  }
-  /** Getter for (Kandy.Events) domain */
-  get events(): Events {
-    return this._events ?? (this._events = new (require("./Events"))(this));
-  }
-  /** Getter for (Kandy.FlexApi) domain */
-  get flexApi(): FlexApi {
-    return this._flexApi ?? (this._flexApi = new (require("./FlexApi"))(this));
-  }
-  /** Getter for (Kandy.FrontlineApi) domain */
-  get frontlineApi(): FrontlineApi {
-    return (
-      this._frontlineApi ??
-      (this._frontlineApi = new (require("./FrontlineApi"))(this))
-    );
-  }
-  /** Getter for (Kandy.Insights) domain */
-  get insights(): Insights {
-    return (
-      this._insights ?? (this._insights = new (require("./Insights"))(this))
-    );
-  }
-  /** Getter for (Kandy.Intelligence) domain */
-  get intelligence(): Intelligence {
-    return (
-      this._intelligence ??
-      (this._intelligence = new (require("./Intelligence"))(this))
-    );
-  }
-  /** Getter for (Kandy.IpMessaging) domain */
-  get ipMessaging(): IpMessaging {
-    return (
-      this._ipMessaging ??
-      (this._ipMessaging = new (require("./IpMessaging"))(this))
-    );
   }
   /** Getter for (Kandy.Lookups) domain */
   get lookups(): Lookups {
@@ -285,24 +147,9 @@ class Kandy extends Client {
       this._messaging ?? (this._messaging = new (require("./Messaging"))(this))
     );
   }
-  /** Getter for (Kandy.Microvisor) domain */
-  get microvisor(): Microvisor {
-    return (
-      this._microvisor ??
-      (this._microvisor = new (require("./Microvisor"))(this))
-    );
-  }
   /** Getter for (Kandy.Monitor) domain */
   get monitor(): Monitor {
     return this._monitor ?? (this._monitor = new (require("./Monitor"))(this));
-  }
-  /** Getter for (Kandy.Notify) domain */
-  get notify(): Notify {
-    return this._notify ?? (this._notify = new (require("./Notify"))(this));
-  }
-  /** Getter for (Kandy.Numbers) domain */
-  get numbers(): Numbers {
-    return this._numbers ?? (this._numbers = new (require("./Numbers"))(this));
   }
   /** Getter for (Kandy.Oauth) domain */
   get oauth(): Oauth {
@@ -316,71 +163,9 @@ class Kandy extends Client {
   get pricing(): Pricing {
     return this._pricing ?? (this._pricing = new (require("./Pricing"))(this));
   }
-  /** Getter for (Kandy.Proxy) domain */
-  get proxy(): Proxy {
-    return this._proxy ?? (this._proxy = new (require("./Proxy"))(this));
-  }
   /** Getter for (Kandy.Routes) domain */
   get routes(): Routes {
     return this._routes ?? (this._routes = new (require("./Routes"))(this));
-  }
-  /** Getter for (Kandy.Serverless) domain */
-  get serverless(): Serverless {
-    return (
-      this._serverless ??
-      (this._serverless = new (require("./Serverless"))(this))
-    );
-  }
-  /** Getter for (Kandy.Studio) domain */
-  get studio(): Studio {
-    return this._studio ?? (this._studio = new (require("./Studio"))(this));
-  }
-  /** Getter for (Kandy.Supersim) domain */
-  get supersim(): Supersim {
-    return (
-      this._supersim ?? (this._supersim = new (require("./Supersim"))(this))
-    );
-  }
-  /** Getter for (Kandy.Sync) domain */
-  get sync(): Sync {
-    return this._sync ?? (this._sync = new (require("./Sync"))(this));
-  }
-  /** Getter for (Kandy.Taskrouter) domain */
-  get taskrouter(): Taskrouter {
-    return (
-      this._taskrouter ??
-      (this._taskrouter = new (require("./Taskrouter"))(this))
-    );
-  }
-  /** Getter for (Kandy.Trunking) domain */
-  get trunking(): Trunking {
-    return (
-      this._trunking ?? (this._trunking = new (require("./Trunking"))(this))
-    );
-  }
-  /** Getter for (Kandy.Trusthub) domain */
-  get trusthub(): Trusthub {
-    return (
-      this._trusthub ?? (this._trusthub = new (require("./Trusthub"))(this))
-    );
-  }
-  /** Getter for (Kandy.Verify) domain */
-  get verify(): Verify {
-    return this._verify ?? (this._verify = new (require("./Verify"))(this));
-  }
-  /** Getter for (Kandy.Video) domain */
-  get video(): Video {
-    return this._video ?? (this._video = new (require("./Video"))(this));
-  }
-  /** Getter for (Kandy.Voice) domain */
-  get voice(): Voice {
-    return this._voice ?? (this._voice = new (require("./Voice"))(this));
-  }
-  /** Getter for (Kandy.Wireless) domain */
-  get wireless(): Wireless {
-    return (
-      this._wireless ?? (this._wireless = new (require("./Wireless"))(this))
-    );
   }
 
   /** Getter for (Kandy.Api.V2010.AccountContext.AddressListInstance) addresses resource */

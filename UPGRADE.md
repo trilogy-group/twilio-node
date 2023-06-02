@@ -51,19 +51,6 @@ _All `MAJOR` version bumps will have upgrade notes posted here._
       say.emphasis("you");
       ```
 
-* [TaskRouter Workers Statistics](https://www.kandy.com/docs/taskrouter/api/worker/statistics) operations updated ([#820](https://github.com/kandy/kandy-node/pull/820))
-  * Cumulative and Real-Time Workers Statistics no longer accept a WorkerSid
-  * `GET /v1/Workspaces/{WorkspaceSid}/Workers/CumulativeStatistics`
-
-    Old: `client.taskrouter.v1.workspaces('WS...').workers('WK...).cumulativeStatistics()`
-
-    New: `client.taskrouter.v1.workspaces('WS...').workers.cumulativeStatistics()`
-  * `GET /v1/Workspaces/{WorkspaceSid}/Workers/RealTimeStatistics`
-
-    Old: `client.taskrouter.v1.workspaces('WS...').workers('WK...).realTimeStatistics()`
-
-    New: `client.taskrouter.v1.workspaces('WS...').workers.realTimeStatistics()`
-
 ## [2017-05-22] 3.1.x to 3.2.x
 
 ---
