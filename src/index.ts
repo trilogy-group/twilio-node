@@ -1,6 +1,7 @@
+import IRequestClient from "./base/RequestClient";
 import ITwilio from "./rest/Twilio";
 import * as webhooks from "./webhooks/webhooks";
-import IRequestClient from "./base/RequestClient";
+
 import type { ClientOpts as IClientOpts } from "./base/BaseTwilio";
 import IAccessToken from "./jwt/AccessToken";
 import IClientCapability from "./jwt/ClientCapability";
@@ -11,15 +12,15 @@ import IMessagingResponse from "./twiml/MessagingResponse";
 import IFaxResponse from "./twiml/FaxResponse";
 
 // Shorthand to automatically create a RestClient
-function TwilioSDK(
+function KandySDK(
   accountSid?: string,
   authToken?: string,
   opts?: IClientOpts
-): TwilioSDK.Twilio {
-  return new TwilioSDK.Twilio(accountSid, authToken, opts);
+): KandySDK.Twilio {
+  return new KandySDK.Twilio(accountSid, authToken, opts);
 }
 
-namespace TwilioSDK {
+namespace KandySDK {
   // Main functional components of the Twilio module
   export type Twilio = ITwilio;
   export const Twilio = ITwilio;
@@ -67,4 +68,4 @@ namespace TwilioSDK {
 }
 
 // Public module interface is a function, which passes through to RestClient constructor
-export = TwilioSDK;
+export = KandySDK;
