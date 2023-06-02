@@ -18,10 +18,10 @@ class VerifyBase extends Domain {
   /**
    * Initialize verify domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://verify.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://verify.kandy.com");
   }
 
   get v2(): V2 {

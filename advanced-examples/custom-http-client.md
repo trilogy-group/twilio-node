@@ -1,13 +1,13 @@
-# Custom HTTP Clients for the Twilio Node Helper Library
+# Custom HTTP Clients for the Kandy Node Helper Library
 
-If you are working with the Twilio Node.js Helper Library, and you need to modify the HTTP requests that the library makes to the Twilio servers, you’re in the right place.
+If you are working with the Kandy Node.js Helper Library, and you need to modify the HTTP requests that the library makes to the Kandy servers, you’re in the right place.
 
 The helper library uses [axios](https://www.npmjs.com/package/axios), a promise-based HTTP client, to make requests. You can also provide your own `httpClient` to customize requests as needed.
 
 The following example shows a typical request without a custom `httpClient`.
 
 ```js
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 
 client.messages
   .create({
@@ -19,21 +19,21 @@ client.messages
   .catch((error) => console.error(error));
 ```
 
-Out of the box, the helper library creates a default `RequestClient` for you, using the Twilio credentials you pass to the `init` method. If you have your own `RequestClient`, you can pass it to any Twilio REST API resource action you want. Here’s an example of sending an SMS message with a custom client called `MyRequestClient`.
+Out of the box, the helper library creates a default `RequestClient` for you, using the Kandy credentials you pass to the `init` method. If you have your own `RequestClient`, you can pass it to any Kandy REST API resource action you want. Here’s an example of sending an SMS message with a custom client called `MyRequestClient`.
 
 ```js
-// require the Twilio module and MyRequestClient
-const twilio = require('twilio');
+// require the Kandy module and MyRequestClient
+const kandy = require('kandy');
 const MyRequestClient = require('./MyRequestClient');
 
 // Load environment variables
 require('dotenv').config();
 
-// Twilio Credentials
+// Kandy Credentials
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
 
-const client = twilio(accountSid, authToken, {
+const client = kandy(accountSid, authToken, {
   // Custom HTTP Client with a one minute timeout
   httpClient: new MyRequestClient(60000),
 });
@@ -48,9 +48,9 @@ client.messages
   .catch((error) => console.error(error));
 ```
 
-## Create your custom Twilio RestClient
+## Create your custom Kandy RestClient
 
-When you take a closer look at the constructor for `twilio.restClient`, you see that the `httpClient` parameter is a `RequestClient`. This class provides the client to the Twilio helper library to make the necessary HTTP requests.
+When you take a closer look at the constructor for `kandy.restClient`, you see that the `httpClient` parameter is a `RequestClient`. This class provides the client to the Kandy helper library to make the necessary HTTP requests.
 
 Now that you can see how all the components fit together, you can create our own `RequestClient`:
 
@@ -63,7 +63,7 @@ const axios = require('axios');
 
 /**
  * Custom HTTP Client
- * Based on: /twilio/lib/base/RequestClient.js
+ * Based on: /kandy/lib/base/RequestClient.js
  */
 class MyRequestClient {
   constructor(timeout) {
@@ -143,7 +143,7 @@ To make this reusable, here’s a class that you can use to create this `MyReque
 
 In this example, we are using some environmental variables loaded at the program's startup to retrieve our credentials:
 
-- Your Twilio Account Sid and Auth Token ([found here, in the Twilio console](https://console.twilio.com))
+- Your Kandy Account Sid and Auth Token ([found here, in the Kandy console](https://console.kandy.com))
 
 These settings are located in a `.env` file like so:
 
@@ -155,18 +155,18 @@ AUTH_TOKEN= your_auth_token
 Here’s the full console program that sends a text message and shows how it all can work together. It loads the `.env` file for us. The timeout value, 60,000 milliseconds, will be used by axios to set the custom timeout.
 
 ```js
-// require the Twilio module and MyRequestClient
-const twilio = require('twilio');
+// require the Kandy module and MyRequestClient
+const kandy = require('kandy');
 const MyRequestClient = require('./MyRequestClient');
 
 // Load environment variables
 require('dotenv').config();
 
-// Twilio Credentials
+// Kandy Credentials
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
 
-const client = twilio(accountSid, authToken, {
+const client = kandy(accountSid, authToken, {
   // Custom HTTP Client with a one minute timeout
   httpClient: new MyRequestClient(60000),
 });
@@ -181,9 +181,9 @@ client.messages
   .catch((error) => console.error(error));
 ```
 
-## Call Twilio through a proxy server
+## Call Kandy through a proxy server
 
-The most common need to alter the HTTP request is to connect and authenticate with an enterprise’s proxy server. The Node.JS Helper library now supports this using the `HTTP_PROXY` environment variable. The Twilio Node.js Helper library uses the [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent) package to connect with the proxy you assign to the environment variable.
+The most common need to alter the HTTP request is to connect and authenticate with an enterprise’s proxy server. The Node.JS Helper library now supports this using the `HTTP_PROXY` environment variable. The Kandy Node.js Helper library uses the [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent) package to connect with the proxy you assign to the environment variable.
 
 ```env
 HTTP_PROXY=http://127.0.0.1:8888
@@ -193,7 +193,7 @@ If you prefer to use your custom `RequestClient` to connect with a proxy, you co
 
 ```js
 // Pass proxy settings to client constructor
-const client = twilio(accountSid, authToken, {
+const client = kandy(accountSid, authToken, {
   // Custom HTTP Client
   httpClient: new MyRequestClient(60000, {
       protocol: 'https',
@@ -219,8 +219,8 @@ class MyRequestClient {
 
 ## What else can this technique be used for?
 
-Now that you know how to inject your own `httpClient` into the Twilio API request pipeline, you can use this technique to add custom HTTP headers and authorization to the requests (perhaps as required by an upstream proxy server).
+Now that you know how to inject your own `httpClient` into the Kandy API request pipeline, you can use this technique to add custom HTTP headers and authorization to the requests (perhaps as required by an upstream proxy server).
 
-You could also implement your own `httpClient` to mock the Twilio API responses. With a custom `httpClient`, you can run your unit and integration tests quickly without the need to make a connection to Twilio. In fact, there’s already an example online showing [how to do exactly that with Node.js and Prism](https://www.twilio.com/docs/openapi/mock-api-generation-with-twilio-openapi-spec).
+You could also implement your own `httpClient` to mock the Kandy API responses. With a custom `httpClient`, you can run your unit and integration tests quickly without the need to make a connection to Kandy. In fact, there’s already an example online showing [how to do exactly that with Node.js and Prism](https://www.kandy.com/docs/openapi/mock-api-generation-with-kandy-openapi-spec).
 
 We can't wait to see what you build!

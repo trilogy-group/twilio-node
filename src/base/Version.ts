@@ -1,6 +1,6 @@
 import Domain from "./Domain";
-import Page, { TwilioResponsePayload } from "./Page";
-import { RequestOpts } from "./BaseTwilio";
+import Page, { KandyResponsePayload } from "./Page";
+import { RequestOpts } from "./BaseKandy";
 import RestException from "./RestException";
 import { trim } from "./utility";
 
@@ -28,7 +28,7 @@ export default class Version {
    *
    * Base version object
    *
-   * @param domain - twilio domain
+   * @param domain - kandy domain
    * @param version - api version
    */
   constructor(domain: Domain, version: string | Version) {

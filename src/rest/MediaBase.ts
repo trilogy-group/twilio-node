@@ -18,10 +18,10 @@ class MediaBase extends Domain {
   /**
    * Initialize media domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://media.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://media.kandy.com");
   }
 
   get v1(): V1 {

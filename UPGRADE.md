@@ -8,22 +8,22 @@ _All `MAJOR` version bumps will have upgrade notes posted here._
 
 * Supported Node.js versions updated
   * Upgrade to Node.js >= 14
-  * Dropped support for Node.js < 14 ([#791](https://github.com/twilio/twilio-node/pull/791))
-  * Added support for Node.js 18 ([#794](https://github.com/twilio/twilio-node/pull/794))
-* Lazy loading enabled by default ([#752](https://github.com/twilio/twilio-node/pull/752))
-  * Required Twilio modules now lazy load by default
+  * Dropped support for Node.js < 14 ([#791](https://github.com/kandy/kandy-node/pull/791))
+  * Added support for Node.js 18 ([#794](https://github.com/kandy/kandy-node/pull/794))
+* Lazy loading enabled by default ([#752](https://github.com/kandy/kandy-node/pull/752))
+  * Required Kandy modules now lazy load by default
   * See the [README](README.md#lazy-loading) for how to disable lazy loading
-* Type changes from `object` to `Record` ([#873](https://github.com/twilio/twilio-node/pull/873))
+* Type changes from `object` to `Record` ([#873](https://github.com/kandy/kandy-node/pull/873))
   * Certain response properties now use the `Record` type with `string` keys
   * Including the `subresourceUris` property for v2010 APIs and the `links` properties for non-v2010 APIs
 * Access Tokens
-  * Creating an [AccessToken](https://www.twilio.com/docs/iam/access-tokens) requires an `identity` in the options ([#875](https://github.com/twilio/twilio-node/pull/875))
-  * `ConversationsGrant` has been deprecated in favor of `VoiceGrant` ([#783](https://github.com/twilio/twilio-node/pull/783))
-  * `IpMessagingGrant` has been removed ([#784](https://github.com/twilio/twilio-node/pull/784))
-* TwiML function deprecations ([#788](https://github.com/twilio/twilio-node/pull/788))
-  * [`<Refer>`](https://www.twilio.com/docs/voice/twiml/refer)
+  * Creating an [AccessToken](https://www.kandy.com/docs/iam/access-tokens) requires an `identity` in the options ([#875](https://github.com/kandy/kandy-node/pull/875))
+  * `ConversationsGrant` has been deprecated in favor of `VoiceGrant` ([#783](https://github.com/kandy/kandy-node/pull/783))
+  * `IpMessagingGrant` has been removed ([#784](https://github.com/kandy/kandy-node/pull/784))
+* TwiML function deprecations ([#788](https://github.com/kandy/kandy-node/pull/788))
+  * [`<Refer>`](https://www.kandy.com/docs/voice/twiml/refer)
     * `Refer.referSip()` replaced by `Refer.sip()`
-  * [`<Say>`](https://www.twilio.com/docs/voice/twiml/say/text-speech#generating-ssml-via-helper-libraries)
+  * [`<Say>`](https://www.kandy.com/docs/voice/twiml/say/text-speech#generating-ssml-via-helper-libraries)
     * `Say.ssmlBreak()` and `Say.break_()` replaced by `Say.break()`
     * `Say.ssmlEmphasis()` replaced by `Say.emphasis()`
     * `Say.ssmlLang()` replaced by `Say.lang()`
@@ -51,7 +51,7 @@ _All `MAJOR` version bumps will have upgrade notes posted here._
       say.emphasis("you");
       ```
 
-* [TaskRouter Workers Statistics](https://www.twilio.com/docs/taskrouter/api/worker/statistics) operations updated ([#820](https://github.com/twilio/twilio-node/pull/820))
+* [TaskRouter Workers Statistics](https://www.kandy.com/docs/taskrouter/api/worker/statistics) operations updated ([#820](https://github.com/kandy/kandy-node/pull/820))
   * Cumulative and Real-Time Workers Statistics no longer accept a WorkerSid
   * `GET /v1/Workspaces/{WorkspaceSid}/Workers/CumulativeStatistics`
 

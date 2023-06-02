@@ -18,10 +18,10 @@ class OauthBase extends Domain {
   /**
    * Initialize oauth domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://oauth.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://oauth.kandy.com");
   }
 
   get v1(): V1 {

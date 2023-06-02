@@ -18,10 +18,10 @@ class TrunkingBase extends Domain {
   /**
    * Initialize trunking domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://trunking.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://trunking.kandy.com");
   }
 
   get v1(): V1 {

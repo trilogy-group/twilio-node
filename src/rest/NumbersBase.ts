@@ -20,10 +20,10 @@ class NumbersBase extends Domain {
   /**
    * Initialize numbers domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://numbers.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://numbers.kandy.com");
   }
 
   get v1(): V1 {

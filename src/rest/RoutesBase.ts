@@ -18,10 +18,10 @@ class RoutesBase extends Domain {
   /**
    * Initialize routes domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://routes.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://routes.kandy.com");
   }
 
   get v2(): V2 {

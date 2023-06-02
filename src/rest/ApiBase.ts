@@ -18,10 +18,10 @@ class ApiBase extends Domain {
   /**
    * Initialize api domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://api.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://api.kandy.com");
   }
 
   get v2010(): V2010 {

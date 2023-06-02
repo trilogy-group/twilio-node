@@ -318,9 +318,9 @@ describe("User specified CA bundle", function () {
   });
 
   it("should use CA if it is specified", function () {
-    process.env.TWILIO_CA_BUNDLE = "/path/to/ca/test-ca.pem";
+    process.env.KANDY_CA_BUNDLE = "/path/to/ca/test-ca.pem";
     let client = new RequestClient();
-    delete process.env.TWILIO_CA_BUNDLE;
+    delete process.env.KANDY_CA_BUNDLE;
 
     return expect(
       client.axios.defaults.httpsAgent.options.ca.toString()

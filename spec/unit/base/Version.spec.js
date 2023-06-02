@@ -1,7 +1,7 @@
 import Version from "../../../src/base/Version";
 import Holodeck from "../../integration/holodeck";
 import Response from "../../../src/http/response";
-import Twilio from "../../../src";
+import Kandy from "../../../src";
 
 describe("fetch method", function () {
   it("should not throw an exception on 3xx status code", function (done) {
@@ -56,7 +56,7 @@ describe("streaming results", function () {
 
   beforeEach(function () {
     holodeck = new Holodeck();
-    client = new Twilio("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
+    client = new Kandy("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
       httpClient: holodeck,
     });
   });
@@ -95,7 +95,7 @@ describe("done should only be called once in each", () => {
 
   beforeEach(function () {
     holodeck = new Holodeck();
-    client = new Twilio("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
+    client = new Kandy("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
       httpClient: holodeck,
     });
     body = {
@@ -172,7 +172,7 @@ describe("each method", function () {
 
   beforeEach(function () {
     holodeck = new Holodeck();
-    client = new Twilio("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
+    client = new Kandy("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
       httpClient: holodeck,
     });
   });

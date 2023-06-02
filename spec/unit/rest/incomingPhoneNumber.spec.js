@@ -1,6 +1,6 @@
 import Holodeck from "../../integration/holodeck";
 import Response from "../../../src/http/response";
-import Twilio from "../../../src/";
+import Kandy from "../../../src/";
 
 var client;
 var holodeck;
@@ -9,7 +9,7 @@ describe("IncomingPhoneNumber", function () {
   /* Before Hooks */
   beforeEach(function () {
     holodeck = new Holodeck();
-    client = new Twilio("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
+    client = new Kandy("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "AUTHTOKEN", {
       httpClient: holodeck,
     });
   });
@@ -94,7 +94,7 @@ describe("IncomingPhoneNumber", function () {
     client.api.v2010
       .accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
       .incomingPhoneNumbers.getPage(
-        "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/IncomingPhoneNumbers.json?FriendlyName=friendly_name&Beta=true&PhoneNumber=%2B19876543210&PageSize=1&Page=0",
+        "https://api.kandy.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/IncomingPhoneNumbers.json?FriendlyName=friendly_name&Beta=true&PhoneNumber=%2B19876543210&PageSize=1&Page=0",
         done
       );
   });

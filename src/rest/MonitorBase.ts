@@ -18,10 +18,10 @@ class MonitorBase extends Domain {
   /**
    * Initialize monitor domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://monitor.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://monitor.kandy.com");
   }
 
   get v1(): V1 {

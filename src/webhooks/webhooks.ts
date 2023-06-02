@@ -15,15 +15,15 @@ export interface Request {
 
 export interface RequestValidatorOptions {
   /**
-   * The full URL (with query string) you used to configure the webhook with Twilio - overrides host/protocol options
+   * The full URL (with query string) you used to configure the webhook with Kandy - overrides host/protocol options
    */
   url?: string;
   /**
-   * Manually specify the host name used by Twilio in a number's webhook config
+   * Manually specify the host name used by Kandy in a number's webhook config
    */
   host?: string;
   /**
-   * Manually specify the protocol used by Twilio in a number's webhook config
+   * Manually specify the protocol used by Kandy in a number's webhook config
    */
   protocol?: string;
 }
@@ -31,8 +31,8 @@ export interface RequestValidatorOptions {
 export interface WebhookOptions {
   /**
    * Whether or not the middleware should validate the request
-   * came from Twilio.  Default true. If the request does not originate from
-   * Twilio, we will return a text body and a 403.  If there is no configured
+   * came from Kandy.  Default true. If the request does not originate from
+   * Kandy, we will return a text body and a 403.  If there is no configured
    * auth token and validate=true, this is an error condition, so we will return
    * a 500.
    */
@@ -42,15 +42,15 @@ export interface WebhookOptions {
    */
   includeHelpers?: boolean;
   /**
-   * The full URL (with query string) you used to configure the webhook with Twilio - overrides host/protocol options
+   * The full URL (with query string) you used to configure the webhook with Kandy - overrides host/protocol options
    */
   url?: string;
   /**
-   * Manually specify the host name used by Twilio in a number's webhook config
+   * Manually specify the host name used by Kandy in a number's webhook config
    */
   host?: string;
   /**
-   * Manually specify the protocol used by Twilio in a number's webhook config
+   * Manually specify the protocol used by Kandy in a number's webhook config
    */
   protocol?: string;
   /**
@@ -62,7 +62,7 @@ export interface WebhookOptions {
 /**
  * Utility function to construct the URL string, since Node.js url library won't include standard port numbers
  *
- * @param parsedUrl - The parsed url object that Twilio requested on your server
+ * @param parsedUrl - The parsed url object that Kandy requested on your server
  * @returns URL with standard port number included
  */
 function buildUrlWithStandardPort(parsedUrl: Url<string>): string {
@@ -82,7 +82,7 @@ function buildUrlWithStandardPort(parsedUrl: Url<string>): string {
 /**
  Utility function to add a port number to a URL
 
- @param parsedUrl - The parsed url object that Twilio requested on your server
+ @param parsedUrl - The parsed url object that Kandy requested on your server
  @returns URL with port
  */
 function addPort(parsedUrl: Url<string>): string {
@@ -95,7 +95,7 @@ function addPort(parsedUrl: Url<string>): string {
 /**
  Utility function to remove a port number from a URL
 
- @param parsedUrl - The parsed url object that Twilio requested on your server
+ @param parsedUrl - The parsed url object that Kandy requested on your server
  @returns URL without port
  */
 function removePort(parsedUrl: Url<string>): string {
@@ -126,13 +126,13 @@ function toFormUrlEncodedParam(
 /**
  Utility function to get the expected signature for a given request
 
- @param authToken - The auth token, as seen in the Twilio portal
+ @param authToken - The auth token, as seen in the Kandy portal
  @param url - The full URL (with query string) you configured to handle
  this request
  @param params - the parameters sent with this request
  @returns signature
  */
-export function getExpectedTwilioSignature(
+export function getExpectedKandySignature(
   authToken: string,
   url: string,
   params: Record<string, any>
@@ -164,21 +164,21 @@ export function getExpectedBodyHash(body: string): string {
 }
 
 /**
- Utility function to validate an incoming request is indeed from Twilio
+ Utility function to validate an incoming request is indeed from Kandy
 
- @param authToken - The auth token, as seen in the Twilio portal
- @param twilioHeader - The value of the X-Twilio-Signature header from the request
+ @param authToken - The auth token, as seen in the Kandy portal
+ @param kandyHeader - The value of the X-Kandy-Signature header from the request
  @param url - The full URL (with query string) you configured to handle this request
  @param params - the parameters sent with this request
  @returns valid
  */
 export function validateRequest(
   authToken: string,
-  twilioHeader: string,
+  kandyHeader: string,
   url: string,
   params: Record<string, any>
 ): boolean {
-  twilioHeader = twilioHeader || "";
+  kandyHeader = kandyHeader || "";
   const urlObject = new Url(url);
   const urlWithPort = addPort(urlObject);
   const urlWithoutPort = removePort(urlObject);
@@ -187,22 +187,22 @@ export function validateRequest(
    *  Check signature of the url with and without the port number
    *  since signature generation on the back end is inconsistent
    */
-  const signatureWithPort = getExpectedTwilioSignature(
+  const signatureWithPort = getExpectedKandySignature(
     authToken,
     urlWithPort,
     params
   );
-  const signatureWithoutPort = getExpectedTwilioSignature(
+  const signatureWithoutPort = getExpectedKandySignature(
     authToken,
     urlWithoutPort,
     params
   );
   const validSignatureWithPort = scmp(
-    Buffer.from(twilioHeader),
+    Buffer.from(kandyHeader),
     Buffer.from(signatureWithPort)
   );
   const validSignatureWithoutPort = scmp(
-    Buffer.from(twilioHeader),
+    Buffer.from(kandyHeader),
     Buffer.from(signatureWithoutPort)
   );
 
@@ -218,38 +218,38 @@ export function validateBody(
 }
 
 /**
- Utility function to validate an incoming request is indeed from Twilio. This also validates
+ Utility function to validate an incoming request is indeed from Kandy. This also validates
  the request body against the bodySHA256 post parameter.
 
- @param authToken - The auth token, as seen in the Twilio portal
- @param twilioHeader - The value of the X-Twilio-Signature header from the request
+ @param authToken - The auth token, as seen in the Kandy portal
+ @param kandyHeader - The value of the X-Kandy-Signature header from the request
  @param url - The full URL (with query string) you configured to handle this request
  @param body - The body of the request
  @returns valid
  */
 export function validateRequestWithBody(
   authToken: string,
-  twilioHeader: string,
+  kandyHeader: string,
   url: string,
   body: string
 ): boolean {
   const urlObject = new Url(url, true);
   return (
-    validateRequest(authToken, twilioHeader, url, {}) &&
+    validateRequest(authToken, kandyHeader, url, {}) &&
     validateBody(body, urlObject.query.bodySHA256 || "")
   );
 }
 
 /**
- Utility function to validate an incoming request is indeed from Twilio.
- adapted from https://github.com/crabasa/twiliosig
+ Utility function to validate an incoming request is indeed from Kandy.
+ adapted from https://github.com/crabasa/kandysig
 
  @param request - A request object (based on Express implementation http://expressjs.com/api.html#req.params)
- @param authToken - The auth token, as seen in the Twilio portal
+ @param authToken - The auth token, as seen in the Kandy portal
  @param opts - options for request validation:
-    -> url: The full URL (with query string) you used to configure the webhook with Twilio - overrides host/protocol options
-    -> host: manually specify the host name used by Twilio in a number's webhook config
-    -> protocol: manually specify the protocol used by Twilio in a number's webhook config
+    -> url: The full URL (with query string) you used to configure the webhook with Kandy - overrides host/protocol options
+    -> host: manually specify the host name used by Kandy in a number's webhook config
+    -> protocol: manually specify the protocol used by Kandy in a number's webhook config
  */
 export function validateIncomingRequest(
   request: Request,
@@ -280,14 +280,14 @@ export function validateIncomingRequest(
   if (webhookUrl.indexOf("bodySHA256") > 0) {
     return validateRequestWithBody(
       authToken,
-      request.header("X-Twilio-Signature") || "",
+      request.header("X-Kandy-Signature") || "",
       webhookUrl,
       request.rawBody || "{}"
     );
   } else {
     return validateRequest(
       authToken,
-      request.header("X-Twilio-Signature") || "",
+      request.header("X-Kandy-Signature") || "",
       webhookUrl,
       request.body || {}
     );
@@ -303,31 +303,31 @@ export function validateExpressRequest(
 }
 
 /**
-Express middleware to accompany a Twilio webhook. Provides Twilio
+Express middleware to accompany a Kandy webhook. Provides Kandy
 request validation, and makes the response a little more friendly for our
 TwiML generator.  Request validation requires the express.urlencoded middleware
 to have been applied (e.g. app.use(express.urlencoded()); in your app config).
 
 Options:
 - validate: {Boolean} whether or not the middleware should validate the request
-    came from Twilio.  Default true. If the request does not originate from
-    Twilio, we will return a text body and a 403.  If there is no configured
+    came from Kandy.  Default true. If the request does not originate from
+    Kandy, we will return a text body and a 403.  If there is no configured
     auth token and validate=true, this is an error condition, so we will return
     a 500.
-- host: manually specify the host name used by Twilio in a number's webhook config
-- protocol: manually specify the protocol used by Twilio in a number's webhook config
-- url: The full URL (with query string) you used to configure the webhook with Twilio - overrides host/protocol options
+- host: manually specify the host name used by Kandy in a number's webhook config
+- protocol: manually specify the protocol used by Kandy in a number's webhook config
+- url: The full URL (with query string) you used to configure the webhook with Kandy - overrides host/protocol options
 
 Returns a middleware function.
 
 Examples:
-var webhookMiddleware = twilio.webhook();
-var webhookMiddleware = twilio.webhook('asdha9dhjasd'); //init with auth token
-var webhookMiddleware = twilio.webhook({
+var webhookMiddleware = kandy.webhook();
+var webhookMiddleware = kandy.webhook('asdha9dhjasd'); //init with auth token
+var webhookMiddleware = kandy.webhook({
     validate:false // don't attempt request validation
 });
-var webhookMiddleware = twilio.webhook({
-    host: 'hook.twilio.com',
+var webhookMiddleware = kandy.webhook({
+    host: 'hook.kandy.com',
     protocol: 'https'
 });
  */
@@ -377,25 +377,25 @@ export function webhook(
   if (options) {
     options.authToken = tokenString
       ? tokenString
-      : process.env.TWILIO_AUTH_TOKEN;
+      : process.env.KANDY_AUTH_TOKEN;
   }
   // Create middleware function
   return function hook(request, response, next) {
     // Do validation if requested
     if (options?.validate) {
-      // Check if the 'X-Twilio-Signature' header exists or not
-      if (!request.header("X-Twilio-Signature")) {
+      // Check if the 'X-Kandy-Signature' header exists or not
+      if (!request.header("X-Kandy-Signature")) {
         return response
           .type("text/plain")
           .status(400)
           .send(
-            "No signature header error - X-Twilio-Signature header does not exist, maybe this request is not coming from Twilio."
+            "No signature header error - X-Kandy-Signature header does not exist, maybe this request is not coming from Kandy."
           );
       }
       // Check for a valid auth token
       if (!options?.authToken) {
         console.error(
-          "[Twilio]: Error - Twilio auth token is required for webhook request validation."
+          "[Kandy]: Error - Kandy auth token is required for webhook request validation."
         );
         response
           .type("text/plain")
@@ -404,7 +404,7 @@ export function webhook(
             "Webhook Error - we attempted to validate this request without first configuring our auth token."
           );
       } else {
-        // Check that the request originated from Twilio
+        // Check that the request originated from Kandy
         var valid = validateExpressRequest(request, options?.authToken, {
           url: options?.url,
           host: options?.host,
@@ -417,7 +417,7 @@ export function webhook(
           return response
             .type("text/plain")
             .status(403)
-            .send("Twilio Request Validation Failed.");
+            .send("Kandy Request Validation Failed.");
         }
       }
     } else {

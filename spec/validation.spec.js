@@ -282,14 +282,14 @@ describe("Request validation middleware", () => {
     protocol: fullUrl.protocol,
     host: fullUrl.host,
     headers: {
-      "X-Twilio-Signature": defaultSignature,
+      "X-Kandy-Signature": defaultSignature,
       host: fullUrl.host,
     },
     url: fullUrl.pathname + fullUrl.search,
     originalUrl: fullUrl.pathname + fullUrl.search,
     body: defaultParams,
   };
-  const defaultRequestWithoutTwilioSignature = {
+  const defaultRequestWithoutKandySignature = {
     method: "POST",
     protocol: fullUrl.protocol,
     host: fullUrl.host,
@@ -407,7 +407,7 @@ describe("Request validation middleware", () => {
         ),
         body,
         headers: Object.assign({}, defaultRequest.headers, {
-          "X-Twilio-Signature": requestUrlWithHashSignature,
+          "X-Kandy-Signature": requestUrlWithHashSignature,
         }),
       })
     );
@@ -432,7 +432,7 @@ describe("Request validation middleware", () => {
           .slice(0, -1),
         body,
         headers: Object.assign({}, defaultRequest.headers, {
-          "X-Twilio-Signature": requestUrlWithHashSignature,
+          "X-Kandy-Signature": requestUrlWithHashSignature,
         }),
       })
     );
@@ -444,11 +444,11 @@ describe("Request validation middleware", () => {
     expect(response.statusCode).toEqual(403);
   });
 
-  it("should fail if no twilio signature is provided in the request headers", () => {
+  it("should fail if no kandy signature is provided in the request headers", () => {
     const newUrl =
       fullUrl.pathname + fullUrl.search + "&somethingUnexpected=true";
     const request = httpMocks.createRequest(
-      Object.assign({}, defaultRequestWithoutTwilioSignature, {
+      Object.assign({}, defaultRequestWithoutKandySignature, {
         originalUrl: newUrl,
       })
     );

@@ -1,14 +1,14 @@
 jest.setTimeout(15000);
 
-import twilio from "twilio";
+import kandy from "kandy";
 
-const fromNumber = process.env.TWILIO_FROM_NUMBER;
-const toNumber = process.env.TWILIO_TO_NUMBER;
-const apiKey = process.env.TWILIO_API_KEY;
-const apiSecret = process.env.TWILIO_API_SECRET;
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const testClient = twilio(apiKey, apiSecret, { accountSid });
-const twiml = new twilio.twiml.VoiceResponse();
+const fromNumber = process.env.KANDY_FROM_NUMBER;
+const toNumber = process.env.KANDY_TO_NUMBER;
+const apiKey = process.env.KANDY_API_KEY;
+const apiSecret = process.env.KANDY_API_SECRET;
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const testClient = kandy(apiKey, apiSecret, { accountSid });
+const twiml = new kandy.twiml.VoiceResponse();
 
 test("Should send a text", () => {
   return testClient.messages

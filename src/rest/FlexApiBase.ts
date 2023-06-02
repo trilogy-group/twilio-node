@@ -20,10 +20,10 @@ class FlexApiBase extends Domain {
   /**
    * Initialize flexApi domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://flex-api.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://flex-api.kandy.com");
   }
 
   get v1(): V1 {

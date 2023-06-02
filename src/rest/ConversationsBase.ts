@@ -18,10 +18,10 @@ class ConversationsBase extends Domain {
   /**
    * Initialize conversations domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://conversations.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://conversations.kandy.com");
   }
 
   get v1(): V1 {

@@ -18,10 +18,10 @@ class SyncBase extends Domain {
   /**
    * Initialize sync domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://sync.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://sync.kandy.com");
   }
 
   get v1(): V1 {

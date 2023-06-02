@@ -20,10 +20,10 @@ class StudioBase extends Domain {
   /**
    * Initialize studio domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://studio.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://studio.kandy.com");
   }
 
   get v1(): V1 {

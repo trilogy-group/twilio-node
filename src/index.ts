@@ -1,8 +1,8 @@
 import IRequestClient from "./base/RequestClient";
-import ITwilio from "./rest/Twilio";
+import IKandy from "./rest/Kandy";
 import * as webhooks from "./webhooks/webhooks";
 
-import type { ClientOpts as IClientOpts } from "./base/BaseTwilio";
+import type { ClientOpts as IClientOpts } from "./base/BaseKandy";
 import IAccessToken from "./jwt/AccessToken";
 import IClientCapability from "./jwt/ClientCapability";
 import ITaskRouterCapability from "./jwt/taskrouter/TaskRouterCapability";
@@ -16,14 +16,14 @@ function KandySDK(
   accountSid?: string,
   authToken?: string,
   opts?: IClientOpts
-): KandySDK.Twilio {
-  return new KandySDK.Twilio(accountSid, authToken, opts);
+): KandySDK.Kandy {
+  return new KandySDK.Kandy(accountSid, authToken, opts);
 }
 
 namespace KandySDK {
-  // Main functional components of the Twilio module
-  export type Twilio = ITwilio;
-  export const Twilio = ITwilio;
+  // Main functional components of the Kandy module
+  export type Kandy = IKandy;
+  export const Kandy = IKandy;
   export namespace jwt {
     export type AccessToken = IAccessToken;
     export const AccessToken = IAccessToken;
@@ -58,9 +58,9 @@ namespace KandySDK {
   export const validateIncomingRequest = webhooks.validateIncomingRequest;
   export type getExpectedBodyHash = typeof webhooks.getExpectedBodyHash;
   export const getExpectedBodyHash = webhooks.getExpectedBodyHash;
-  export type getExpectedTwilioSignature =
-    typeof webhooks.getExpectedTwilioSignature;
-  export const getExpectedTwilioSignature = webhooks.getExpectedTwilioSignature;
+  export type getExpectedKandySignature =
+    typeof webhooks.getExpectedKandySignature;
+  export const getExpectedKandySignature = webhooks.getExpectedKandySignature;
   export type webhook = typeof webhooks.webhook;
   export const webhook = webhooks.webhook;
   // Export the client options type for convenience

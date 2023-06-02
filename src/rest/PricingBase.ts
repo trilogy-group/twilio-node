@@ -20,10 +20,10 @@ class PricingBase extends Domain {
   /**
    * Initialize pricing domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://pricing.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://pricing.kandy.com");
   }
 
   get v1(): V1 {

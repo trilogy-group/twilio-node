@@ -1,6 +1,6 @@
-# Contributing to `twilio-node`
+# Contributing to `kandy-node`
 
-We'd love for you to contribute to our source code and to make `twilio-node`
+We'd love for you to contribute to our source code and to make `kandy-node`
 even better than it is today! Here are the guidelines we'd like you to follow:
 
  - [Code of Conduct](#coc)
@@ -14,15 +14,15 @@ even better than it is today! Here are the guidelines we'd like you to follow:
 
 ## <a name="coc"></a> Code of Conduct
 
-Help us keep `twilio-node` open and inclusive. Please be kind to and considerate
-of other developers, as we all have the same goal: make `twilio-node` as good as
+Help us keep `kandy-node` open and inclusive. Please be kind to and considerate
+of other developers, as we all have the same goal: make `kandy-node` as good as
 it can be.
 
 ## <a name="question"></a> Got an API/Product Question or Problem?
 
-If you have questions about how to use `twilio-node`, please see our
+If you have questions about how to use `kandy-node`, please see our
 [docs](./README.md), and if you don't find the answer there, please contact
-[help@twilio.com](mailto:help@twilio.com) with any issues you have.
+[help@kandy.com](mailto:help@kandy.com) with any issues you have.
 
 ## <a name="issue"></a> Found an Issue?
 
@@ -51,7 +51,7 @@ You can request a new feature by submitting an issue to our
 consider what kind of change it is:
 
 * **Major Changes** that you wish to contribute to the project should be
-  discussed first with `twilio-node` contributors in an issue or pull request so
+  discussed first with `kandy-node` contributors in an issue or pull request so
   that we can develop a proper solution and better coordinate our efforts,
   prevent duplication of work, and help you to craft the change so that it is
   successfully accepted into the project.
@@ -82,7 +82,7 @@ will increase the chances of your issue being dealt with quickly:
 * **Overview of the Issue** - if an error is being thrown a non-minified stack
   trace helps
 * **Motivation for or Use Case** - explain why this is a bug for you
-* **`twilio-node` Version(s)** - is it a regression?
+* **`kandy-node` Version(s)** - is it a regression?
 * **Operating System (if relevant)** - is this a problem with all systems or
   only specific ones?
 * **Reproduce the Error** - provide an isolated code snippet or an unambiguous
@@ -106,7 +106,7 @@ Before you submit your pull request consider the following guidelines:
 
 * Create your patch, **including appropriate test cases**.
 * Follow our [Coding Rules](#rules).
-* Run the full `twilio-node` test suite (aliased by `make test`), and ensure
+* Run the full `kandy-node` test suite (aliased by `make test`), and ensure
   that all tests pass.
 * Commit your changes using a descriptive commit message.
 
@@ -128,11 +128,11 @@ Before you submit your pull request consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-In GitHub, send a pull request to `twilio-node:main`.
+In GitHub, send a pull request to `kandy-node:main`.
 If we suggest changes, then:
 
 * Make the required updates.
-* Re-run the `twilio-node` test suite to ensure tests are still passing.
+* Re-run the `kandy-node` test suite to ensure tests are still passing.
 * Commit your changes to your branch (e.g. `my-fix-branch`).
 * Push the changes to your GitHub repository (this will update your Pull Request).
 
@@ -152,5 +152,5 @@ you are working:
 * All classes and methods **must be documented**.
 
 
-[issue-link]: https://github.com/twilio/twilio-node/issues/new
-[github]: https://github.com/twilio/twilio-node
+[issue-link]: https://github.com/kandy/kandy-node/issues/new
+[github]: https://github.com/kandy/kandy-node

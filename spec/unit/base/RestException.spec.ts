@@ -4,7 +4,7 @@ describe("exception gets created from string", function () {
   it("should test serialize without details", function () {
     const response = {
       statusCode: 200,
-      body: '{"message":"test", "code":81022,"more_info": "https://www.twilio.com/docs/errors/81022"}',
+      body: '{"message":"test", "code":81022,"more_info": "https://www.kandy.com/docs/errors/81022"}',
     };
 
     const exception = new RestException(response);
@@ -12,13 +12,13 @@ describe("exception gets created from string", function () {
     expect(exception.message).toEqual("test");
     expect(exception.code).toEqual(81022);
     expect(exception.moreInfo).toEqual(
-      "https://www.twilio.com/docs/errors/81022"
+      "https://www.kandy.com/docs/errors/81022"
     );
   });
   it("should test serialize from improper json string", function () {
     const response = {
       statusCode: 200,
-      body: '{message":test", "code:81022,"more_info": "https://www.twilio.com/docs/errors/81022"}',
+      body: '{message":test", "code:81022,"more_info": "https://www.kandy.com/docs/errors/81022"}',
     };
     const exception = new RestException(response);
     expect(exception.status).toEqual(200);
@@ -37,7 +37,7 @@ describe("exception gets created from json error", function () {
       body: {
         message: "test",
         code: 81022,
-        more_info: "https://www.twilio.com/docs/errors/81022",
+        more_info: "https://www.kandy.com/docs/errors/81022",
       },
     };
 
@@ -46,7 +46,7 @@ describe("exception gets created from json error", function () {
     expect(exception.message).toEqual("test");
     expect(exception.code).toEqual(81022);
     expect(exception.moreInfo).toEqual(
-      "https://www.twilio.com/docs/errors/81022"
+      "https://www.kandy.com/docs/errors/81022"
     );
     expect(exception.details).toEqual(undefined);
   });
@@ -61,7 +61,7 @@ describe("exception gets created from json error", function () {
       body: {
         message: "test",
         code: 81022,
-        more_info: "https://www.twilio.com/docs/errors/81022",
+        more_info: "https://www.kandy.com/docs/errors/81022",
         details: details,
       },
     };

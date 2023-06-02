@@ -9,7 +9,7 @@
  * Do not edit the class manually.
  */
 
-import { Client, ClientOpts, RequestOpts } from "../base/BaseTwilio";
+import { Client, ClientOpts, RequestOpts } from "../base/BaseKandy";
 import Accounts from "./Accounts";
 import Api from "./Api";
 import Autopilot from "./Autopilot";
@@ -73,87 +73,87 @@ import { ValidationRequestListInstance } from "./api/v2010/account/validationReq
 
 /* jshint ignore:start */
 /**
- * Twilio Client to interact with the Rest API
+ * Kandy Client to interact with the Rest API
  */
 /* jshint ignore:end */
 
-class Twilio extends Client {
-  /** (Twilio.Accounts) - accounts domain */
+class Kandy extends Client {
+  /** (Kandy.Accounts) - accounts domain */
   _accounts?: Accounts;
-  /** (Twilio.Api) - api domain */
+  /** (Kandy.Api) - api domain */
   _api?: Api;
-  /** (Twilio.Autopilot) - autopilot domain */
+  /** (Kandy.Autopilot) - autopilot domain */
   _autopilot?: Autopilot;
-  /** (Twilio.Bulkexports) - bulkexports domain */
+  /** (Kandy.Bulkexports) - bulkexports domain */
   _bulkexports?: Bulkexports;
-  /** (Twilio.Chat) - chat domain */
+  /** (Kandy.Chat) - chat domain */
   _chat?: Chat;
-  /** (Twilio.Content) - content domain */
+  /** (Kandy.Content) - content domain */
   _content?: Content;
-  /** (Twilio.Conversations) - conversations domain */
+  /** (Kandy.Conversations) - conversations domain */
   _conversations?: Conversations;
-  /** (Twilio.Events) - events domain */
+  /** (Kandy.Events) - events domain */
   _events?: Events;
-  /** (Twilio.FlexApi) - flexApi domain */
+  /** (Kandy.FlexApi) - flexApi domain */
   _flexApi?: FlexApi;
-  /** (Twilio.FrontlineApi) - frontlineApi domain */
+  /** (Kandy.FrontlineApi) - frontlineApi domain */
   _frontlineApi?: FrontlineApi;
-  /** (Twilio.Insights) - insights domain */
+  /** (Kandy.Insights) - insights domain */
   _insights?: Insights;
-  /** (Twilio.Intelligence) - intelligence domain */
+  /** (Kandy.Intelligence) - intelligence domain */
   _intelligence?: Intelligence;
-  /** (Twilio.IpMessaging) - ipMessaging domain */
+  /** (Kandy.IpMessaging) - ipMessaging domain */
   _ipMessaging?: IpMessaging;
-  /** (Twilio.Lookups) - lookups domain */
+  /** (Kandy.Lookups) - lookups domain */
   _lookups?: Lookups;
-  /** (Twilio.Media) - media domain */
+  /** (Kandy.Media) - media domain */
   _media?: Media;
-  /** (Twilio.Messaging) - messaging domain */
+  /** (Kandy.Messaging) - messaging domain */
   _messaging?: Messaging;
-  /** (Twilio.Microvisor) - microvisor domain */
+  /** (Kandy.Microvisor) - microvisor domain */
   _microvisor?: Microvisor;
-  /** (Twilio.Monitor) - monitor domain */
+  /** (Kandy.Monitor) - monitor domain */
   _monitor?: Monitor;
-  /** (Twilio.Notify) - notify domain */
+  /** (Kandy.Notify) - notify domain */
   _notify?: Notify;
-  /** (Twilio.Numbers) - numbers domain */
+  /** (Kandy.Numbers) - numbers domain */
   _numbers?: Numbers;
-  /** (Twilio.Oauth) - oauth domain */
+  /** (Kandy.Oauth) - oauth domain */
   _oauth?: Oauth;
-  /** (Twilio.Preview) - preview domain */
+  /** (Kandy.Preview) - preview domain */
   _preview?: Preview;
-  /** (Twilio.Pricing) - pricing domain */
+  /** (Kandy.Pricing) - pricing domain */
   _pricing?: Pricing;
-  /** (Twilio.Proxy) - proxy domain */
+  /** (Kandy.Proxy) - proxy domain */
   _proxy?: Proxy;
-  /** (Twilio.Routes) - routes domain */
+  /** (Kandy.Routes) - routes domain */
   _routes?: Routes;
-  /** (Twilio.Serverless) - serverless domain */
+  /** (Kandy.Serverless) - serverless domain */
   _serverless?: Serverless;
-  /** (Twilio.Studio) - studio domain */
+  /** (Kandy.Studio) - studio domain */
   _studio?: Studio;
-  /** (Twilio.Supersim) - supersim domain */
+  /** (Kandy.Supersim) - supersim domain */
   _supersim?: Supersim;
-  /** (Twilio.Sync) - sync domain */
+  /** (Kandy.Sync) - sync domain */
   _sync?: Sync;
-  /** (Twilio.Taskrouter) - taskrouter domain */
+  /** (Kandy.Taskrouter) - taskrouter domain */
   _taskrouter?: Taskrouter;
-  /** (Twilio.Trunking) - trunking domain */
+  /** (Kandy.Trunking) - trunking domain */
   _trunking?: Trunking;
-  /** (Twilio.Trusthub) - trusthub domain */
+  /** (Kandy.Trusthub) - trusthub domain */
   _trusthub?: Trusthub;
-  /** (Twilio.Verify) - verify domain */
+  /** (Kandy.Verify) - verify domain */
   _verify?: Verify;
-  /** (Twilio.Video) - video domain */
+  /** (Kandy.Video) - video domain */
   _video?: Video;
-  /** (Twilio.Voice) - voice domain */
+  /** (Kandy.Voice) - voice domain */
   _voice?: Voice;
-  /** (Twilio.Wireless) - wireless domain */
+  /** (Kandy.Wireless) - wireless domain */
   _wireless?: Wireless;
 
   /* jshint ignore:start */
   /**
-   * Creates a new instance of Twilio Client
+   * Creates a new instance of Kandy Client
    *
    * @param username -
    *          The username used for authentication. This is normally account sid, but if using key/secret auth will be the api key sid.
@@ -161,7 +161,7 @@ class Twilio extends Client {
    *          The password used for authentication. This is normally auth token, but if using key/secret auth will be the secret.
    * @param opts - The options argument
    *
-   * @returns A new instance of Twilio client
+   * @returns A new instance of Kandy client
    */
   /* jshint ignore:end */
   constructor(username?: string, password?: string, opts?: ClientOpts) {
@@ -208,292 +208,292 @@ class Twilio extends Client {
   }
 
   //Domains
-  /** Getter for (Twilio.Accounts) domain */
+  /** Getter for (Kandy.Accounts) domain */
   get accounts(): Accounts {
     return (
       this._accounts ?? (this._accounts = new (require("./Accounts"))(this))
     );
   }
-  /** Getter for (Twilio.Api) domain */
+  /** Getter for (Kandy.Api) domain */
   get api(): Api {
     return this._api ?? (this._api = new (require("./Api"))(this));
   }
-  /** Getter for (Twilio.Autopilot) domain */
+  /** Getter for (Kandy.Autopilot) domain */
   get autopilot(): Autopilot {
     return (
       this._autopilot ?? (this._autopilot = new (require("./Autopilot"))(this))
     );
   }
-  /** Getter for (Twilio.Bulkexports) domain */
+  /** Getter for (Kandy.Bulkexports) domain */
   get bulkexports(): Bulkexports {
     return (
       this._bulkexports ??
       (this._bulkexports = new (require("./Bulkexports"))(this))
     );
   }
-  /** Getter for (Twilio.Chat) domain */
+  /** Getter for (Kandy.Chat) domain */
   get chat(): Chat {
     return this._chat ?? (this._chat = new (require("./Chat"))(this));
   }
-  /** Getter for (Twilio.Content) domain */
+  /** Getter for (Kandy.Content) domain */
   get content(): Content {
     return this._content ?? (this._content = new (require("./Content"))(this));
   }
-  /** Getter for (Twilio.Conversations) domain */
+  /** Getter for (Kandy.Conversations) domain */
   get conversations(): Conversations {
     return (
       this._conversations ??
       (this._conversations = new (require("./Conversations"))(this))
     );
   }
-  /** Getter for (Twilio.Events) domain */
+  /** Getter for (Kandy.Events) domain */
   get events(): Events {
     return this._events ?? (this._events = new (require("./Events"))(this));
   }
-  /** Getter for (Twilio.FlexApi) domain */
+  /** Getter for (Kandy.FlexApi) domain */
   get flexApi(): FlexApi {
     return this._flexApi ?? (this._flexApi = new (require("./FlexApi"))(this));
   }
-  /** Getter for (Twilio.FrontlineApi) domain */
+  /** Getter for (Kandy.FrontlineApi) domain */
   get frontlineApi(): FrontlineApi {
     return (
       this._frontlineApi ??
       (this._frontlineApi = new (require("./FrontlineApi"))(this))
     );
   }
-  /** Getter for (Twilio.Insights) domain */
+  /** Getter for (Kandy.Insights) domain */
   get insights(): Insights {
     return (
       this._insights ?? (this._insights = new (require("./Insights"))(this))
     );
   }
-  /** Getter for (Twilio.Intelligence) domain */
+  /** Getter for (Kandy.Intelligence) domain */
   get intelligence(): Intelligence {
     return (
       this._intelligence ??
       (this._intelligence = new (require("./Intelligence"))(this))
     );
   }
-  /** Getter for (Twilio.IpMessaging) domain */
+  /** Getter for (Kandy.IpMessaging) domain */
   get ipMessaging(): IpMessaging {
     return (
       this._ipMessaging ??
       (this._ipMessaging = new (require("./IpMessaging"))(this))
     );
   }
-  /** Getter for (Twilio.Lookups) domain */
+  /** Getter for (Kandy.Lookups) domain */
   get lookups(): Lookups {
     return this._lookups ?? (this._lookups = new (require("./Lookups"))(this));
   }
-  /** Getter for (Twilio.Media) domain */
+  /** Getter for (Kandy.Media) domain */
   get media(): Media {
     return this._media ?? (this._media = new (require("./Media"))(this));
   }
-  /** Getter for (Twilio.Messaging) domain */
+  /** Getter for (Kandy.Messaging) domain */
   get messaging(): Messaging {
     return (
       this._messaging ?? (this._messaging = new (require("./Messaging"))(this))
     );
   }
-  /** Getter for (Twilio.Microvisor) domain */
+  /** Getter for (Kandy.Microvisor) domain */
   get microvisor(): Microvisor {
     return (
       this._microvisor ??
       (this._microvisor = new (require("./Microvisor"))(this))
     );
   }
-  /** Getter for (Twilio.Monitor) domain */
+  /** Getter for (Kandy.Monitor) domain */
   get monitor(): Monitor {
     return this._monitor ?? (this._monitor = new (require("./Monitor"))(this));
   }
-  /** Getter for (Twilio.Notify) domain */
+  /** Getter for (Kandy.Notify) domain */
   get notify(): Notify {
     return this._notify ?? (this._notify = new (require("./Notify"))(this));
   }
-  /** Getter for (Twilio.Numbers) domain */
+  /** Getter for (Kandy.Numbers) domain */
   get numbers(): Numbers {
     return this._numbers ?? (this._numbers = new (require("./Numbers"))(this));
   }
-  /** Getter for (Twilio.Oauth) domain */
+  /** Getter for (Kandy.Oauth) domain */
   get oauth(): Oauth {
     return this._oauth ?? (this._oauth = new (require("./Oauth"))(this));
   }
-  /** Getter for (Twilio.Preview) domain */
+  /** Getter for (Kandy.Preview) domain */
   get preview(): Preview {
     return this._preview ?? (this._preview = new (require("./Preview"))(this));
   }
-  /** Getter for (Twilio.Pricing) domain */
+  /** Getter for (Kandy.Pricing) domain */
   get pricing(): Pricing {
     return this._pricing ?? (this._pricing = new (require("./Pricing"))(this));
   }
-  /** Getter for (Twilio.Proxy) domain */
+  /** Getter for (Kandy.Proxy) domain */
   get proxy(): Proxy {
     return this._proxy ?? (this._proxy = new (require("./Proxy"))(this));
   }
-  /** Getter for (Twilio.Routes) domain */
+  /** Getter for (Kandy.Routes) domain */
   get routes(): Routes {
     return this._routes ?? (this._routes = new (require("./Routes"))(this));
   }
-  /** Getter for (Twilio.Serverless) domain */
+  /** Getter for (Kandy.Serverless) domain */
   get serverless(): Serverless {
     return (
       this._serverless ??
       (this._serverless = new (require("./Serverless"))(this))
     );
   }
-  /** Getter for (Twilio.Studio) domain */
+  /** Getter for (Kandy.Studio) domain */
   get studio(): Studio {
     return this._studio ?? (this._studio = new (require("./Studio"))(this));
   }
-  /** Getter for (Twilio.Supersim) domain */
+  /** Getter for (Kandy.Supersim) domain */
   get supersim(): Supersim {
     return (
       this._supersim ?? (this._supersim = new (require("./Supersim"))(this))
     );
   }
-  /** Getter for (Twilio.Sync) domain */
+  /** Getter for (Kandy.Sync) domain */
   get sync(): Sync {
     return this._sync ?? (this._sync = new (require("./Sync"))(this));
   }
-  /** Getter for (Twilio.Taskrouter) domain */
+  /** Getter for (Kandy.Taskrouter) domain */
   get taskrouter(): Taskrouter {
     return (
       this._taskrouter ??
       (this._taskrouter = new (require("./Taskrouter"))(this))
     );
   }
-  /** Getter for (Twilio.Trunking) domain */
+  /** Getter for (Kandy.Trunking) domain */
   get trunking(): Trunking {
     return (
       this._trunking ?? (this._trunking = new (require("./Trunking"))(this))
     );
   }
-  /** Getter for (Twilio.Trusthub) domain */
+  /** Getter for (Kandy.Trusthub) domain */
   get trusthub(): Trusthub {
     return (
       this._trusthub ?? (this._trusthub = new (require("./Trusthub"))(this))
     );
   }
-  /** Getter for (Twilio.Verify) domain */
+  /** Getter for (Kandy.Verify) domain */
   get verify(): Verify {
     return this._verify ?? (this._verify = new (require("./Verify"))(this));
   }
-  /** Getter for (Twilio.Video) domain */
+  /** Getter for (Kandy.Video) domain */
   get video(): Video {
     return this._video ?? (this._video = new (require("./Video"))(this));
   }
-  /** Getter for (Twilio.Voice) domain */
+  /** Getter for (Kandy.Voice) domain */
   get voice(): Voice {
     return this._voice ?? (this._voice = new (require("./Voice"))(this));
   }
-  /** Getter for (Twilio.Wireless) domain */
+  /** Getter for (Kandy.Wireless) domain */
   get wireless(): Wireless {
     return (
       this._wireless ?? (this._wireless = new (require("./Wireless"))(this))
     );
   }
 
-  /** Getter for (Twilio.Api.V2010.AccountContext.AddressListInstance) addresses resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.AddressListInstance) addresses resource */
   get addresses(): AddressListInstance {
     return this.api.v2010.account.addresses;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.ApplicationListInstance) applications resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.ApplicationListInstance) applications resource */
   get applications(): ApplicationListInstance {
     return this.api.v2010.account.applications;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.AuthorizedConnectAppListInstance) authorizedConnectApps resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.AuthorizedConnectAppListInstance) authorizedConnectApps resource */
   get authorizedConnectApps(): AuthorizedConnectAppListInstance {
     return this.api.v2010.account.authorizedConnectApps;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.AvailablePhoneNumberCountryListInstance) availablePhoneNumbers resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.AvailablePhoneNumberCountryListInstance) availablePhoneNumbers resource */
   get availablePhoneNumbers(): AvailablePhoneNumberCountryListInstance {
     return this.api.v2010.account.availablePhoneNumbers;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.BalanceListInstance) balance resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.BalanceListInstance) balance resource */
   get balance(): BalanceListInstance {
     return this.api.v2010.account.balance;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.CallListInstance) calls resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.CallListInstance) calls resource */
   get calls(): CallListInstance {
     return this.api.v2010.account.calls;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.ConferenceListInstance) conferences resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.ConferenceListInstance) conferences resource */
   get conferences(): ConferenceListInstance {
     return this.api.v2010.account.conferences;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.ConnectAppListInstance) connectApps resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.ConnectAppListInstance) connectApps resource */
   get connectApps(): ConnectAppListInstance {
     return this.api.v2010.account.connectApps;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.IncomingPhoneNumberListInstance) incomingPhoneNumbers resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.IncomingPhoneNumberListInstance) incomingPhoneNumbers resource */
   get incomingPhoneNumbers(): IncomingPhoneNumberListInstance {
     return this.api.v2010.account.incomingPhoneNumbers;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.KeyListInstance) keys resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.KeyListInstance) keys resource */
   get keys(): KeyListInstance {
     return this.api.v2010.account.keys;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.MessageListInstance) messages resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.MessageListInstance) messages resource */
   get messages(): MessageListInstance {
     return this.api.v2010.account.messages;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.NewKeyListInstance) newKeys resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.NewKeyListInstance) newKeys resource */
   get newKeys(): NewKeyListInstance {
     return this.api.v2010.account.newKeys;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.NewSigningKeyListInstance) newSigningKeys resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.NewSigningKeyListInstance) newSigningKeys resource */
   get newSigningKeys(): NewSigningKeyListInstance {
     return this.api.v2010.account.newSigningKeys;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.NotificationListInstance) notifications resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.NotificationListInstance) notifications resource */
   get notifications(): NotificationListInstance {
     return this.api.v2010.account.notifications;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.OutgoingCallerIdListInstance) outgoingCallerIds resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.OutgoingCallerIdListInstance) outgoingCallerIds resource */
   get outgoingCallerIds(): OutgoingCallerIdListInstance {
     return this.api.v2010.account.outgoingCallerIds;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.QueueListInstance) queues resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.QueueListInstance) queues resource */
   get queues(): QueueListInstance {
     return this.api.v2010.account.queues;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.RecordingListInstance) recordings resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.RecordingListInstance) recordings resource */
   get recordings(): RecordingListInstance {
     return this.api.v2010.account.recordings;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.ShortCodeListInstance) shortCodes resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.ShortCodeListInstance) shortCodes resource */
   get shortCodes(): ShortCodeListInstance {
     return this.api.v2010.account.shortCodes;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.SigningKeyListInstance) signingKeys resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.SigningKeyListInstance) signingKeys resource */
   get signingKeys(): SigningKeyListInstance {
     return this.api.v2010.account.signingKeys;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.SipListInstance) sip resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.SipListInstance) sip resource */
   get sip(): SipListInstance {
     return this.api.v2010.account.sip;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.TokenListInstance) tokens resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.TokenListInstance) tokens resource */
   get tokens(): TokenListInstance {
     return this.api.v2010.account.tokens;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.TranscriptionListInstance) transcriptions resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.TranscriptionListInstance) transcriptions resource */
   get transcriptions(): TranscriptionListInstance {
     return this.api.v2010.account.transcriptions;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.UsageListInstance) usage resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.UsageListInstance) usage resource */
   get usage(): UsageListInstance {
     return this.api.v2010.account.usage;
   }
-  /** Getter for (Twilio.Api.V2010.AccountContext.ValidationRequestListInstance) validationRequests resource */
+  /** Getter for (Kandy.Api.V2010.AccountContext.ValidationRequestListInstance) validationRequests resource */
   get validationRequests(): ValidationRequestListInstance {
     return this.api.v2010.account.validationRequests;
   }
 }
 
-namespace Twilio {
+namespace Kandy {
   export interface RequestClientOptions extends ClientOpts {}
   export interface RequestOptions extends RequestOpts {}
 }
 
-export = Twilio;
+export = Kandy;

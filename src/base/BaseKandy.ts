@@ -8,7 +8,7 @@ const moduleInfo = require("../../package.json"); /* jshint ignore:line */
 const util = require("util"); /* jshint ignore:line */
 const RestException = require("../base/RestException"); /* jshint ignore:line */
 
-namespace Twilio {
+namespace Kandy {
   export interface ClientOpts {
     httpClient?: RequestClient;
     accountSid?: string;
@@ -37,7 +37,7 @@ namespace Twilio {
 
   /* jshint ignore:start */
   /**
-   * Parent class for Twilio Client that implements request & validation logic
+   * Parent class for Kandy Client that implements request & validation logic
    */
 
   /* jshint ignore:end */
@@ -58,7 +58,7 @@ namespace Twilio {
 
     /* jshint ignore:start */
     /**
-     * Create a BaseTwilio instance
+     * Create a BaseKandy instance
      *
      * @param username -
      *          The username used for authentication. This is normally account sid, but if using key/secret auth will be
@@ -68,7 +68,7 @@ namespace Twilio {
      *          the secret.
      * @param opts - The options argument
      *
-     * @returns A new instance of BaseTwilio
+     * @returns A new instance of BaseKandy
      */
 
     /* jshint ignore:end */
@@ -78,20 +78,20 @@ namespace Twilio {
       this.env = this.opts.env || process.env;
       this.username =
         username ||
-        this.env.TWILIO_ACCOUNT_SID ||
+        this.env.KANDY_ACCOUNT_SID ||
         (() => {
           throw new Error("username is required");
         })();
       this.password =
         password ||
-        this.env.TWILIO_AUTH_TOKEN ||
+        this.env.KANDY_AUTH_TOKEN ||
         (() => {
           throw new Error("password is required");
         })();
       this.accountSid = this.opts.accountSid || this.username;
-      this.edge = this.opts.edge || this.env.TWILIO_EDGE;
-      this.region = this.opts.region || this.env.TWILIO_REGION;
-      this.logLevel = this.opts.logLevel || this.env.TWILIO_LOG_LEVEL;
+      this.edge = this.opts.edge || this.env.KANDY_EDGE;
+      this.region = this.opts.region || this.env.KANDY_REGION;
+      this.logLevel = this.opts.logLevel || this.env.KANDY_LOG_LEVEL;
       this.autoRetry = this.opts.autoRetry || false;
       this.maxRetries = this.opts.maxRetries;
       this.userAgentExtensions = this.opts.userAgentExtensions || [];
@@ -122,7 +122,7 @@ namespace Twilio {
 
     /* jshint ignore:start */
     /**
-     * Makes a request to the Twilio API using the configured http client.
+     * Makes a request to the Kandy API using the configured http client.
      * Authentication information is automatically added if none is provided.
      *
      * @param opts - The options argument
@@ -152,7 +152,7 @@ namespace Twilio {
       const nodeVersion = process.version;
 
       headers["User-Agent"] = util.format(
-        "twilio-node/%s (%s %s) node/%s",
+        "kandy-node/%s (%s %s) node/%s",
         pkgVersion,
         osName,
         osArch,
@@ -192,7 +192,7 @@ namespace Twilio {
     /**
      * Adds a region and/or edge to a given hostname
      *
-     * @param hostname - A URI hostname (e.g. api.twilio.com)
+     * @param hostname - A URI hostname (e.g. api.kandy.com)
      * @param targetEdge - The targeted edge location (e.g. sydney)
      * @param targetRegion - The targeted region location (e.g. au1)
      */
@@ -237,7 +237,7 @@ namespace Twilio {
       return this.httpClient
         ?.request({
           method: "get",
-          uri: "https://api.twilio.com:8443/2010-04-01/.json",
+          uri: "https://api.kandy.com:8443/2010-04-01/.json",
         })
         .then((response: any) => {
           if (response["statusCode"] < 200 || response["statusCode"] >= 300) {
@@ -250,4 +250,4 @@ namespace Twilio {
   }
 }
 
-export = Twilio;
+export = Kandy;

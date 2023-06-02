@@ -18,10 +18,10 @@ class AccountsBase extends Domain {
   /**
    * Initialize accounts domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://accounts.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://accounts.kandy.com");
   }
 
   get v1(): V1 {

@@ -1,17 +1,17 @@
-var Twilio = require("../lib");
+var Kandy = require("../lib");
 
-var accountSid = process.env.TWILIO_ACCOUNT_SID;
-var token = process.env.TWILIO_AUTH_TOKEN;
+var accountSid = process.env.KANDY_ACCOUNT_SID;
+var token = process.env.KANDY_AUTH_TOKEN;
 
 // Uncomment the following line to specify a custom CA bundle for HTTPS requests:
-// process.env.TWILIO_CA_BUNDLE = '/path/to/cert.pem';
+// process.env.KANDY_CA_BUNDLE = '/path/to/cert.pem';
 // You can also set this as a regular environment variable outside of the code
 
-var twilio = new Twilio(accountSid, token);
+var kandy = new Kandy(accountSid, token);
 
 var i = 0;
 // Callback as second parameter
-twilio.calls.each({
+kandy.calls.each({
   pageSize: 7,
   callback: function (call, done) {
     console.log(call.sid);
@@ -27,7 +27,7 @@ twilio.calls.each({
 });
 
 // Callback as first parameter
-twilio.calls.each(function (call) {
+kandy.calls.each(function (call) {
   console.log(call.sid);
 });
 
@@ -35,7 +35,7 @@ var from = process.env.FROM_NUMBER;
 var to = process.env.TO_NUMBER;
 
 // Send message using callback
-twilio.messages.create(
+kandy.messages.create(
   {
     from: from,
     to: to,
@@ -48,7 +48,7 @@ twilio.messages.create(
 );
 
 // Send message using promise
-var promise = twilio.messages.create({
+var promise = kandy.messages.create({
   from: from,
   to: to,
   body: "create using promises",
@@ -59,13 +59,13 @@ promise.then(function (message) {
 });
 
 // Create sip trunk using callback as first parameter
-twilio.trunking.v1.trunks.create(function (err, result) {
+kandy.trunking.v1.trunks.create(function (err, result) {
   console.log("Created default trunk");
   console.log(result.sid);
 });
 
 // Create sip trunk using callback as second parameter
-twilio.trunking.v1.trunks.create(
+kandy.trunking.v1.trunks.create(
   {
     friendlyName: "sip trunking",
   },
@@ -76,7 +76,7 @@ twilio.trunking.v1.trunks.create(
   }
 );
 
-promise = twilio.trunking.v1.trunks.create({
+promise = kandy.trunking.v1.trunks.create({
   friendlyName: "promise trunking",
 });
 promise.then(function (trunk) {
@@ -88,20 +88,20 @@ promise.then(function (trunk) {
 var trunkSid = "TK7e37e59861c14bb80dde245cfaad5522";
 
 // Fetch trunk sid using callback
-twilio.trunking.v1.trunks(trunkSid).fetch(function (err, result) {
+kandy.trunking.v1.trunks(trunkSid).fetch(function (err, result) {
   console.log("Fetch trunk using callback");
   console.log(result.sid);
 });
 
 // Fetch trunk using promise
-promise = twilio.trunking.v1.trunks(trunkSid).fetch();
+promise = kandy.trunking.v1.trunks(trunkSid).fetch();
 promise.then(function (trunk) {
   console.log("Fetch trunk using promise");
   console.log(trunk.sid);
 });
 
 // Update trunk using callback
-twilio.trunking.v1.trunks(trunkSid).update(
+kandy.trunking.v1.trunks(trunkSid).update(
   {
     friendlyName: "callback trunk",
   },
@@ -113,7 +113,7 @@ twilio.trunking.v1.trunks(trunkSid).update(
 );
 
 // Update trunk using promise
-promise = twilio.trunking.v1.trunks(trunkSid).update({
+promise = kandy.trunking.v1.trunks(trunkSid).update({
   friendlyName: "promise trunk",
 });
 promise.then(function (trunk) {
@@ -123,7 +123,7 @@ promise.then(function (trunk) {
 });
 
 // List messages using callbacks
-twilio.messages.list(function (err, messages) {
+kandy.messages.list(function (err, messages) {
   console.log("Listing messages using callbacks");
   messages.forEach(function (message) {
     console.log(message.sid);
@@ -131,7 +131,7 @@ twilio.messages.list(function (err, messages) {
 });
 
 // List messages using promises
-promise = twilio.messages.list();
+promise = kandy.messages.list();
 promise.then(function (messages) {
   console.log("Listing messages using promises");
   messages.forEach(function (message) {

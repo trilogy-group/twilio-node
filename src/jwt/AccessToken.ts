@@ -83,7 +83,7 @@ class AccessToken implements AccessToken.AccessTokenOptions {
     }
 
     let header: any = {
-      cty: "twilio-fpa;v=1",
+      cty: "kandy-fpa;v=1",
       typ: "JWT",
     };
 
@@ -397,7 +397,7 @@ namespace AccessToken {
 
     /**
      * @param options - ...
-     * @param options.grant - The PlaybackGrant retrieved from Twilio's API
+     * @param options.grant - The PlaybackGrant retrieved from Kandy's API
      */
     constructor(options?: PlaybackGrantOptions) {
       options = options || {};

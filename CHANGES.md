@@ -1,4 +1,4 @@
-twilio-node changelog
+kandy-node changelog
 =====================
 
 [2023-06-01] Version 4.11.2
@@ -33,7 +33,7 @@ twilio-node changelog
 [2023-05-04] Version 4.11.0
 ---------------------------
 **Library - Docs**
-- [PR #928](https://github.com/twilio/twilio-node/pull/928): consolidate. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
+- [PR #928](https://github.com/kandy/kandy-node/pull/928): consolidate. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
 
 **Conversations**
 - Remove `start_date`, `end_date` and `state` query parameters from list operation on Conversations resource **(breaking change)**
@@ -70,12 +70,12 @@ twilio-node changelog
 [2023-03-22] Version 4.9.0
 --------------------------
 **Library - Fix**
-- [PR #925](https://github.com/twilio/twilio-node/pull/925): use correct Headers type. Thanks to [@Methuselah96](https://github.com/Methuselah96)!
-- [PR #921](https://github.com/twilio/twilio-node/pull/921): correct the enum names. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #920](https://github.com/twilio/twilio-node/pull/920): revert the structural changes to the AccessToken class/namespace. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #925](https://github.com/kandy/kandy-node/pull/925): use correct Headers type. Thanks to [@Methuselah96](https://github.com/Methuselah96)!
+- [PR #921](https://github.com/kandy/kandy-node/pull/921): correct the enum names. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #920](https://github.com/kandy/kandy-node/pull/920): revert the structural changes to the AccessToken class/namespace. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Library - Docs**
-- [PR #918](https://github.com/twilio/twilio-node/pull/918): Show auth token in webhook validation example. Thanks to [@asportnoy](https://github.com/asportnoy)!
+- [PR #918](https://github.com/kandy/kandy-node/pull/918): Show auth token in webhook validation example. Thanks to [@asportnoy](https://github.com/asportnoy)!
 
 **Api**
 - Revert Corrected the data type for `friendly_name` in Available Phone Number Local, Mobile and TollFree resources
@@ -97,13 +97,13 @@ twilio-node changelog
 [2023-02-22] Version 4.8.0
 --------------------------
 **Library - Feature**
-- [PR #917](https://github.com/twilio/twilio-node/pull/917): export enum types. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #917](https://github.com/kandy/kandy-node/pull/917): export enum types. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Library - Test**
-- [PR #916](https://github.com/twilio/twilio-node/pull/916): refactor cluster tests for pack output. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #916](https://github.com/kandy/kandy-node/pull/916): refactor cluster tests for pack output. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Library - Fix**
-- [PR #914](https://github.com/twilio/twilio-node/pull/914): Export values and all type information. Thanks to [@aaronhuggins-carewell](https://github.com/aaronhuggins-carewell)!
+- [PR #914](https://github.com/kandy/kandy-node/pull/914): Export values and all type information. Thanks to [@aaronhuggins-carewell](https://github.com/aaronhuggins-carewell)!
 
 **Api**
 - Remove `scheduled_for` property from message resource
@@ -113,7 +113,7 @@ twilio-node changelog
 [2023-02-08] Version 4.7.2
 --------------------------
 **Library - Fix**
-- [PR #911](https://github.com/twilio/twilio-node/pull/911): restore test-docker rule. Thanks to [@beebzz](https://github.com/beebzz)!
+- [PR #911](https://github.com/kandy/kandy-node/pull/911): restore test-docker rule. Thanks to [@beebzz](https://github.com/beebzz)!
 
 **Lookups**
 - Add `disposable_phone_number_risk` package to the lookup response
@@ -123,7 +123,7 @@ twilio-node changelog
 [2023-02-01] Version 4.7.1
 --------------------------
 **Library - Fix**
-- [PR #910](https://github.com/twilio/twilio-node/pull/910): use relative root for library type imports. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #910](https://github.com/kandy/kandy-node/pull/910): use relative root for library type imports. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 
 [2023-01-30] Version 4.7.0
@@ -131,27 +131,27 @@ twilio-node changelog
 **Note:** This release contains breaking changes, check our [upgrade guide](./UPGRADE.md###-2023-01-25-3xx-to-4xx) for detailed migration notes.
 
 **Library - Feature**
-- [PR #908](https://github.com/twilio/twilio-node/pull/908): prep twilio-node for 4.7.x bump. Thanks to [@beebzz](https://github.com/beebzz)!
-- [PR #906](https://github.com/twilio/twilio-node/pull/906): add root index. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #883](https://github.com/twilio/twilio-node/pull/883): Merge branch '4.0.0-rc' to main. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
+- [PR #908](https://github.com/kandy/kandy-node/pull/908): prep kandy-node for 4.7.x bump. Thanks to [@beebzz](https://github.com/beebzz)!
+- [PR #906](https://github.com/kandy/kandy-node/pull/906): add root index. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #883](https://github.com/kandy/kandy-node/pull/883): Merge branch '4.0.0-rc' to main. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
 
 **Library - Fix**
-- [PR #905](https://github.com/twilio/twilio-node/pull/905): correct included files path. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #907](https://github.com/twilio/twilio-node/pull/907): update exports for backwards-compatibility. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #902](https://github.com/twilio/twilio-node/pull/902): remove Flex shortcuts for removed APIs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #903](https://github.com/twilio/twilio-node/pull/903): move lib to src and dist to lib for backwards-compatibility. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #897](https://github.com/twilio/twilio-node/pull/897): use break() for method names rather than break_(). Thanks to [@mattcole19](https://github.com/mattcole19)!
+- [PR #905](https://github.com/kandy/kandy-node/pull/905): correct included files path. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #907](https://github.com/kandy/kandy-node/pull/907): update exports for backwards-compatibility. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #902](https://github.com/kandy/kandy-node/pull/902): remove Flex shortcuts for removed APIs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #903](https://github.com/kandy/kandy-node/pull/903): move lib to src and dist to lib for backwards-compatibility. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #897](https://github.com/kandy/kandy-node/pull/897): use break() for method names rather than break_(). Thanks to [@mattcole19](https://github.com/mattcole19)!
 
 **Library - Test**
-- [PR #904](https://github.com/twilio/twilio-node/pull/904): update tests to use new src path. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #904](https://github.com/kandy/kandy-node/pull/904): update tests to use new src path. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Library - Docs**
-- [PR #901](https://github.com/twilio/twilio-node/pull/901): update README link to exceptions example for 4.x release. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
-- [PR #899](https://github.com/twilio/twilio-node/pull/899): use long property descriptions if available. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #895](https://github.com/twilio/twilio-node/pull/895): add relevant Refer/Say/ssml links to upgrade guide; formatting. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
+- [PR #901](https://github.com/kandy/kandy-node/pull/901): update README link to exceptions example for 4.x release. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
+- [PR #899](https://github.com/kandy/kandy-node/pull/899): use long property descriptions if available. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #895](https://github.com/kandy/kandy-node/pull/895): add relevant Refer/Say/ssml links to upgrade guide; formatting. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
 
 **Library - Chore**
-- [PR #888](https://github.com/twilio/twilio-node/pull/888): re-add test:typescript to test rule. Thanks to [@beebzz](https://github.com/beebzz)!
+- [PR #888](https://github.com/kandy/kandy-node/pull/888): re-add test:typescript to test rule. Thanks to [@beebzz](https://github.com/beebzz)!
 
 **Api**
 - Add `public_application_connect_enabled` param to Application resource
@@ -169,7 +169,7 @@ twilio-node changelog
 [2023-01-11] Version 3.84.1
 ---------------------------
 **Library - Test**
-- [PR #848](https://github.com/twilio/twilio-node/pull/848): bypass audit failures until v4 release. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #848](https://github.com/kandy/kandy-node/pull/848): bypass audit failures until v4 release. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Conversations**
 - Add support for creating Multi-Channel Rich Content Messages
@@ -184,7 +184,7 @@ twilio-node changelog
 [2022-12-14] Version 3.84.0
 ---------------------------
 **Library - Docs**
-- [PR #821](https://github.com/twilio/twilio-node/pull/821): add commands to install release candidates. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #821](https://github.com/kandy/kandy-node/pull/821): add commands to install release candidates. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Api**
 - Add `street_secondary` param to address create and update
@@ -197,7 +197,7 @@ twilio-node changelog
 - Changing the uri for authorization api from using Accounts to Insights **(breaking change)**
 
 **Media**
-- Gate Twilio Live endpoints behind beta_feature for EOS
+- Gate Kandy Live endpoints behind beta_feature for EOS
 
 **Messaging**
 - Mark `MessageFlow` as a required field for Campaign Creation **(breaking change)**
@@ -236,7 +236,7 @@ twilio-node changelog
 [2022-11-16] Version 3.83.3
 ---------------------------
 **Library - Chore**
-- [PR #823](https://github.com/twilio/twilio-node/pull/823): upgrade GitHub Actions dependencies. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #823](https://github.com/kandy/kandy-node/pull/823): upgrade GitHub Actions dependencies. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Api**
 - Set the Content resource to have public visibility as Preview
@@ -316,13 +316,13 @@ twilio-node changelog
 [2022-09-21] Version 3.82.1
 ---------------------------
 **Library - Fix**
-- [PR #782](https://github.com/twilio/twilio-node/pull/782): support duplicated query param values. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #782](https://github.com/kandy/kandy-node/pull/782): support duplicated query param values. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 
 [2022-09-07] Version 3.82.0
 ---------------------------
 **Library - Fix**
-- [PR #723](https://github.com/twilio/twilio-node/pull/723): webhook validation with array parameter sorting Fixes #722. Thanks to [@robbie-terazo](https://github.com/robbie-terazo)!
+- [PR #723](https://github.com/kandy/kandy-node/pull/723): webhook validation with array parameter sorting Fixes #722. Thanks to [@robbie-terazo](https://github.com/robbie-terazo)!
 
 **Flex**
 - Removed redundant `close` status from Flex Interactions flow **(breaking change)**
@@ -344,10 +344,10 @@ twilio-node changelog
 [2022-08-24] Version 3.81.0
 ---------------------------
 **Library - Test**
-- [PR #779](https://github.com/twilio/twilio-node/pull/779): add test-docker rule. Thanks to [@beebzz](https://github.com/beebzz)!
+- [PR #779](https://github.com/kandy/kandy-node/pull/779): add test-docker rule. Thanks to [@beebzz](https://github.com/beebzz)!
 
 **Library - Feature**
-- [PR #778](https://github.com/twilio/twilio-node/pull/778): RequestClient updated to become more customizable. Thanks to [@mattcole19](https://github.com/mattcole19)!
+- [PR #778](https://github.com/kandy/kandy-node/pull/778): RequestClient updated to become more customizable. Thanks to [@mattcole19](https://github.com/mattcole19)!
 
 **Api**
 - Remove `beta feature` from scheduling params and remove optimize parameters. **(breaking change)**
@@ -372,10 +372,10 @@ twilio-node changelog
 [2022-07-21] Version 3.80.0
 ---------------------------
 **Library - Docs**
-- [PR #772](https://github.com/twilio/twilio-node/pull/772): added npm/yarn install instructions. Thanks to [@citypaul](https://github.com/citypaul)!
+- [PR #772](https://github.com/kandy/kandy-node/pull/772): added npm/yarn install instructions. Thanks to [@citypaul](https://github.com/citypaul)!
 
 **Library - Feature**
-- [PR #775](https://github.com/twilio/twilio-node/pull/775): add a timeout options to RequestClient that creates a custom https agent. Thanks to [@benweissmann](https://github.com/benweissmann)!
+- [PR #775](https://github.com/kandy/kandy-node/pull/775): add a timeout options to RequestClient that creates a custom https agent. Thanks to [@benweissmann](https://github.com/benweissmann)!
 
 **Flex**
 - Add `status`, `error_code`, and `error_message` fields to Interaction `Channel`
@@ -392,7 +392,7 @@ twilio-node changelog
 [2022-07-13] Version 3.79.0
 ---------------------------
 **Library - Test**
-- [PR #771](https://github.com/twilio/twilio-node/pull/771): Adding misc as PR type. Thanks to [@rakatyal](https://github.com/rakatyal)!
+- [PR #771](https://github.com/kandy/kandy-node/pull/771): Adding misc as PR type. Thanks to [@rakatyal](https://github.com/rakatyal)!
 
 **Conversations**
 - Allowed to use `identity` as part of Participant's resource **(breaking change)**
@@ -411,7 +411,7 @@ twilio-node changelog
 [2022-06-29] Version 3.78.0
 ---------------------------
 **Library - Docs**
-- [PR #767](https://github.com/twilio/twilio-node/pull/767): a full stop is added in README.md file. Thanks to [@bishal7679](https://github.com/bishal7679)!
+- [PR #767](https://github.com/kandy/kandy-node/pull/767): a full stop is added in README.md file. Thanks to [@bishal7679](https://github.com/bishal7679)!
 
 **Api**
 - Added `amazon-polly` to `usage_record` API.
@@ -445,7 +445,7 @@ twilio-node changelog
 [2022-06-01] Version 3.77.2
 ---------------------------
 **Library - Chore**
-- [PR #755](https://github.com/twilio/twilio-node/pull/755): use Docker 'rc' tag for release candidate images. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #755](https://github.com/kandy/kandy-node/pull/755): use Docker 'rc' tag for release candidate images. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 
 [2022-05-18] Version 3.77.1
@@ -486,8 +486,8 @@ twilio-node changelog
 [2022-03-23] Version 3.76.0
 ---------------------------
 **Library - Chore**
-- [PR #748](https://github.com/twilio/twilio-node/pull/748): update url-parse dependency. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
-- [PR #746](https://github.com/twilio/twilio-node/pull/746): Update Axios to v0.26.1. Thanks to [@stephenwade](https://github.com/stephenwade)!
+- [PR #748](https://github.com/kandy/kandy-node/pull/748): update url-parse dependency. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #746](https://github.com/kandy/kandy-node/pull/746): Update Axios to v0.26.1. Thanks to [@stephenwade](https://github.com/stephenwade)!
 
 **Api**
 - Change `stream` url parameter to non optional
@@ -518,13 +518,13 @@ twilio-node changelog
 [2022-03-09] Version 3.75.1
 ---------------------------
 **Library - Chore**
-- [PR #742](https://github.com/twilio/twilio-node/pull/742): push Datadog Release Metric upon deploy success. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #742](https://github.com/kandy/kandy-node/pull/742): push Datadog Release Metric upon deploy success. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Add optional boolean include_soft_deleted parameter to retrieve soft deleted recordings
 
 **Chat**
-- Add `X-Twilio-Wehook-Enabled` header to `delete` method in UserChannel resource
+- Add `X-Kandy-Wehook-Enabled` header to `delete` method in UserChannel resource
 
 **Numbers**
 - Expose `failure_reason` in the Supporting Documents resources
@@ -538,7 +538,7 @@ twilio-node changelog
 [2022-02-23] Version 3.75.0
 ---------------------------
 **Library - Chore**
-- [PR #740](https://github.com/twilio/twilio-node/pull/740): update url-parse dependency. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #740](https://github.com/kandy/kandy-node/pull/740): update url-parse dependency. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
 
 **Api**
 - Add `uri` to `stream` resource
@@ -568,11 +568,11 @@ twilio-node changelog
 [2022-02-09] Version 3.74.0
 ---------------------------
 **Library - Chore**
-- [PR #736](https://github.com/twilio/twilio-node/pull/736): upgrade supported language versions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #734](https://github.com/twilio/twilio-node/pull/734): bump axios to latest. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #736](https://github.com/kandy/kandy-node/pull/736): upgrade supported language versions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #734](https://github.com/kandy/kandy-node/pull/734): bump axios to latest. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
 
 **Library - Feature**
-- [PR #733](https://github.com/twilio/twilio-node/pull/733): support required resource properties with names containing periods. Thanks to [@Hunga1](https://github.com/Hunga1)!
+- [PR #733](https://github.com/kandy/kandy-node/pull/733): support required resource properties with names containing periods. Thanks to [@Hunga1](https://github.com/Hunga1)!
 
 **Api**
 - Add `stream` resource
@@ -603,7 +603,7 @@ twilio-node changelog
 [2022-01-26] Version 3.73.1
 ---------------------------
 **Library - Chore**
-- [PR #727](https://github.com/twilio/twilio-node/pull/727): run audit only on non dev dependencies. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #727](https://github.com/kandy/kandy-node/pull/727): run audit only on non dev dependencies. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
 
 **Insights**
 - Added new endpoint to fetch Conference Participant Summary
@@ -620,13 +620,13 @@ twilio-node changelog
 [2022-01-12] Version 3.73.0
 ---------------------------
 **Library - Chore**
-- [PR #721](https://github.com/twilio/twilio-node/pull/721): add sonarcloud analysis for twilio-node. Thanks to [@beebzz](https://github.com/beebzz)!
+- [PR #721](https://github.com/kandy/kandy-node/pull/721): add sonarcloud analysis for kandy-node. Thanks to [@beebzz](https://github.com/beebzz)!
 
 **Library - Feature**
-- [PR #720](https://github.com/twilio/twilio-node/pull/720): add GitHub release step during deploy. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #720](https://github.com/kandy/kandy-node/pull/720): add GitHub release step during deploy. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Library - Fix**
-- [PR #716](https://github.com/twilio/twilio-node/pull/716): done callback execution when each method limit reached. Thanks to [@Hunga1](https://github.com/Hunga1)!
+- [PR #716](https://github.com/kandy/kandy-node/pull/716): done callback execution when each method limit reached. Thanks to [@Hunga1](https://github.com/Hunga1)!
 
 **Api**
 - Make fixed time scheduling parameters public **(breaking change)**
@@ -644,7 +644,7 @@ twilio-node changelog
 [2021-12-15] Version 3.72.0
 ---------------------------
 **Library - Feature**
-- [PR #712](https://github.com/twilio/twilio-node/pull/712): run tests before deploying. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #712](https://github.com/kandy/kandy-node/pull/712): run tests before deploying. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Api**
 - Add optional boolean send_as_mms parameter to the create action of Message resource **(breaking change)**
@@ -694,8 +694,8 @@ twilio-node changelog
 [2021-11-17] Version 3.71.2
 ---------------------------
 **Library - Fix**
-- [PR #707](https://github.com/twilio/twilio-node/pull/707): make ttl optional in ClientCapabilityOptions. Thanks to [@ghmeier](https://github.com/ghmeier)!
-- [PR #704](https://github.com/twilio/twilio-node/pull/704): git log retrieval issues. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #707](https://github.com/kandy/kandy-node/pull/707): make ttl optional in ClientCapabilityOptions. Thanks to [@ghmeier](https://github.com/ghmeier)!
+- [PR #704](https://github.com/kandy/kandy-node/pull/704): git log retrieval issues. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
 
 **Frontline**
 - Added `is_available` to User's resource
@@ -715,14 +715,14 @@ twilio-node changelog
 [2021-11-03] Version 3.71.1
 ---------------------------
 **Library - Fix**
-- [PR #705](https://github.com/twilio/twilio-node/pull/705): node setup wf step. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #705](https://github.com/kandy/kandy-node/pull/705): node setup wf step. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
 
 
 [2021-11-03] Version 3.71.0
 ---------------------------
 **Library - Chore**
-- [PR #703](https://github.com/twilio/twilio-node/pull/703): fix Docker image tag. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #702](https://github.com/twilio/twilio-node/pull/702): migrate from TravisCI to GitHub Actions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #703](https://github.com/kandy/kandy-node/pull/703): fix Docker image tag. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #702](https://github.com/kandy/kandy-node/pull/702): migrate from TravisCI to GitHub Actions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Updated `media_url` property to be treated as PII
@@ -744,10 +744,10 @@ twilio-node changelog
 [2021-10-18] Version 3.70.0
 ---------------------------
 **Library - Feature**
-- [PR #700](https://github.com/twilio/twilio-node/pull/700): Add PlaybackGrant. Thanks to [@sarahcstringer](https://github.com/sarahcstringer)!
+- [PR #700](https://github.com/kandy/kandy-node/pull/700): Add PlaybackGrant. Thanks to [@sarahcstringer](https://github.com/sarahcstringer)!
 
 **Library - Fix**
-- [PR #695](https://github.com/twilio/twilio-node/pull/695): Update Axios package. Thanks to [@houmark](https://github.com/houmark)!
+- [PR #695](https://github.com/kandy/kandy-node/pull/695): Update Axios package. Thanks to [@houmark](https://github.com/houmark)!
 
 **Api**
 - Corrected enum values for `emergency_address_status` values in `/IncomingPhoneNumbers` response. **(breaking change)**
@@ -798,7 +798,7 @@ twilio-node changelog
 [2021-09-22] Version 3.68.0
 ---------------------------
 **Library - Feature**
-- [PR #692](https://github.com/twilio/twilio-node/pull/692): add API response headers to the returned response. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #692](https://github.com/kandy/kandy-node/pull/692): add API response headers to the returned response. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Events**
 - Add segment sink
@@ -827,10 +827,10 @@ twilio-node changelog
 [2021-08-25] Version 3.67.1
 ---------------------------
 **Library - Fix**
-- [PR #687](https://github.com/twilio/twilio-node/pull/687): webhook validation with an array parameter. Thanks to [@askel4dd](https://github.com/askel4dd)!
+- [PR #687](https://github.com/kandy/kandy-node/pull/687): webhook validation with an array parameter. Thanks to [@askel4dd](https://github.com/askel4dd)!
 
 **Library - Chore**
-- [PR #686](https://github.com/twilio/twilio-node/pull/686): Updated url-parse dependency to address security issue. Thanks to [@dmurawsky](https://github.com/dmurawsky)!
+- [PR #686](https://github.com/kandy/kandy-node/pull/686): Updated url-parse dependency to address security issue. Thanks to [@dmurawsky](https://github.com/dmurawsky)!
 
 **Api**
 - Add Programmabled Voice SIP Refer call transfers (`calls-transfers`) to usage records
@@ -881,7 +881,7 @@ twilio-node changelog
 [2021-07-28] Version 3.66.1
 ---------------------------
 **Library - Chore**
-- [PR #680](https://github.com/twilio/twilio-node/pull/680): update user agent string for better debugging. Thanks to [@philnash](https://github.com/philnash)!
+- [PR #680](https://github.com/kandy/kandy-node/pull/680): update user agent string for better debugging. Thanks to [@philnash](https://github.com/philnash)!
 
 **Conversations**
 - Expose ParticipantConversations resource
@@ -924,7 +924,7 @@ twilio-node changelog
 [2021-06-16] Version 3.64.0
 ---------------------------
 **Library - Chore**
-- [PR #677](https://github.com/twilio/twilio-node/pull/677): bump lodash and eslint per npm audit. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #677](https://github.com/kandy/kandy-node/pull/677): bump lodash and eslint per npm audit. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Api**
 - Update `status` enum for Messages to include 'canceled'
@@ -937,7 +937,7 @@ twilio-node changelog
 [2021-06-02] Version 3.63.1
 ---------------------------
 **Library - Fix**
-- [PR #675](https://github.com/twilio/twilio-node/pull/675): remove @type/express. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #675](https://github.com/kandy/kandy-node/pull/675): remove @type/express. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
 
 **Events**
 - join Sinks and Subscriptions service
@@ -950,7 +950,7 @@ twilio-node changelog
 [2021-05-19] Version 3.63.0
 ---------------------------
 **Library - Chore**
-- [PR #673](https://github.com/twilio/twilio-node/pull/673): resolves jsdoc / underscore security vulnerability. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #673](https://github.com/kandy/kandy-node/pull/673): resolves jsdoc / underscore security vulnerability. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Events**
 - add query param to return types filtered by Schema Id
@@ -973,7 +973,7 @@ twilio-node changelog
 [2021-05-05] Version 3.62.0
 ---------------------------
 **Library - Chore**
-- [PR #672](https://github.com/twilio/twilio-node/pull/672): integrate with SonarCloud. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #672](https://github.com/kandy/kandy-node/pull/672): integrate with SonarCloud. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Corrected the data types for feedback summary fields **(breaking change)**
@@ -996,7 +996,7 @@ twilio-node changelog
 [2021-04-21] Version 3.61.0
 ---------------------------
 **Library - Fix**
-- [PR #667](https://github.com/twilio/twilio-node/pull/667): remove type definition from peerDeps. Thanks to [@ktalebian](https://github.com/ktalebian)!
+- [PR #667](https://github.com/kandy/kandy-node/pull/667): remove type definition from peerDeps. Thanks to [@ktalebian](https://github.com/ktalebian)!
 
 **Api**
 - Revert Update the conference participant create `from` and `to` param to be endpoint type for supporting client identifier and sip address
@@ -1026,7 +1026,7 @@ twilio-node changelog
 [2021-04-07] Version 3.60.0
 ---------------------------
 **Library - Chore**
-- [PR #668](https://github.com/twilio/twilio-node/pull/668): expose internal RequestClient to users at top level. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
+- [PR #668](https://github.com/kandy/kandy-node/pull/668): expose internal RequestClient to users at top level. Thanks to [@stern-shawn](https://github.com/stern-shawn)!
 
 **Api**
 - Added `announcement` event to conference status callback events
@@ -1086,10 +1086,10 @@ twilio-node changelog
 [2021-03-15] Version 3.58.0
 ---------------------------
 **Library - Fix**
-- [PR #665](https://github.com/twilio/twilio-node/pull/665): fix validateExpressRequest issue. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #665](https://github.com/kandy/kandy-node/pull/665): fix validateExpressRequest issue. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
 
 **Library - Chore**
-- [PR #661](https://github.com/twilio/twilio-node/pull/661): upgrade url-parse. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #661](https://github.com/kandy/kandy-node/pull/661): upgrade url-parse. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Events**
 - Set maturity to beta
@@ -1127,11 +1127,11 @@ twilio-node changelog
 [2021-02-10] Version 3.56.0
 ---------------------------
 **Library - Fix**
-- [PR #654](https://github.com/twilio/twilio-node/pull/654): validation failing due to params. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
-- [PR #590](https://github.com/twilio/twilio-node/pull/590): updated RequestClient to handle proxy from default PROXY_HOST env var. Thanks to [@tlawrie](https://github.com/tlawrie)!
-- [PR #653](https://github.com/twilio/twilio-node/pull/653): adds property types for AccessToken and Grants. Thanks to [@philnash](https://github.com/philnash)!
-- [PR #652](https://github.com/twilio/twilio-node/pull/652): pagination bug and drop page limit and page limit calculation. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
-- [PR #651](https://github.com/twilio/twilio-node/pull/651): shortcut syntax for new non-GA versions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #654](https://github.com/kandy/kandy-node/pull/654): validation failing due to params. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #590](https://github.com/kandy/kandy-node/pull/590): updated RequestClient to handle proxy from default PROXY_HOST env var. Thanks to [@tlawrie](https://github.com/tlawrie)!
+- [PR #653](https://github.com/kandy/kandy-node/pull/653): adds property types for AccessToken and Grants. Thanks to [@philnash](https://github.com/philnash)!
+- [PR #652](https://github.com/kandy/kandy-node/pull/652): pagination bug and drop page limit and page limit calculation. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #651](https://github.com/kandy/kandy-node/pull/651): shortcut syntax for new non-GA versions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Revert change that conference participant create `from` and `to` param to be endpoint type for supporting client identifier and sip address
@@ -1150,7 +1150,7 @@ twilio-node changelog
 
 **Serverless**
 - Add runtime field to Build response and as an optional parameter to the Build create endpoint.
-- Add @twilio/runtime-handler dependency to Build response example.
+- Add @kandy/runtime-handler dependency to Build response example.
 
 **Sync**
 - Remove If-Match header for Document **(breaking change)**
@@ -1192,8 +1192,8 @@ twilio-node changelog
 [2021-01-06] Version 3.54.2
 ---------------------------
 **Library - Fix**
-- [PR #640](https://github.com/twilio/twilio-node/pull/640): axios update to v0.21.1. Thanks to [@ShelbyZ](https://github.com/ShelbyZ)!
-- [PR #642](https://github.com/twilio/twilio-node/pull/642): url encoding for validateExpressRequest. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #640](https://github.com/kandy/kandy-node/pull/640): axios update to v0.21.1. Thanks to [@ShelbyZ](https://github.com/ShelbyZ)!
+- [PR #642](https://github.com/kandy/kandy-node/pull/642): url encoding for validateExpressRequest. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 
 [2020-12-16] Version 3.54.1
@@ -1243,7 +1243,7 @@ twilio-node changelog
 [2020-11-18] Version 3.52.0
 ---------------------------
 **Library - Chore**
-- [PR #630](https://github.com/twilio/twilio-node/pull/630): Move @types dependencies to peerDependencies. Thanks to [@taxilian](https://github.com/taxilian)!
+- [PR #630](https://github.com/kandy/kandy-node/pull/630): Move @types dependencies to peerDependencies. Thanks to [@taxilian](https://github.com/taxilian)!
 
 **Api**
 - Add new call events resource - GET /2010-04-01/Accounts/{account_sid}/Calls/{call_sid}/Events.json
@@ -1270,15 +1270,15 @@ twilio-node changelog
 [2020-11-05] Version 3.51.0
 ---------------------------
 **Library - Fix**
-- [PR #621](https://github.com/twilio/twilio-node/pull/621): X-Twilio-Signature validation when URL query parameters contain @ or :. Thanks to [@adamj9431](https://github.com/adamj9431)!
-- [PR #622](https://github.com/twilio/twilio-node/pull/622): remove request auth headers from debug logging. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #621](https://github.com/kandy/kandy-node/pull/621): X-Kandy-Signature validation when URL query parameters contain @ or :. Thanks to [@adamj9431](https://github.com/adamj9431)!
+- [PR #622](https://github.com/kandy/kandy-node/pull/622): remove request auth headers from debug logging. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
 
 **Library - Feature**
-- [PR #623](https://github.com/twilio/twilio-node/pull/623): add regional twr header in the access token. Thanks to [@charliesantos](https://github.com/charliesantos)!
-- [PR #618](https://github.com/twilio/twilio-node/pull/618): add http logging for Node JS. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #623](https://github.com/kandy/kandy-node/pull/623): add regional twr header in the access token. Thanks to [@charliesantos](https://github.com/charliesantos)!
+- [PR #618](https://github.com/kandy/kandy-node/pull/618): add http logging for Node JS. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
 
 **Library - Chore**
-- [PR #625](https://github.com/twilio/twilio-node/pull/625): pin jasmine for compatibility with older node versions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #625](https://github.com/kandy/kandy-node/pull/625): pin jasmine for compatibility with older node versions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Added `verify-push` to `usage_record` API
@@ -1297,7 +1297,7 @@ twilio-node changelog
 
 **Verify**
 - Verify Push madurity were updated from `preview` to `beta`
-- `twilio_sandbox_mode` header was removed from Verify Push resources **(breaking change)**
+- `kandy_sandbox_mode` header was removed from Verify Push resources **(breaking change)**
 
 **Video**
 - [Rooms] Add Recording Rules API
@@ -1356,7 +1356,7 @@ twilio-node changelog
 [2020-09-16] Version 3.49.2
 ---------------------------
 **Library - Fix**
-- [PR #614](https://github.com/twilio/twilio-node/pull/614): Prevent throwing an exception on 3xx response status code. Thanks to [@Saka7](https://github.com/Saka7)!
+- [PR #614](https://github.com/kandy/kandy-node/pull/614): Prevent throwing an exception on 3xx response status code. Thanks to [@Saka7](https://github.com/Saka7)!
 
 **Conversations**
 - Expose Configuration and Service Configuration resources
@@ -1383,7 +1383,7 @@ twilio-node changelog
 [2020-09-02] Version 3.49.1
 ---------------------------
 **Library - Fix**
-- [PR #605](https://github.com/twilio/twilio-node/pull/605): allow lower versions of typescript (2.5). Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #605](https://github.com/kandy/kandy-node/pull/605): allow lower versions of typescript (2.5). Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Ai**
 - Initial release
@@ -1410,10 +1410,10 @@ twilio-node changelog
 [2020-08-19] Version 3.49.0
 ---------------------------
 **Library - Docs**
-- [PR #603](https://github.com/twilio/twilio-node/pull/603): convert markdown links to jsdoc formatted links. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #603](https://github.com/kandy/kandy-node/pull/603): convert markdown links to jsdoc formatted links. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Library - Chore**
-- [PR #602](https://github.com/twilio/twilio-node/pull/602): update GitHub branch references to use HEAD. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #602](https://github.com/kandy/kandy-node/pull/602): update GitHub branch references to use HEAD. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Conversations**
 - Allow Identity addition to Participants
@@ -1459,11 +1459,11 @@ twilio-node changelog
 [2020-07-08] Version 3.48.0
 ---------------------------
 **Library - Fix**
-- [PR #592](https://github.com/twilio/twilio-node/pull/592): upgrade dependencies and ignore low severity vulnerabilities. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #592](https://github.com/kandy/kandy-node/pull/592): upgrade dependencies and ignore low severity vulnerabilities. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Library - Feature**
-- [PR #589](https://github.com/twilio/twilio-node/pull/589): add fax capability to deserialized phone number capabilities. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #587](https://github.com/twilio/twilio-node/pull/587): include API response headers in 'Last Response'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #589](https://github.com/kandy/kandy-node/pull/589): add fax capability to deserialized phone number capabilities. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #587](https://github.com/kandy/kandy-node/pull/587): include API response headers in 'Last Response'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Conversations**
 - Allow Address updates for Participants
@@ -1492,7 +1492,7 @@ twilio-node changelog
 [2020-06-24] Version 3.47.0
 ---------------------------
 **Library - Fix**
-- [PR #584](https://github.com/twilio/twilio-node/pull/584): use datetime instead of date for alert start/end date params. Thanks to [@mebuckler](https://github.com/mebuckler)!
+- [PR #584](https://github.com/kandy/kandy-node/pull/584): use datetime instead of date for alert start/end date params. Thanks to [@mebuckler](https://github.com/mebuckler)!
 
 **Api**
 - Added optional `JitterBufferSize` parameter for creating conference participant
@@ -1527,8 +1527,8 @@ twilio-node changelog
 [2020-06-10] Version 3.46.0
 ---------------------------
 **Library - Docs**
-- [PR #583](https://github.com/twilio/twilio-node/pull/583): link to handling exceptions. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
-- [PR #582](https://github.com/twilio/twilio-node/pull/582): link to custom HTTP client instructions. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #583](https://github.com/kandy/kandy-node/pull/583): link to handling exceptions. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #582](https://github.com/kandy/kandy-node/pull/582): link to custom HTTP client instructions. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Api**
 - Added `pstnconnectivity` to `usage_record` API
@@ -1567,8 +1567,8 @@ twilio-node changelog
 - Fixed some examples to use the correct "TK" SID prefix for Trunk resources.
 
 **Authy**
-- Renamed `twilio_authy_sandbox_mode` headers to `twilio_sandbox_mode` **(breaking change)**
-- Renamed `Twilio-Authy-*` headers to `Twilio-Veriry-*` **(breaking change)**
+- Renamed `kandy_authy_sandbox_mode` headers to `kandy_sandbox_mode` **(breaking change)**
+- Renamed `Kandy-Authy-*` headers to `Kandy-Veriry-*` **(breaking change)**
 
 **Flex**
 - Adding `flex_service_instance_sid` to Flex Configuration
@@ -1591,7 +1591,7 @@ twilio-node changelog
 [2020-05-13] Version 3.43.1
 ---------------------------
 **Library - Fix**
-- [PR #571](https://github.com/twilio/twilio-node/pull/571): regional/edge precendence and env vars. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #571](https://github.com/kandy/kandy-node/pull/571): regional/edge precendence and env vars. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Add optional `emergency_caller_sid` parameter to SIP Domain
@@ -1626,11 +1626,11 @@ twilio-node changelog
 [2020-04-29] Version 3.43.0
 ---------------------------
 **Library - Chore**
-- [PR #568](https://github.com/twilio/twilio-node/pull/568): logic refactor. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #568](https://github.com/kandy/kandy-node/pull/568): logic refactor. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Library - Feature**
-- [PR #565](https://github.com/twilio/twilio-node/pull/565): adds details to rest exception. Thanks to [@ashish-s](https://github.com/ashish-s)!
-- [PR #563](https://github.com/twilio/twilio-node/pull/563): add regional support. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #565](https://github.com/kandy/kandy-node/pull/565): adds details to rest exception. Thanks to [@ashish-s](https://github.com/ashish-s)!
+- [PR #563](https://github.com/kandy/kandy-node/pull/563): add regional support. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Preview**
 - Added `Dispatch` version to `preview`
@@ -1645,7 +1645,7 @@ twilio-node changelog
 [2020-04-15] Version 3.42.2
 ---------------------------
 **Library - Fix**
-- [PR #560](https://github.com/twilio/twilio-node/pull/560): type declaration for IncomingPhoneNumberInstance. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #560](https://github.com/kandy/kandy-node/pull/560): type declaration for IncomingPhoneNumberInstance. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
 
 **Api**
 - Updated description for property `call_reason` in the call create request
@@ -1666,12 +1666,12 @@ twilio-node changelog
 [2020-04-07] Version 3.42.1
 ---------------------------
 **Library - Fix**
-- [PR #558](https://github.com/twilio/twilio-node/pull/558): add list instance types and update 'object' type properties to 'any' in TS. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #556](https://github.com/twilio/twilio-node/pull/556): update allowed types for response body. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #554](https://github.com/twilio/twilio-node/pull/554): json parsing for non default clients. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #558](https://github.com/kandy/kandy-node/pull/558): add list instance types and update 'object' type properties to 'any' in TS. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #556](https://github.com/kandy/kandy-node/pull/556): update allowed types for response body. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #554](https://github.com/kandy/kandy-node/pull/554): json parsing for non default clients. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Library - Chore**
-- [PR #557](https://github.com/twilio/twilio-node/pull/557): remove S3 URLs from test data. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #557](https://github.com/kandy/kandy-node/pull/557): remove S3 URLs from test data. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Studio**
 - Add new `warnings` attribute v2 flow POST api
@@ -1680,8 +1680,8 @@ twilio-node changelog
 [2020-04-01] Version 3.42.0
 ---------------------------
 **Library - Fix**
-- [PR #551](https://github.com/twilio/twilio-node/pull/551): axios expects paramsSerializer not paramSerializer. Thanks to [@stephencaldwell](https://github.com/stephencaldwell)!
-- [PR #549](https://github.com/twilio/twilio-node/pull/549): refactor 'RestException' to properly extend 'Error'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #551](https://github.com/kandy/kandy-node/pull/551): axios expects paramsSerializer not paramSerializer. Thanks to [@stephencaldwell](https://github.com/stephencaldwell)!
+- [PR #549](https://github.com/kandy/kandy-node/pull/549): refactor 'RestException' to properly extend 'Error'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Api**
 - Add optional 'secure' parameter to SIP Domain
@@ -1707,19 +1707,19 @@ twilio-node changelog
 [2020-03-18] Version 3.41.1
 ---------------------------
 **Library - Fix**
-- [PR #547](https://github.com/twilio/twilio-node/pull/547): add status validator to request options so non-2XXs can be wrapped in a 'RestException'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #547](https://github.com/kandy/kandy-node/pull/547): add status validator to request options so non-2XXs can be wrapped in a 'RestException'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 
 [2020-03-18] Version 3.41.0
 ---------------------------
 **Library - Fix**
-- [PR #546](https://github.com/twilio/twilio-node/pull/546): Page JSON parsing and integration tests. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #545](https://github.com/twilio/twilio-node/pull/545): add overloaded TS definitions for non-required params. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #544](https://github.com/twilio/twilio-node/pull/544): Add method overload to VoiceResponse.prototype.play. Thanks to [@DCtheTall](https://github.com/DCtheTall)!
-- [PR #543](https://github.com/twilio/twilio-node/pull/543): don't re-parse parsed JSON. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #546](https://github.com/kandy/kandy-node/pull/546): Page JSON parsing and integration tests. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #545](https://github.com/kandy/kandy-node/pull/545): add overloaded TS definitions for non-required params. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #544](https://github.com/kandy/kandy-node/pull/544): Add method overload to VoiceResponse.prototype.play. Thanks to [@DCtheTall](https://github.com/DCtheTall)!
+- [PR #543](https://github.com/kandy/kandy-node/pull/543): don't re-parse parsed JSON. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Library - Feature**
-- [PR #542](https://github.com/twilio/twilio-node/pull/542): migrate from deprecated request module to axios. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #542](https://github.com/kandy/kandy-node/pull/542): migrate from deprecated request module to axios. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Api**
 - Add optional `emergency_calling_enabled` parameter to SIP Domain
@@ -1730,20 +1730,20 @@ twilio-node changelog
 - Added `config` param to Factor creation **(breaking change)**
 
 **Preview**
-- Renamed `SuccessRate` endpoint to `ImpressionsRate` for Branded Calls (fka. Verified by Twilio) **(breaking change)**
+- Renamed `SuccessRate` endpoint to `ImpressionsRate` for Branded Calls (fka. Verified by Kandy) **(breaking change)**
 
 
 [2020-03-04] Version 3.40.0
 ---------------------------
 **Library - Docs**
-- [PR #541](https://github.com/twilio/twilio-node/pull/541): add url parameter documentation in twilio.webhook(). Thanks to [@fungiboletus](https://github.com/fungiboletus)!
-- [PR #532](https://github.com/twilio/twilio-node/pull/532): guide for enabling lazy loading. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #541](https://github.com/kandy/kandy-node/pull/541): add url parameter documentation in kandy.webhook(). Thanks to [@fungiboletus](https://github.com/fungiboletus)!
+- [PR #532](https://github.com/kandy/kandy-node/pull/532): guide for enabling lazy loading. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Library - Fix**
-- [PR #534](https://github.com/twilio/twilio-node/pull/534): proper indentation. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #534](https://github.com/kandy/kandy-node/pull/534): proper indentation. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
 
 **Library - Feature**
-- [PR #526](https://github.com/twilio/twilio-node/pull/526): Faster requiring using optional lazy loading. Thanks to [@wolfenrain](https://github.com/wolfenrain)!
+- [PR #526](https://github.com/kandy/kandy-node/pull/526): Faster requiring using optional lazy loading. Thanks to [@wolfenrain](https://github.com/wolfenrain)!
 
 **Authy**
 - Added the `configuration` property to services to return the service level configurations
@@ -1755,7 +1755,7 @@ twilio-node changelog
 
 **Preview**
 - Removed `/Devices` register Branded Calls endpoint, as per iOS sample app deprecation **(breaking change)**
-- Removed `Twilio-Sandbox-Mode` request header from the Branded Calls endpoints, as not officially supported **(breaking change)**
+- Removed `Kandy-Sandbox-Mode` request header from the Branded Calls endpoints, as not officially supported **(breaking change)**
 - Removed `Verify` version from `preview` subdomain in favor to `verify` subdomain. **(breaking change)**
 
 **Serverless**
@@ -1831,7 +1831,7 @@ twilio-node changelog
 [2020-01-22] Version 3.39.3
 ---------------------------
 **Library - Docs**
-- [PR #524](https://github.com/twilio/twilio-node/pull/524): baseline all the templated markdown docs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #524](https://github.com/kandy/kandy-node/pull/524): baseline all the templated markdown docs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Api**
 - Add payments public APIs
@@ -1859,7 +1859,7 @@ twilio-node changelog
 [2020-01-08] Version 3.39.2
 ---------------------------
 **Library - Fix**
-- [PR #519](https://github.com/twilio/twilio-node/pull/519): switch to a URL parsing lib that does not add percent-encoding. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #519](https://github.com/kandy/kandy-node/pull/519): switch to a URL parsing lib that does not add percent-encoding. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Numbers**
 - Add Regulatory Compliance CRUD APIs
@@ -1874,7 +1874,7 @@ twilio-node changelog
 [2019-12-18] Version 3.39.1
 ---------------------------
 **Preview**
-- Add `/Insights/SuccessRate` endpoint for Businesses Branded Calls (Verified by Twilio)
+- Add `/Insights/SuccessRate` endpoint for Businesses Branded Calls (Verified by Kandy)
 
 **Studio**
 - StudioV2 API in beta
@@ -1906,15 +1906,15 @@ twilio-node changelog
 [2019-12-04] Version 3.38.0
 ---------------------------
 **Library**
-- [PR #515](https://github.com/twilio/twilio-node/pull/515): fix: replace moment with dayjs. Thanks to [@cktang88](https://github.com/cktang88)!
-- [PR #512](https://github.com/twilio/twilio-node/pull/512): docs: add supported language versions to README. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #501](https://github.com/twilio/twilio-node/pull/501): fix: escape special characters in TwiML attribute values. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #510](https://github.com/twilio/twilio-node/pull/510): fix: Add optional 'url' property to the webhook request validator type definition. Thanks to [@hoshinokanade](https://github.com/hoshinokanade)!
-- [PR #508](https://github.com/twilio/twilio-node/pull/508): fix: Rename child TwiML methods to be based on tag name and deprecate old methods. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #509](https://github.com/twilio/twilio-node/pull/509): fix: Improve function deprecation and remove unnecessary dependency. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #507](https://github.com/twilio/twilio-node/pull/507): chore: upgrade older dependencies. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #502](https://github.com/twilio/twilio-node/pull/502): fix: add opts check for remove calls. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #499](https://github.com/twilio/twilio-node/pull/499): BREAKING feat: add support for custom HTTP headers in API requests. Thanks to [@eshanholtz](https://github.com/eshanholtz)! **(breaking change)**
+- [PR #515](https://github.com/kandy/kandy-node/pull/515): fix: replace moment with dayjs. Thanks to [@cktang88](https://github.com/cktang88)!
+- [PR #512](https://github.com/kandy/kandy-node/pull/512): docs: add supported language versions to README. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #501](https://github.com/kandy/kandy-node/pull/501): fix: escape special characters in TwiML attribute values. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #510](https://github.com/kandy/kandy-node/pull/510): fix: Add optional 'url' property to the webhook request validator type definition. Thanks to [@hoshinokanade](https://github.com/hoshinokanade)!
+- [PR #508](https://github.com/kandy/kandy-node/pull/508): fix: Rename child TwiML methods to be based on tag name and deprecate old methods. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #509](https://github.com/kandy/kandy-node/pull/509): fix: Improve function deprecation and remove unnecessary dependency. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #507](https://github.com/kandy/kandy-node/pull/507): chore: upgrade older dependencies. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #502](https://github.com/kandy/kandy-node/pull/502): fix: add opts check for remove calls. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #499](https://github.com/kandy/kandy-node/pull/499): BREAKING feat: add support for custom HTTP headers in API requests. Thanks to [@eshanholtz](https://github.com/eshanholtz)! **(breaking change)**
 
 **Api**
 - Add optional `twiml` parameter for call create
@@ -1936,7 +1936,7 @@ twilio-node changelog
 [2019-11-13] Version 3.37.1
 ---------------------------
 **Library**
-- [PR #498](https://github.com/twilio/twilio-node/pull/498): fix: Stringify TwiML array attributes as space delimited. Thanks to [@mpeltonen](https://github.com/mpeltonen)!
+- [PR #498](https://github.com/kandy/kandy-node/pull/498): fix: Stringify TwiML array attributes as space delimited. Thanks to [@mpeltonen](https://github.com/mpeltonen)!
 
 **Api**
 - Make `persistent_action` parameter public
@@ -1970,10 +1970,10 @@ twilio-node changelog
 [2019-10-30] Version 3.37.0
 ---------------------------
 **Library**
-- [PR #493](https://github.com/twilio/twilio-node/pull/493): Update resources after sorting. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #491](https://github.com/twilio/twilio-node/pull/491): added request validation for urls with and without ports. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
-- [PR #490](https://github.com/twilio/twilio-node/pull/490): Fix escape url. Thanks to [@pedroprado010](https://github.com/pedroprado010)!
-- [PR #484](https://github.com/twilio/twilio-node/pull/484): Fixes missing identity value in token when it's not a string. Thanks to [@codedawi](https://github.com/codedawi)!
+- [PR #493](https://github.com/kandy/kandy-node/pull/493): Update resources after sorting. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #491](https://github.com/kandy/kandy-node/pull/491): added request validation for urls with and without ports. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #490](https://github.com/kandy/kandy-node/pull/490): Fix escape url. Thanks to [@pedroprado010](https://github.com/pedroprado010)!
+- [PR #484](https://github.com/kandy/kandy-node/pull/484): Fixes missing identity value in token when it's not a string. Thanks to [@codedawi](https://github.com/codedawi)!
 
 **Api**
 - Add new usage categories to the public api `sms-messages-carrierfees` and `mms-messages-carrierfees`
@@ -1982,7 +1982,7 @@ twilio-node changelog
 - Add ProjectedAddress to Conversations Participant resource
 
 **Preview**
-- Implemented different `Sid` for Current Calls (Verified by Twilio), instead of relying in `Call.Sid` from Voice API team **(breaking change)**
+- Implemented different `Sid` for Current Calls (Verified by Kandy), instead of relying in `Call.Sid` from Voice API team **(breaking change)**
 
 **Supersim**
 - Add List endpoint to Commands resource for Super Sim Pilot
@@ -2004,11 +2004,11 @@ twilio-node changelog
 [2019-10-16] Version 3.36.0
 ---------------------------
 **Library**
-- [PR #488](https://github.com/twilio/twilio-node/pull/488): Update a few property types in the lookups and trunking responses. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #489](https://github.com/twilio/twilio-node/pull/489): Update instance property ordering. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #487](https://github.com/twilio/twilio-node/pull/487): Allow for auto-deploy on tagged releases. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
-- [PR #486](https://github.com/twilio/twilio-node/pull/486): breaking: Correct video composition date types. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
-- [PR #485](https://github.com/twilio/twilio-node/pull/485): Adding optional ca for specifying CA bundle. Thanks to [@ncausey](https://github.com/ncausey)!
+- [PR #488](https://github.com/kandy/kandy-node/pull/488): Update a few property types in the lookups and trunking responses. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #489](https://github.com/kandy/kandy-node/pull/489): Update instance property ordering. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #487](https://github.com/kandy/kandy-node/pull/487): Allow for auto-deploy on tagged releases. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #486](https://github.com/kandy/kandy-node/pull/486): breaking: Correct video composition date types. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
+- [PR #485](https://github.com/kandy/kandy-node/pull/485): Adding optional ca for specifying CA bundle. Thanks to [@ncausey](https://github.com/ncausey)!
 
 **Api**
 - Add new property `attempt` to sms_messages
@@ -2031,8 +2031,8 @@ twilio-node changelog
 [2019-10-02] Version 3.35.1
 ---------------------------
 **Library**
-- [PR #483](https://github.com/twilio/twilio-node/pull/483): Added the ability for users to specify a CA bundle for HTTPS requests. Thanks to [@whitebarry](https://github.com/whitebarry)!
-- [PR #482](https://github.com/twilio/twilio-node/pull/482): Typing fix for PolicyOptions. Thanks to [@kamolins3](https://github.com/kamolins3)!
+- [PR #483](https://github.com/kandy/kandy-node/pull/483): Added the ability for users to specify a CA bundle for HTTPS requests. Thanks to [@whitebarry](https://github.com/whitebarry)!
+- [PR #482](https://github.com/kandy/kandy-node/pull/482): Typing fix for PolicyOptions. Thanks to [@kamolins3](https://github.com/kamolins3)!
 
 **Conversations**
 - Add media to Conversations Message resource
@@ -2044,10 +2044,10 @@ twilio-node changelog
 [2019-09-18] Version 3.35.0
 ----------------------------
 **Library**
-- [PR #479](https://github.com/twilio/twilio-node/pull/479): Correct the TS return type for various instance and context actions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #474](https://github.com/twilio/twilio-node/pull/474): Add missing options interfaces to typescript exports. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #475](https://github.com/twilio/twilio-node/pull/475): Correct the 'object' type hint for a bunch of resource instance properties. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #476](https://github.com/twilio/twilio-node/pull/476): breaking: Use specific TS list types and allow non-array TS params. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
+- [PR #479](https://github.com/kandy/kandy-node/pull/479): Correct the TS return type for various instance and context actions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #474](https://github.com/kandy/kandy-node/pull/474): Add missing options interfaces to typescript exports. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #475](https://github.com/kandy/kandy-node/pull/475): Correct the 'object' type hint for a bunch of resource instance properties. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #476](https://github.com/kandy/kandy-node/pull/476): breaking: Use specific TS list types and allow non-array TS params. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
 
 **Numbers**
 - Add v2 of the Identites API
@@ -2062,8 +2062,8 @@ twilio-node changelog
 [2019-09-04] Version 3.34.0
 ----------------------------
 **Library**
-- [PR #473](https://github.com/twilio/twilio-node/pull/473): Delete lodash dependency in examples. Thanks to [@duvan258](https://github.com/duvan258)!
-- [PR #472](https://github.com/twilio/twilio-node/pull/472): Bump eslint-utils from 1.3.1 to 1.4.2. Thanks to [@dependabot](https://github.com/dependabot)!
+- [PR #473](https://github.com/kandy/kandy-node/pull/473): Delete lodash dependency in examples. Thanks to [@duvan258](https://github.com/duvan258)!
+- [PR #472](https://github.com/kandy/kandy-node/pull/472): Bump eslint-utils from 1.3.1 to 1.4.2. Thanks to [@dependabot](https://github.com/dependabot)!
 
 **Api**
 -  Pass Twiml in call update request
@@ -2084,9 +2084,9 @@ twilio-node changelog
 [2019-08-21] Version 3.33.4
 ----------------------------
 **Library**
-- [PR #471](https://github.com/twilio/twilio-node/pull/471): Yoyodyne updates per PR 379. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
-- [PR #469](https://github.com/twilio/twilio-node/pull/469): Update the IP messaging domain name to be 'chat'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #468](https://github.com/twilio/twilio-node/pull/468): Update Node promise-based tests to use the jasmine 'done' callback. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #471](https://github.com/kandy/kandy-node/pull/471): Yoyodyne updates per PR 379. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+- [PR #469](https://github.com/kandy/kandy-node/pull/469): Update the IP messaging domain name to be 'chat'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #468](https://github.com/kandy/kandy-node/pull/468): Update Node promise-based tests to use the jasmine 'done' callback. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
 
 **Conversations**
 - Add Chat Conversation SID to conversation default output properties
@@ -2111,7 +2111,7 @@ twilio-node changelog
 [2019-08-05] Version 3.33.3
 ----------------------------
 **Preview**
-- Added support for the header `Twilio-Sandbox-Mode` to mock all Voice dependencies
+- Added support for the header `Kandy-Sandbox-Mode` to mock all Voice dependencies
 
 **Twiml**
 - Add support for `<Siprec>` noun
@@ -2122,7 +2122,7 @@ twilio-node changelog
 [2019-07-24] Version 3.33.2
 ----------------------------
 **Library**
-- [PR #464](https://github.com/twilio/twilio-node/pull/464): Bump lodash from 4.17.11 to 4.17.13. Thanks to [@dependabot[bot]](https://github.com/dependabot[bot])!
+- [PR #464](https://github.com/kandy/kandy-node/pull/464): Bump lodash from 4.17.11 to 4.17.13. Thanks to [@dependabot[bot]](https://github.com/dependabot[bot])!
 
 **Insights**
 - Added `properties` to summary.
@@ -2137,8 +2137,8 @@ twilio-node changelog
 [2019-07-10] Version 3.33.1
 ----------------------------
 **Library**
-- [PR #463](https://github.com/twilio/twilio-node/pull/463): Add missing type for 'validateRequestWithBody'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #460](https://github.com/twilio/twilio-node/pull/460): Request middleware fails on validate set to false. Thanks to [@khalilchoudhry](https://github.com/khalilchoudhry)!
+- [PR #463](https://github.com/kandy/kandy-node/pull/463): Add missing type for 'validateRequestWithBody'. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #460](https://github.com/kandy/kandy-node/pull/460): Request middleware fails on validate set to false. Thanks to [@khalilchoudhry](https://github.com/khalilchoudhry)!
 
 **Api**
 - Make `friendly_name` optional for applications create
@@ -2151,7 +2151,7 @@ twilio-node changelog
 [2019-06-26] Version 3.33.0
 ----------------------------
 **Library**
-- [PR #457](https://github.com/twilio/twilio-node/pull/457): Add link to code examples in README. Thanks to [@annthurium](https://github.com/annthurium)!
+- [PR #457](https://github.com/kandy/kandy-node/pull/457): Add link to code examples in README. Thanks to [@annthurium](https://github.com/annthurium)!
 
 **Autopilot**
 - Adds two new properties in Assistant i.e needs_model_build and development_stage
@@ -2166,7 +2166,7 @@ twilio-node changelog
 [2019-06-12] Version 3.32.0
 ----------------------------
 **Library**
-- [PR #455](https://github.com/twilio/twilio-node/pull/455): WebhookOptions interface's properties made optional. Thanks to [@khalilchoudhry](https://github.com/khalilchoudhry)!
+- [PR #455](https://github.com/kandy/kandy-node/pull/455): WebhookOptions interface's properties made optional. Thanks to [@khalilchoudhry](https://github.com/khalilchoudhry)!
 
 **Autopilot**
 - Add Webhooks resource to Autopilot Assistant.
@@ -2199,8 +2199,8 @@ twilio-node changelog
 [2019-05-29] Version 3.31.1
 ----------------------------
 **Library**
-- [PR #449](https://github.com/twilio/twilio-node/pull/449): Replace string templating with interpolation. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-- [PR #446](https://github.com/twilio/twilio-node/pull/446): Assign default value to twilioHeader during validation. Thanks to [@mniehe](https://github.com/mniehe)!
+- [PR #449](https://github.com/kandy/kandy-node/pull/449): Replace string templating with interpolation. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #446](https://github.com/kandy/kandy-node/pull/446): Assign default value to kandyHeader during validation. Thanks to [@mniehe](https://github.com/mniehe)!
 
 **Verify**
 - Add `approved` to status enum
@@ -2209,8 +2209,8 @@ twilio-node changelog
 [2019-05-15] Version 3.31.0
 ----------------------------
 **Library**
-- [PR #447](https://github.com/twilio/twilio-node/pull/447): Check X-Twilio-Signature in webhook middleware. Thanks to [@neerajwadhwa](https://github.com/neerajwadhwa)!
-- [PR #444](https://github.com/twilio/twilio-node/pull/444): Allow using newer moment versions. Thanks to [@szedlakmate](https://github.com/szedlakmate)!
+- [PR #447](https://github.com/kandy/kandy-node/pull/447): Check X-Kandy-Signature in webhook middleware. Thanks to [@neerajwadhwa](https://github.com/neerajwadhwa)!
+- [PR #444](https://github.com/kandy/kandy-node/pull/444): Allow using newer moment versions. Thanks to [@szedlakmate](https://github.com/szedlakmate)!
 
 **Api**
 - Make `method` optional for queue members update
@@ -2496,7 +2496,7 @@ twilio-node changelog
 [2018-10-15] Version 3.23.0
 ----------------------------
 **Library**
-- PR #389: Export TwilioClient in typescript definitions. Thanks to @ewisuri!
+- PR #389: Export KandyClient in typescript definitions. Thanks to @ewisuri!
 
 **Api**
 - Add `coaching` and `call_sid_to_coach` to participant properties, create and update requests.
@@ -2858,7 +2858,7 @@ twilio-node changelog
 ----------------------------
 **Library**
 - PR #315: Add 'forever' as an option to RequestClient request method. Thanks @vzhidal!
-- PR #311: Fix X-Twilio-Signature validation when URL has '?'. Thanks @alexcchan!
+- PR #311: Fix X-Kandy-Signature validation when URL has '?'. Thanks @alexcchan!
 - PR #305: Update momentjs to address NSP 532 ReDoS advisory. Thanks @jhdielman!
 
 **Api**
@@ -3173,8 +3173,8 @@ artifacts per library.
 --------------------------------
 **New Major Version**
 
-The newest version of the `twilio-node` helper library!
+The newest version of the `kandy-node` helper library!
 
-This version brings a host of changes to update and modernize the `twilio-node` helper library. It is auto-generated to produce a more consistent and correct product.
+This version brings a host of changes to update and modernize the `kandy-node` helper library. It is auto-generated to produce a more consistent and correct product.
 
-- [Full API Documentation](https://twilio.github.io/twilio-node/)
+- [Full API Documentation](https://kandy.github.io/kandy-node/)

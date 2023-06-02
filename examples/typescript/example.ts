@@ -1,10 +1,10 @@
-import twilio from "../../";
+import kandy from "../../";
 import { MessageListInstanceCreateOptions } from "../../lib/rest/api/v2010/account/message";
 
-const accountSid: string = process.env.TWILIO_ACCOUNT_SID || "";
-const token: string = process.env.TWILIO_AUTH_TOKEN || "";
+const accountSid: string = process.env.KANDY_ACCOUNT_SID || "";
+const token: string = process.env.KANDY_AUTH_TOKEN || "";
 
-const client = twilio(accountSid, token);
+const client = kandy(accountSid, token);
 
 let i: number = 0;
 client.calls.each({
@@ -127,6 +127,6 @@ promiseMessage.then((messages: any[]) => {
   });
 });
 
-const twiml = new twilio.twiml.VoiceResponse();
+const twiml = new kandy.twiml.VoiceResponse();
 twiml.dial({}, "+12345678901");
-twiml.play("https://demo.twilio.com/docs/classic.mp3");
+twiml.play("https://demo.kandy.com/docs/classic.mp3");

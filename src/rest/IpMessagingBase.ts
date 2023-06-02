@@ -20,10 +20,10 @@ class IpMessagingBase extends Domain {
   /**
    * Initialize ipMessaging domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://ip-messaging.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://ip-messaging.kandy.com");
   }
 
   get v1(): V1 {

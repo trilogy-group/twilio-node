@@ -46,17 +46,17 @@ describe("create messaging response TwiML", function () {
     var actual = new MessagingResponse();
     var message = actual.message();
     message.body("foobar");
-    message.media("https://twilio.com");
+    message.media("https://kandy.com");
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Message><Body>foobar</Body><Media>https://twilio.com</Media></Message></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Message><Body>foobar</Body><Media>https://kandy.com</Media></Message></Response>'
     );
   });
 
   it("should serialize a redirect", function () {
     var actual = new MessagingResponse();
-    actual.redirect("https://twilio.com");
+    actual.redirect("https://kandy.com");
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Redirect>https://twilio.com</Redirect></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Redirect>https://kandy.com</Redirect></Response>'
     );
   });
 

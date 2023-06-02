@@ -18,10 +18,10 @@ class AutopilotBase extends Domain {
   /**
    * Initialize autopilot domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://autopilot.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://autopilot.kandy.com");
   }
 
   get v1(): V1 {

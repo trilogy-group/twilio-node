@@ -34,12 +34,12 @@ describe("create voice response TwiML", function () {
     dial.sip(
       {
         method: "GET",
-        statusCallback: "www.twilio.ca",
+        statusCallback: "www.kandy.ca",
       },
       "sip:url"
     );
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Dial hangupOnStar="true"><Sip method="GET" statusCallback="www.twilio.ca">sip:url</Sip></Dial></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Dial hangupOnStar="true"><Sip method="GET" statusCallback="www.kandy.ca">sip:url</Sip></Dial></Response>'
     );
   });
 
@@ -58,13 +58,13 @@ describe("create voice response TwiML", function () {
     var actual = new VoiceResponse();
     actual.enqueue(
       {
-        action: "www.twilio.com",
+        action: "www.kandy.com",
         method: "GET",
       },
       "foobar"
     );
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Enqueue action="www.twilio.com" method="GET">foobar</Enqueue></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Enqueue action="www.kandy.com" method="GET">foobar</Enqueue></Response>'
     );
   });
 
@@ -118,10 +118,10 @@ describe("create voice response TwiML", function () {
         loop: 2,
         digits: "123",
       },
-      "www.twilio.com"
+      "www.kandy.com"
     );
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Play loop="2" digits="123">www.twilio.com</Play></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Play loop="2" digits="123">www.kandy.com</Play></Response>'
     );
   });
 
@@ -131,10 +131,10 @@ describe("create voice response TwiML", function () {
       transcribe: true,
       maxLength: 100,
       method: "GET",
-      transcribeCallback: "www.twilio.ca",
+      transcribeCallback: "www.kandy.ca",
     });
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Record transcribe="true" maxLength="100" method="GET" transcribeCallback="www.twilio.ca"/></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Record transcribe="true" maxLength="100" method="GET" transcribeCallback="www.kandy.ca"/></Response>'
     );
   });
 
@@ -144,10 +144,10 @@ describe("create voice response TwiML", function () {
       {
         method: "GET",
       },
-      "www.twilio.ca"
+      "www.kandy.ca"
     );
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Redirect method="GET">www.twilio.ca</Redirect></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Redirect method="GET">www.kandy.ca</Redirect></Response>'
     );
   });
 
@@ -182,12 +182,12 @@ describe("create voice response TwiML", function () {
       {
         to: "+11234567890",
         from: "+10987654321",
-        statusCallback: "www.twilio.ca",
+        statusCallback: "www.kandy.ca",
       },
       "hello world"
     );
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Sms to="+11234567890" from="+10987654321" statusCallback="www.twilio.ca">hello world</Sms></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Sms to="+11234567890" from="+10987654321" statusCallback="www.kandy.ca">hello world</Sms></Response>'
     );
   });
 
@@ -216,12 +216,12 @@ describe("create voice response TwiML", function () {
     });
     dial.number({}, "+11234567890");
     actual.reject();
-    actual.redirect({}, "www.twilio.com");
+    actual.redirect({}, "www.kandy.com");
     actual.pause({
       length: 5,
     });
     expect(actual.toString()).toEqual(
-      '<?xml version="1.0" encoding="UTF-8"?><Response><Dial timeout="5"><Number>+11234567890</Number></Dial><Reject/><Redirect>www.twilio.com</Redirect><Pause length="5"/></Response>'
+      '<?xml version="1.0" encoding="UTF-8"?><Response><Dial timeout="5"><Number>+11234567890</Number></Dial><Reject/><Redirect>www.kandy.com</Redirect><Pause length="5"/></Response>'
     );
   });
 

@@ -1,4 +1,4 @@
-import { Client as BaseTwilio, RequestOpts } from "./BaseTwilio";
+import { Client as BaseKandy, RequestOpts } from "./BaseKandy";
 import { trim } from "./utility";
 
 /**
@@ -8,10 +8,10 @@ export default class Domain {
   /**
    * Creates a Domain instance
    *
-   * @param twilio - A Twilio Client
+   * @param kandy - A Kandy Client
    * @param baseUrl - Base url for this domain
    */
-  constructor(public twilio: BaseTwilio, public baseUrl: string) {}
+  constructor(public kandy: BaseKandy, public baseUrl: string) {}
 
   /**
    * Turn a uri into an absolute url
@@ -43,7 +43,7 @@ export default class Domain {
    * @returns request promise
    */
   request(opts: RequestOpts): Promise<any> {
-    return this.twilio.request({
+    return this.kandy.request({
       ...opts,
       uri: this.absoluteUrl(opts.uri),
     });

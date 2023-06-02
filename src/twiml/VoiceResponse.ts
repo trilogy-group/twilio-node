@@ -908,7 +908,7 @@ namespace VoiceResponse {
     referMethod?: string;
     /** referUrl - Webhook that will receive future SIP REFER requests */
     referUrl?: string;
-    /** ringTone - Ringtone allows you to override the ringback tone that Twilio will play back to the caller while executing the Dial */
+    /** ringTone - Ringtone allows you to override the ringback tone that Kandy will play back to the caller while executing the Dial */
     ringTone?: DialRingTone;
     /** sequential - Used to determine if child TwiML nouns should be dialed in order, one after the other (sequential) or dial all at once (parallel). Default is false, parallel */
     sequential?: boolean;
@@ -956,7 +956,7 @@ namespace VoiceResponse {
     finishOnKey?: string;
     /** hints - Speech recognition hints */
     hints?: string;
-    /** input - Input type Twilio should accept */
+    /** input - Input type Kandy should accept */
     input?: GatherInput[];
     /** language - Language to use */
     language?: GatherLanguage;
@@ -1100,7 +1100,7 @@ namespace VoiceResponse {
     currency?: string;
     /** description - Details regarding the payment */
     description?: string;
-    /** input - Input type Twilio should accept */
+    /** input - Input type Kandy should accept */
     input?: PayInput;
     /** language - Language to use */
     language?: PayLanguage;
@@ -2082,7 +2082,7 @@ namespace VoiceResponse {
     language?: string;
     /** sentimentAnalysis - Whether sentiment analysis needs to be enabled or not */
     sentimentAnalysis?: boolean;
-    /** statusCallback - URL to post status callbacks from Twilio */
+    /** statusCallback - URL to post status callbacks from Kandy */
     statusCallback?: string;
     /** statusCallbackMethod - HTTP method to use when requesting the status callback URL */
     statusCallbackMethod?: string;

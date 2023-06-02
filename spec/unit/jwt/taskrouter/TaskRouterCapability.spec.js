@@ -57,7 +57,7 @@ describe("The TaskRouter Capability Token Object", function () {
     var decoded = jwt.verify(c.toJwt(), "foobar");
     expect(decoded.policies.length).toBe(6);
     var activitiesPolicy = {
-      url: "https://taskrouter.twilio.com/v1/Workspaces/WS456/Activities",
+      url: "https://taskrouter.kandy.com/v1/Workspaces/WS456/Activities",
       method: "GET",
       query_filter: {},
       post_filter: {},
@@ -66,7 +66,7 @@ describe("The TaskRouter Capability Token Object", function () {
     expect(decoded.policies[0]).toEqual(activitiesPolicy);
 
     var reservationFetchPolicy = {
-      url: "https://taskrouter.twilio.com/v1/Workspaces/WS456/Tasks/**",
+      url: "https://taskrouter.kandy.com/v1/Workspaces/WS456/Tasks/**",
       method: "GET",
       query_filter: {},
       post_filter: {},
@@ -75,7 +75,7 @@ describe("The TaskRouter Capability Token Object", function () {
     expect(decoded.policies[1]).toEqual(reservationFetchPolicy);
 
     var reservationsPolicy = {
-      url: "https://taskrouter.twilio.com/v1/Workspaces/WS456/Workers/WK789/Reservations/**",
+      url: "https://taskrouter.kandy.com/v1/Workspaces/WS456/Workers/WK789/Reservations/**",
       method: "GET",
       query_filter: {},
       post_filter: {},
@@ -84,7 +84,7 @@ describe("The TaskRouter Capability Token Object", function () {
     expect(decoded.policies[2]).toEqual(reservationsPolicy);
 
     var workerFetchPolicy = {
-      url: "https://taskrouter.twilio.com/v1/Workspaces/WS456/Workers/WK789",
+      url: "https://taskrouter.kandy.com/v1/Workspaces/WS456/Workers/WK789",
       method: "GET",
       query_filter: {},
       post_filter: {},
@@ -93,7 +93,7 @@ describe("The TaskRouter Capability Token Object", function () {
     expect(decoded.policies[3]).toEqual(workerFetchPolicy);
 
     var getPolicy = {
-      url: "https://event-bridge.twilio.com/v1/wschannels/AC123/WK789",
+      url: "https://event-bridge.kandy.com/v1/wschannels/AC123/WK789",
       method: "GET",
       query_filter: {},
       post_filter: {},
@@ -102,7 +102,7 @@ describe("The TaskRouter Capability Token Object", function () {
     expect(decoded.policies[4]).toEqual(getPolicy);
 
     var postPolicy = {
-      url: "https://event-bridge.twilio.com/v1/wschannels/AC123/WK789",
+      url: "https://event-bridge.kandy.com/v1/wschannels/AC123/WK789",
       method: "POST",
       query_filter: {},
       post_filter: {},

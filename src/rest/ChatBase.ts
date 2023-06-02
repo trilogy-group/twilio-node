@@ -22,10 +22,10 @@ class ChatBase extends Domain {
   /**
    * Initialize chat domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://chat.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://chat.kandy.com");
   }
 
   get v1(): V1 {

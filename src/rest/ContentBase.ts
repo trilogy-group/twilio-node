@@ -18,10 +18,10 @@ class ContentBase extends Domain {
   /**
    * Initialize content domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://content.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://content.kandy.com");
   }
 
   get v1(): V1 {

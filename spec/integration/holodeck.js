@@ -26,7 +26,7 @@ class Holodeck {
       Accept: "application/json",
       "Accept-Charset": "utf-8",
       "User-Agent": util.format(
-        "twilio-node/%s (%s %s) node/%s",
+        "kandy-node/%s (%s %s) node/%s",
         moduleInfo.version,
         os.platform(),
         os.arch(),

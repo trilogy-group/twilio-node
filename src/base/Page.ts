@@ -2,7 +2,7 @@ import Version from "./Version";
 import Response from "../http/response";
 import RestException from "./RestException";
 
-export interface TwilioResponsePayload {
+export interface KandyResponsePayload {
   [key: string]: any;
   first_page_uri: string;
   next_page_uri: string;
@@ -23,7 +23,7 @@ interface Solution {
 
 export default class Page<
   TVersion extends Version,
-  TPayload extends TwilioResponsePayload,
+  TPayload extends KandyResponsePayload,
   TResource,
   TInstance
 > {
@@ -38,7 +38,7 @@ export default class Page<
    *
    * Base page object to maintain request state.
    *
-   * @param version - A twilio version instance
+   * @param version - A kandy version instance
    * @param response - The http response
    * @param solution - path solution
    */
@@ -167,7 +167,7 @@ export default class Page<
       return undefined;
     }
 
-    var reqPromise = this._version._domain.twilio.request({
+    var reqPromise = this._version._domain.kandy.request({
       method: "get",
       uri: this.nextPageUrl,
     });
@@ -196,7 +196,7 @@ export default class Page<
       return undefined;
     }
 
-    var reqPromise = this._version._domain.twilio.request({
+    var reqPromise = this._version._domain.kandy.request({
       method: "get",
       uri: this.previousPageUrl,
     });

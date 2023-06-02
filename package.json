@@ -1,23 +1,23 @@
 {
-  "name": "twilio",
-  "description": "A Twilio helper library",
+  "name": "kandy",
+  "description": "A Kandy helper library",
   "version": "4.11.2",
-  "author": "API Team <api@twilio.com>",
+  "author": "API Team <api@kandy.com>",
   "contributors": [
     {
-      "name": "twilio-node contributors",
-      "url": "https://github.com/twilio/twilio-node/graphs/contributors"
+      "name": "kandy-node contributors",
+      "url": "https://github.com/kandy/kandy-node/graphs/contributors"
     }
   ],
   "keywords": [
-    "twilio",
+    "kandy",
     "sms",
     "rest",
     "api"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/twilio/twilio-node.git"
+    "url": "https://github.com/kandy/kandy-node.git"
   },
   "dependencies": {
     "axios": "^0.26.1",

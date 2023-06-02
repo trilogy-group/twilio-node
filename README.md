@@ -1,19 +1,19 @@
-# twilio-node
+# kandy-node
 
-[![NPM](https://nodei.co/npm/twilio.png?downloads=true&stars=true)](https://nodei.co/npm/twilio/)
+[![NPM](https://nodei.co/npm/kandy.png?downloads=true&stars=true)](https://nodei.co/npm/kandy/)
 
-[![Tests](https://github.com/twilio/twilio-node/actions/workflows/test-and-deploy.yml/badge.svg)](https://github.com/twilio/twilio-node/actions/workflows/test-and-deploy.yml)
-[![Learn with TwilioQuest](https://img.shields.io/static/v1?label=TwilioQuest&message=Learn%20to%20contribute%21&color=F22F46&labelColor=1f243c&style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAASFBMVEUAAAAZGRkcHBwjIyMoKCgAAABgYGBoaGiAgICMjIyzs7PJycnMzMzNzc3UoBfd3d3m5ubqrhfrMEDu7u739/f4vSb/3AD///9tbdyEAAAABXRSTlMAAAAAAMJrBrEAAAKoSURBVHgB7ZrRcuI6EESdyxXGYoNFvMD//+l2bSszRgyUYpFAsXOeiJGmj4NkuWx1Qeh+Ekl9DgEXOBwOx+Px5xyQhDykfgq4wG63MxxaR4ddIkg6Ul3g84vCIcjPBA5gmUMeXESrlukuoK33+33uID8TWeLAdOWsKpJYzwVMB7bOzYSGOciyUlXSn0/ABXTosJ1M1SbypZ4O4MbZuIDMU02PMbauhhHMHXbmebmALIiEbbbbbUrpF1gwE9kFfRNAJaP+FQEXCCTGyJ4ngDrjOFo3jEL5JdqjF/pueR4cCeCGgAtwmuRS6gDwaRiGvu+DMFwSBLTE3+jF8JyuV1okPZ+AC4hDFhCHyHQjdjPHUKFDlHSJkHQXMB3KpSwXNGJPcwwTdZiXlRN0gSp0zpWxNtM0beYE0nRH6QIbO7rawwXaBYz0j78gxjokDuv12gVeUuBD0MDi0OQCLvDaAho4juP1Q/jkAncXqIcCfd+7gAu4QLMACCLxpRsSuQh0igu0C9Svhi7weAGZg50L3IE3cai4IfkNZAC8dfdhsUD3CgKBVC9JE5ABAFzg4QL/taYPAAWrHdYcgfLaIgAXWJ7OV38n1LEF8tt2TH29E+QAoDoO5Ve/LtCQDmKM9kPbvCEBApK+IXzbcSJ0cIGF6e8gpcRhUDogWZ8JnaWjPXc/fNnBBUKRngiHgTUSivSzDRDgHZQOLvBQgf8rRt+VdBUUhwkU6VpJ+xcOwQUqZr+mR0kvBUgv6cB4+37hQAkXqE8PwGisGhJtN4xAHMzrsgvI7rccXqSvKh6jltGlrOHA3Xk1At3LC4QiPdX9/0ndHpGVvTjR4bZA1ypAKgVcwE5vx74ulwIugDt8e/X7JgfkucBMIAr26ndnB4UCLnDOqvteQsHlgX9N4A+c4cW3DXSPbwAAAABJRU5ErkJggg==)](https://twil.io/learn-open-source)
+[![Tests](https://github.com/kandy/kandy-node/actions/workflows/test-and-deploy.yml/badge.svg)](https://github.com/kandy/kandy-node/actions/workflows/test-and-deploy.yml)
+[![Learn with KandyQuest](https://img.shields.io/static/v1?label=KandyQuest&message=Learn%20to%20contribute%21&color=F22F46&labelColor=1f243c&style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAASFBMVEUAAAAZGRkcHBwjIyMoKCgAAABgYGBoaGiAgICMjIyzs7PJycnMzMzNzc3UoBfd3d3m5ubqrhfrMEDu7u739/f4vSb/3AD///9tbdyEAAAABXRSTlMAAAAAAMJrBrEAAAKoSURBVHgB7ZrRcuI6EESdyxXGYoNFvMD//+l2bSszRgyUYpFAsXOeiJGmj4NkuWx1Qeh+Ekl9DgEXOBwOx+Px5xyQhDykfgq4wG63MxxaR4ddIkg6Ul3g84vCIcjPBA5gmUMeXESrlukuoK33+33uID8TWeLAdOWsKpJYzwVMB7bOzYSGOciyUlXSn0/ABXTosJ1M1SbypZ4O4MbZuIDMU02PMbauhhHMHXbmebmALIiEbbbbbUrpF1gwE9kFfRNAJaP+FQEXCCTGyJ4ngDrjOFo3jEL5JdqjF/pueR4cCeCGgAtwmuRS6gDwaRiGvu+DMFwSBLTE3+jF8JyuV1okPZ+AC4hDFhCHyHQjdjPHUKFDlHSJkHQXMB3KpSwXNGJPcwwTdZiXlRN0gSp0zpWxNtM0beYE0nRH6QIbO7rawwXaBYz0j78gxjokDuv12gVeUuBD0MDi0OQCLvDaAho4juP1Q/jkAncXqIcCfd+7gAu4QLMACCLxpRsSuQh0igu0C9Svhi7weAGZg50L3IE3cai4IfkNZAC8dfdhsUD3CgKBVC9JE5ABAFzg4QL/taYPAAWrHdYcgfLaIgAXWJ7OV38n1LEF8tt2TH29E+QAoDoO5Ve/LtCQDmKM9kPbvCEBApK+IXzbcSJ0cIGF6e8gpcRhUDogWZ8JnaWjPXc/fNnBBUKRngiHgTUSivSzDRDgHZQOLvBQgf8rRt+VdBUUhwkU6VpJ+xcOwQUqZr+mR0kvBUgv6cB4+37hQAkXqE8PwGisGhJtN4xAHMzrsgvI7rccXqSvKh6jltGlrOHA3Xk1At3LC4QiPdX9/0ndHpGVvTjR4bZA1ypAKgVcwE5vx74ulwIugDt8e/X7JgfkucBMIAr26ndnB4UCLnDOqvteQsHlgX9N4A+c4cW3DXSPbwAAAABJRU5ErkJggg==)](https://twil.io/learn-open-source)
 
 ## Documentation
 
-The documentation for the Twilio API can be found [here][apidocs].
+The documentation for the Kandy API can be found [here][apidocs].
 
 The Node library documentation can be found [here][libdocs].
 
 ## Versions
 
-`twilio-node` uses a modified version of [Semantic Versioning](https://semver.org) for all changes. [See this document](VERSIONS.md) for details.
+`kandy-node` uses a modified version of [Semantic Versioning](https://semver.org) for all changes. [See this document](VERSIONS.md) for details.
 
 ### Supported Node.js Versions
 
@@ -26,28 +26,28 @@ This library supports the following Node.js implementations:
 TypeScript is supported for TypeScript version 2.9 and above.
 
 > **Warning**
-> Do not use this Node.js library in a front-end application. Doing so can expose your Twilio credentials to end-users as part of the bundled HTML/JavaScript sent to their browser.
+> Do not use this Node.js library in a front-end application. Doing so can expose your Kandy credentials to end-users as part of the bundled HTML/JavaScript sent to their browser.
 
 ## Installation
 
-`npm install twilio` or `yarn add twilio`
+`npm install kandy` or `yarn add kandy`
 
 ### Test your installation
 
 To make sure the installation was successful, try sending yourself an SMS message, like this:
 
 ```js
-// Your AccountSID and Auth Token from console.twilio.com
+// Your AccountSID and Auth Token from console.kandy.com
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 
 client.messages
   .create({
-    body: 'Hello from twilio-node',
+    body: 'Hello from kandy-node',
     to: '+12345678901', // Text your number
-    from: '+12345678901', // From a valid Twilio number
+    from: '+12345678901', // From a valid Kandy number
   })
   .then((message) => console.log(message.sid));
 ```
@@ -55,7 +55,7 @@ client.messages
 After a brief delay, you will receive the text message on your phone.
 
 > **Warning**
-> It's okay to hardcode your credentials when testing locally, but you should use environment variables to keep them secret before committing any code or deploying to production. Check out [How to Set Environment Variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html) for more information.
+> It's okay to hardcode your credentials when testing locally, but you should use environment variables to keep them secret before committing any code or deploying to production. Check out [How to Set Environment Variables](https://www.kandy.com/blog/2017/01/how-to-set-environment-variables.html) for more information.
 
 ## Usage
 
@@ -63,50 +63,50 @@ Check out these [code examples](examples) in JavaScript and TypeScript to get up
 
 ### Environment Variables
 
-`twilio-node` supports credential storage in environment variables. If no credentials are provided when instantiating the Twilio client (e.g., `const client = require('twilio')();`), the values in following env vars will be used: `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN`.
+`kandy-node` supports credential storage in environment variables. If no credentials are provided when instantiating the Kandy client (e.g., `const client = require('kandy')();`), the values in following env vars will be used: `KANDY_ACCOUNT_SID` and `KANDY_AUTH_TOKEN`.
 
-If your environment requires SSL decryption, you can set the path to CA bundle in the env var `TWILIO_CA_BUNDLE`.
+If your environment requires SSL decryption, you can set the path to CA bundle in the env var `KANDY_CA_BUNDLE`.
 
 ### Client Initialization
 
-If you invoke any V2010 operations without specifying an account SID, `twilio-node` will automatically use the `TWILIO_ACCOUNT_SID` value that the client was initialized with. This is useful for when you'd like to, for example, fetch resources for your main account but also your subaccount. See below:
+If you invoke any V2010 operations without specifying an account SID, `kandy-node` will automatically use the `KANDY_ACCOUNT_SID` value that the client was initialized with. This is useful for when you'd like to, for example, fetch resources for your main account but also your subaccount. See below:
 
 ```javascript
-// Your Account SID, Subaccount SID Auth Token from console.twilio.com
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const subaccountSid = process.env.TWILIO_ACCOUNT_SUBACCOUNT_SID;
+// Your Account SID, Subaccount SID Auth Token from console.kandy.com
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const authToken = process.env.KANDY_AUTH_TOKEN;
+const subaccountSid = process.env.KANDY_ACCOUNT_SUBACCOUNT_SID;
 
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 const mainAccountCalls = client.api.v2010.account.calls.list; // SID not specified, so defaults to accountSid
 const subaccountCalls = client.api.v2010.account(subaccountSid).calls.list; // SID specified as subaccountSid
 ```
 
 ### Lazy Loading
 
-`twilio-node` supports lazy loading required modules for faster loading time. Lazy loading is enabled by default. To disable lazy loading, simply instantiate the Twilio client with the `lazyLoading` flag set to `false`:
+`kandy-node` supports lazy loading required modules for faster loading time. Lazy loading is enabled by default. To disable lazy loading, simply instantiate the Kandy client with the `lazyLoading` flag set to `false`:
 
 ```javascript
-// Your Account SID and Auth Token from console.twilio.com
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+// Your Account SID and Auth Token from console.kandy.com
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const authToken = process.env.KANDY_AUTH_TOKEN;
 
-const client = require('twilio')(accountSid, authToken, {
+const client = require('kandy')(accountSid, authToken, {
   lazyLoading: false,
 });
 ```
 
 ### Enable Auto-Retry with Exponential Backoff
 
-`twilio-node` supports automatic retry with exponential backoff when API requests receive an [Error 429 response](https://support.twilio.com/hc/en-us/articles/360044308153-Twilio-API-response-Error-429-Too-Many-Requests-). This retry with exponential backoff feature is disabled by default. To enable this feature, instantiate the Twilio client with the `autoRetry` flag set to `true`.
+`kandy-node` supports automatic retry with exponential backoff when API requests receive an [Error 429 response](https://support.kandy.com/hc/en-us/articles/360044308153-Kandy-API-response-Error-429-Too-Many-Requests-). This retry with exponential backoff feature is disabled by default. To enable this feature, instantiate the Kandy client with the `autoRetry` flag set to `true`.
 
 Optionally, the maximum number of retries performed by this feature can be set with the `maxRetries` flag. The default maximum number of retries is `3`.
 
 ```javascript
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const authToken = process.env.KANDY_AUTH_TOKEN;
 
-const client = require('twilio')(accountSid, authToken, {
+const client = require('kandy')(accountSid, authToken, {
   autoRetry: true,
   maxRetries: 3,
 });
@@ -114,27 +114,27 @@ const client = require('twilio')(accountSid, authToken, {
 
 ### Specify Region and/or Edge
 
-To take advantage of Twilio's [Global Infrastructure](https://www.twilio.com/docs/global-infrastructure), specify the target Region and/or Edge for the client:
+To take advantage of Kandy's [Global Infrastructure](https://www.kandy.com/docs/global-infrastructure), specify the target Region and/or Edge for the client:
 
 ```javascript
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const authToken = process.env.KANDY_AUTH_TOKEN;
 
-const client = require('twilio')(accountSid, authToken, {
+const client = require('kandy')(accountSid, authToken, {
   region: 'au1',
   edge: 'sydney',
 });
 ```
 
-Alternatively, specify the edge and/or region after constructing the Twilio client:
+Alternatively, specify the edge and/or region after constructing the Kandy client:
 
 ```javascript
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 client.region = 'au1';
 client.edge = 'sydney';
 ```
 
-This will result in the `hostname` transforming from `api.twilio.com` to `api.sydney.au1.twilio.com`.
+This will result in the `hostname` transforming from `api.kandy.com` to `api.sydney.au1.kandy.com`.
 
 ### Iterate through records
 
@@ -142,34 +142,34 @@ The library automatically handles paging for you. Collections, such as `calls` a
 
 `list` eagerly fetches all records and returns them as a list, whereas `each` streams records and lazily retrieves pages of records as you iterate over the collection. You can also page manually using the `page` method.
 
-For more information about these methods, view the [auto-generated library docs](https://www.twilio.com/docs/libraries/reference/twilio-node/).
+For more information about these methods, view the [auto-generated library docs](https://www.kandy.com/docs/libraries/reference/kandy-node/).
 
 ```js
-// Your Account SID and Auth Token from console.twilio.com
+// Your Account SID and Auth Token from console.kandy.com
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 
 client.calls.each((call) => console.log(call.direction));
 ```
 
 ### Enable Debug Logging
 
-There are two ways to enable debug logging in the default HTTP client. You can create an environment variable called `TWILIO_LOG_LEVEL` and set it to `debug` or you can set the logLevel variable on the client as debug:
+There are two ways to enable debug logging in the default HTTP client. You can create an environment variable called `KANDY_LOG_LEVEL` and set it to `debug` or you can set the logLevel variable on the client as debug:
 
 ```javascript
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const authToken = process.env.KANDY_AUTH_TOKEN;
 
-const client = require('twilio')(accountSid, authToken, {
+const client = require('kandy')(accountSid, authToken, {
   logLevel: 'debug',
 });
 ```
 
-You can also set the logLevel variable on the client after constructing the Twilio client:
+You can also set the logLevel variable on the client after constructing the Kandy client:
 
 ```javascript
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 client.logLevel = 'debug';
 ```
 
@@ -183,7 +183,7 @@ For example, you can retrieve the status code of the last response like so:
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-const client = require('twilio')(accountSid, authToken);
+const client = require('kandy')(accountSid, authToken);
 
 client.messages
   .create({
@@ -208,7 +208,7 @@ client.messages
 
 ### Handle exceptions
 
-If the Twilio API returns a 400 or a 500 level HTTP response, `twilio-node` will throw an error including relevant information, which you can then `catch`:
+If the Kandy API returns a 400 or a 500 level HTTP response, `kandy-node` will throw an error including relevant information, which you can then `catch`:
 
 ```js
 client.messages
@@ -242,7 +242,7 @@ try {
 
 If you are using callbacks, error information will be included in the `error` parameter of the callback.
 
-400-level errors are [normal during API operation](https://www.twilio.com/docs/api/rest/request#get-responses) ("Invalid number", "Cannot deliver SMS to that number", for example) and should be handled appropriately.
+400-level errors are [normal during API operation](https://www.kandy.com/docs/api/rest/request#get-responses) ("Invalid number", "Cannot deliver SMS to that number", for example) and should be handled appropriately.
 
 ### Use a custom HTTP Client
 
@@ -250,15 +250,15 @@ To use a custom HTTP client with this helper library, please see the [advanced e
 
 ### Use webhook validation
 
-See [example](examples/express.js) for a code sample for incoming Twilio request validation.
+See [example](examples/express.js) for a code sample for incoming Kandy request validation.
 
 ## Docker image
 
-The `Dockerfile` present in this repository and its respective `twilio/twilio-node` Docker image are currently used by Twilio for testing purposes only.
+The `Dockerfile` present in this repository and its respective `kandy/kandy-node` Docker image are currently used by Kandy for testing purposes only.
 
 ## Getting help
 
-If you need help installing or using the library, please check the [Twilio Support Help Center](https://support.twilio.com) first, and [file a support ticket](https://twilio.com/help/contact) if you don't find an answer to your question.
+If you need help installing or using the library, please check the [Kandy Support Help Center](https://support.kandy.com) first, and [file a support ticket](https://kandy.com/help/contact) if you don't find an answer to your question.
 
 If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
 
@@ -292,5 +292,5 @@ To run just one specific test file instead of the whole suite, provide a JavaScr
 npm run test:javascript -- -m .\*client.\*
 ```
 
-[apidocs]: https://www.twilio.com/docs/api
-[libdocs]: https://twilio.github.io/twilio-node
+[apidocs]: https://www.kandy.com/docs/api
+[libdocs]: https://kandy.github.io/kandy-node

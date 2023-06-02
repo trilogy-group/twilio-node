@@ -108,9 +108,9 @@ class RequestClient {
     };
 
     // sets https agent CA bundle if defined in CA bundle filepath env variable
-    if (process.env.TWILIO_CA_BUNDLE !== undefined) {
+    if (process.env.KANDY_CA_BUNDLE !== undefined) {
       if (agentOpts.ca === undefined) {
-        agentOpts.ca = fs.readFileSync(process.env.TWILIO_CA_BUNDLE);
+        agentOpts.ca = fs.readFileSync(process.env.KANDY_CA_BUNDLE);
       }
     }
 
@@ -248,7 +248,7 @@ class RequestClient {
   }
 
   private logRequest<TData>(options: LastRequestOptions<TData>) {
-    console.log("-- BEGIN Twilio API Request --");
+    console.log("-- BEGIN Kandy API Request --");
     console.log(`${options.method} ${options.url}`);
 
     if (options.params) {
@@ -266,7 +266,7 @@ class RequestClient {
       );
     }
 
-    console.log("-- END Twilio API Request --");
+    console.log("-- END Kandy API Request --");
   }
 }
 

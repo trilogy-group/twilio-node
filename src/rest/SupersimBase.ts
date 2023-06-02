@@ -18,10 +18,10 @@ class SupersimBase extends Domain {
   /**
    * Initialize supersim domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://supersim.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://supersim.kandy.com");
   }
 
   get v1(): V1 {

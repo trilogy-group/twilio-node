@@ -12,8 +12,8 @@ test:
 	npm test
 
 test-docker:
-	docker build -t twilio/twilio-node .
-	docker run twilio/twilio-node npm run ci
+	docker build -t kandy/kandy-node .
+	docker run kandy/kandy-node npm run ci
 
 docs:
 	npm run typedoc
@@ -27,12 +27,12 @@ prettier:
 API_DEFINITIONS_SHA=$(shell git log --oneline | grep Regenerated | head -n1 | cut -d ' ' -f 5)
 CURRENT_TAG=$(shell expr "${GITHUB_TAG}" : ".*-rc.*" >/dev/null && echo "rc" || echo "latest")
 docker-build:
-	docker build -t twilio/twilio-node .
-	docker tag twilio/twilio-node twilio/twilio-node:${GITHUB_TAG}
-	docker tag twilio/twilio-node twilio/twilio-node:apidefs-${API_DEFINITIONS_SHA}
-	docker tag twilio/twilio-node twilio/twilio-node:${CURRENT_TAG}
+	docker build -t kandy/kandy-node .
+	docker tag kandy/kandy-node kandy/kandy-node:${GITHUB_TAG}
+	docker tag kandy/kandy-node kandy/kandy-node:apidefs-${API_DEFINITIONS_SHA}
+	docker tag kandy/kandy-node kandy/kandy-node:${CURRENT_TAG}
 
 docker-push:
-	docker push twilio/twilio-node:${GITHUB_TAG}
-	docker push twilio/twilio-node:apidefs-${API_DEFINITIONS_SHA}
-	docker push twilio/twilio-node:${CURRENT_TAG}
+	docker push kandy/kandy-node:${GITHUB_TAG}
+	docker push kandy/kandy-node:apidefs-${API_DEFINITIONS_SHA}
+	docker push kandy/kandy-node:${CURRENT_TAG}

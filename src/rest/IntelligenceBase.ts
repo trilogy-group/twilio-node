@@ -18,10 +18,10 @@ class IntelligenceBase extends Domain {
   /**
    * Initialize intelligence domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://intelligence.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://intelligence.kandy.com");
   }
 
   get v2(): V2 {

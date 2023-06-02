@@ -18,10 +18,10 @@ class NotifyBase extends Domain {
   /**
    * Initialize notify domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://notify.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://notify.kandy.com");
   }
 
   get v1(): V1 {

@@ -1,10 +1,10 @@
 contact_links:
-  - name: Twilio Support
-    url: https://twilio.com/help/contact
+  - name: Kandy Support
+    url: https://kandy.com/help/contact
     about: Get Support
   - name: Stack Overflow
-    url: https://stackoverflow.com/questions/tagged/twilio-node+or+twilio+node
+    url: https://stackoverflow.com/questions/tagged/kandy-node+or+kandy+node
     about: Ask questions on Stack Overflow
   - name: Documentation
-    url: https://www.twilio.com/docs/libraries/reference/twilio-node
+    url: https://www.kandy.com/docs/libraries/reference/kandy-node
     about: View Reference Documentation

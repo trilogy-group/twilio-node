@@ -20,10 +20,10 @@ class LookupsBase extends Domain {
   /**
    * Initialize lookups domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://lookups.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://lookups.kandy.com");
   }
 
   get v1(): V1 {

@@ -1,7 +1,7 @@
 FROM node:14
 
-RUN mkdir /twilio
-WORKDIR /twilio
+RUN mkdir /kandy
+WORKDIR /kandy
 
 ENV NODE_PATH /usr/local/lib/node_modules
 

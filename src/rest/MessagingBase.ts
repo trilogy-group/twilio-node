@@ -18,10 +18,10 @@ class MessagingBase extends Domain {
   /**
    * Initialize messaging domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://messaging.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://messaging.kandy.com");
   }
 
   get v1(): V1 {

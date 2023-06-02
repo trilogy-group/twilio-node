@@ -18,10 +18,10 @@ class EventsBase extends Domain {
   /**
    * Initialize events domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://events.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://events.kandy.com");
   }
 
   get v1(): V1 {

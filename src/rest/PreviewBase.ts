@@ -28,10 +28,10 @@ class PreviewBase extends Domain {
   /**
    * Initialize preview domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://preview.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://preview.kandy.com");
   }
 
   get deployed_devices(): DeployedDevices {

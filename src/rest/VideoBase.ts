@@ -18,10 +18,10 @@ class VideoBase extends Domain {
   /**
    * Initialize video domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://video.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://video.kandy.com");
   }
 
   get v1(): V1 {

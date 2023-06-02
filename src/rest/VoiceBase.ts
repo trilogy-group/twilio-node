@@ -18,10 +18,10 @@ class VoiceBase extends Domain {
   /**
    * Initialize voice domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://voice.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://voice.kandy.com");
   }
 
   get v1(): V1 {

@@ -18,10 +18,10 @@ class ServerlessBase extends Domain {
   /**
    * Initialize serverless domain
    *
-   * @param twilio - The twilio client
+   * @param kandy - The kandy client
    */
-  constructor(twilio: any) {
-    super(twilio, "https://serverless.twilio.com");
+  constructor(kandy: any) {
+    super(kandy, "https://serverless.kandy.com");
   }
 
   get v1(): V1 {

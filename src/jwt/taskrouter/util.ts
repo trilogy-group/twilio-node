@@ -1,7 +1,7 @@
 import { Policy } from "./TaskRouterCapability";
 
-const EVENT_URL_BASE = "https://event-bridge.twilio.com/v1/wschannels";
-const TASKROUTER_BASE_URL = "https://taskrouter.twilio.com";
+const EVENT_URL_BASE = "https://event-bridge.kandy.com/v1/wschannels";
+const TASKROUTER_BASE_URL = "https://taskrouter.kandy.com";
 const TASKROUTER_VERSION = "v1";
 
 /**

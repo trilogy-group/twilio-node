@@ -1,17 +1,17 @@
-import { FlowInstance } from "twilio/lib/rest/studio/v2/flow";
+import { FlowInstance } from "kandy/lib/rest/studio/v2/flow";
 jest.setTimeout(15000);
 
-const twilio = require("twilio");
+const kandy = require("kandy");
 const localtunnel = require("localtunnel");
 const http = require("http");
 
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const apiKey = process.env.TWILIO_API_KEY;
-const apiSecret = process.env.TWILIO_API_SECRET;
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const testClient = twilio(apiKey, apiSecret, { accountSid });
+const authToken = process.env.KANDY_AUTH_TOKEN;
+const apiKey = process.env.KANDY_API_KEY;
+const apiSecret = process.env.KANDY_API_SECRET;
+const accountSid = process.env.KANDY_ACCOUNT_SID;
+const testClient = kandy(apiKey, apiSecret, { accountSid });
 
-describe("Validating Incoming Twilio Request", () => {
+describe("Validating Incoming Kandy Request", () => {
   let tunnel;
   let flowSid;
   let validationServer;
@@ -26,7 +26,7 @@ describe("Validating Incoming Twilio Request", () => {
         "://" +
         req.headers["host"] +
         req.url;
-      let signatureHeader = req.headers["x-twilio-signature"];
+      let signatureHeader = req.headers["x-kandy-signature"];
       let body = "";
       req.on("data", (chunk: string) => {
         body += chunk;
@@ -35,7 +35,7 @@ describe("Validating Incoming Twilio Request", () => {
       req.on("end", () => {
         let params = new URLSearchParams(body);
         let paramObject = Object.fromEntries(params.entries());
-        let requestIsValid = twilio.validateRequest(
+        let requestIsValid = kandy.validateRequest(
           authToken,
           signatureHeader,
           url,
