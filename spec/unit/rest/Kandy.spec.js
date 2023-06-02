@@ -23,9 +23,7 @@ describe("client", () => {
       expect(() => new Kandy("ADXXXXXXXX", "test-password")).toThrow(
         "must start with"
       );
-      expect(() => new Kandy("SKXXXXXXXX", "test-password")).toThrow(
-        "API Key"
-      );
+      expect(() => new Kandy("SKXXXXXXXX", "test-password")).toThrow("API Key");
     });
   });
 
