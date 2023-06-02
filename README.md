@@ -134,7 +134,7 @@ client.region = 'au1';
 client.edge = 'sydney';
 ```
 
-This will result in the `hostname` transforming from `api.twilio.com` to `api.sydney.au1.kandy.com`.
+This will result in the `hostname` transforming from `api.twilio.com` to `api.sydney.au1.twilio.com`.
 
 ### Iterate through records
 

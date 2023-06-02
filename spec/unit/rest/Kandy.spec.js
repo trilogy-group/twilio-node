@@ -41,7 +41,7 @@ describe("client", () => {
           .then(() => scope.done());
       });
       it("should use the default region if only edge is defined", () => {
-        const scope = nock("https://api.edge.us1.kandy.com")
+        const scope = nock("https://api.edge.us1.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.edge = "edge";
@@ -50,16 +50,16 @@ describe("client", () => {
           .then(() => scope.done());
       });
       it("should use the provided region if only edge is defined and there is a provided region", () => {
-        const scope = nock("https://api.edge.region.kandy.com")
+        const scope = nock("https://api.edge.region.twilio.comm")
           .get("/")
           .reply(200, "test response");
         client.edge = "edge";
         return client
-          .request({ method: "GET", uri: "https://api.region.kandy.com" })
+          .request({ method: "GET", uri: "https://api.region.twilio.com" })
           .then(() => scope.done());
       });
       it("should set the region properly if only the region is specified", () => {
-        const scope = nock("https://api.region.kandy.com")
+        const scope = nock("https://api.region.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.region = "region";
@@ -68,7 +68,7 @@ describe("client", () => {
           .then(() => scope.done());
       });
       it("should set the region and edge properly", () => {
-        const scope = nock("https://api.edge.region.kandy.com")
+        const scope = nock("https://api.edge.region.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.edge = "edge";
@@ -78,33 +78,33 @@ describe("client", () => {
           .then(() => scope.done());
       });
       it("should set the region and edge properly when an edge is already included", () => {
-        const scope = nock("https://api.edge2.region.kandy.com")
+        const scope = nock("https://api.edge2.region.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.edge = "edge2";
         return client
           .request({
             method: "GET",
-            uri: "https://api.edge1.region.kandy.com",
+            uri: "https://api.edge1.region.twilio.com",
           })
           .then(() => scope.done());
       });
       it("should set the region and edge properly when a region is already included", () => {
-        const scope = nock("https://api.edge.region2.kandy.com")
+        const scope = nock("https://api.edge.region2.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.region = "region2";
         return client
-          .request({ method: "GET", uri: "https://api.edge.region.kandy.com" })
+          .request({ method: "GET", uri: "https://api.edge.region.twilio.com" })
           .then(() => scope.done());
       });
       it("should set the region properly when a region is already included", () => {
-        const scope = nock("https://api.region2.kandy.com")
+        const scope = nock("https://api.region2.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.region = "region2";
         return client
-          .request({ method: "GET", uri: "https://api.region.kandy.com" })
+          .request({ method: "GET", uri: "https://api.region.twilio.com" })
           .then(() => scope.done());
       });
       it("should set the region properly on a custom domain", () => {
@@ -117,7 +117,7 @@ describe("client", () => {
           .then(() => scope.done());
       });
       it("should set the region properly when a port is included", () => {
-        const scope = nock("https://api.region.kandy.com:123")
+        const scope = nock("https://api.region.twilio.com:123")
           .get("/")
           .reply(200, "test response");
         client.region = "region";
