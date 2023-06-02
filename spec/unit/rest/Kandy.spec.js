@@ -50,7 +50,7 @@ describe("client", () => {
           .then(() => scope.done());
       });
       it("should use the provided region if only edge is defined and there is a provided region", () => {
-        const scope = nock("https://api.edge.region.twilio.comm")
+        const scope = nock("https://api.edge.region.twilio.com")
           .get("/")
           .reply(200, "test response");
         client.edge = "edge";
